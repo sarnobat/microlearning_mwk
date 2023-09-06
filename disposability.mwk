@@ -1,1 +1,160 @@
 
+=== ===
+#disposability
+#smallisbeautiful
+#microservices
+#programmingtips
+
+small apps are good because you can kill them and rewrite them more cheaply than a large system.
+
+
+2023-01-25
+
+=== ===
+#programmingtips
+#disposability
+#scripting
+
+a programming language with compact oneliners allow you to write programs from scratch at a shell prompt each time you need them (e.g. photo img tag scraping from mkdc shows)
+
+
+2022-08-23
+
+=== ===
+#programmingtips
+#codemaintenance
+#codewriting
+#codecomprehension
+#disposability
+#maintainability
+
+Hard to read = hard to debug 
+Hard to read = hard to modify/improve (this is the neglected part of “maintainability” which implies you are just cleaning up code without any functionality changes)
+
+Being complex-but-working-so-ignorable is a bad idea
+
+This is also why worse is better:
+(-) you won’t get bad code that solves difficult problems and thus can’t be retired easily
+(-) you can easily maintain something that is limited but easy to understand
+
+2022-09-04
+
+=== ===
+Quick fixes only involve modifying local code
+Fixing something properly often involves ripping up the structure and making widespread changes
+
+This is why it’s better to have small disposable components. You can rewrite the dissatisfactory one completely instead of trying to make huge changes to something existing.
+
+#disposability
+
+=== ===
+#composability
+#disposability
+
+Lewis’s First Rule
+
+I’ve never even thought to come up with a “rule” of software design before, but this is the most important lesson I’ve learned in my 26 or so years of hobbyist, amateur, and professional software development. I think it’s more important than any single design pattern (although many of the patterns in the Gang of Four book embody this rule), architectural principle, or other aphorism (excpet, of course, for Hanlon’s Razor, but that extends beyond software). Lewis’s First Rule is simply this: All application code must be either composable or disposable. 
+
+=== ===
+#disposability
+
+Disposability
+
+even though aws s3 is annoying in not supporting ssh, it's good design by isolating the part that probably will have more longevity. The part written on top of it for secure shell access can be thrown away with less opportunity cost (e.g. If a new version version or different remote access means becomes more popular)
+
+There is some redundancy to make these pieces standalone by having to create a communication layer in between, but it's good redundancy because you can test each piece separately. Same way the command shell in Unix is redundant for application development but it allows you to test the kernel outside of your application interactively
+
+Hmmm, this is exactly how SOA and multi-tier enterprise applications work.I'm not sure why I find those unnecessary and want a monolith.
+
+=== ===
+#disposability
+
+Scripts are like micro apps - low creation cost and low disposability opportunity cost (if you keep your scripts small and composable, you almost never need to go back and edit old scripts and go through the burden of trying to reverse-engineer what you did
+=== ===
+#toosoon
+#disposability
+#rapidprototyping
+
+Too soon
+Start off with shell scripts (cheap to produce and dispose, no maintenance). Only when you know what you’re doing, then commit to a lot of design.
+
+2019-01-17
+
+=== ===
+#disposability
+
+Microservices, Java the Unix way
+Small enough to throw away
+* rewrite over maintain
+Containerless
+degrees of freedom
+* if you share code, you have to deploy them together if that common code is changed so you've lost degrees of freedom
+Watchdog process
+=== Importance of rapidly writable and runnable code ===
+#composability
+#disposability
+#rapidprototyping
+
+composability, disposability, throw away, data not binaries, rapid iteration
+
+Lots of iteration, feedback, experience and willing to take a few steps back, throw some code away and take a new path is key.
+
+Any piece of a program I cannot throw away and rewrite in less than a couple weeks (with a design and idea in mind) is a bad piece.
+
+https://www.reddit.com/r/programming/comments/30x0v1/simplicity_in_software/
+
+
+2017-09-27
+
+=== ===
+#disposability
+#detachability
+
+Disposability
+Detachability
+E.g. Sandisk cruzer to download torrents to (but easy to lose)
+
+=== Easier to remove library than framework ===
+#disposability
+#hateframeworks
+
+Code that uses a framework cannot be ported to a different framework (because no 2 frameworks have the same structure). That’s why it has staying power - you’re stuck with it, and the opportunity cost of replacing it is too high.
+
+On the other hand, if you call a library, you can remove it as soon as it is not satisfactory, or is not used (pruning).
+
+Frameworks inhibit the branch and prune process
+
+2019-01-17
+
+=== Don't call me, I'll call you, Delusions of Grandeur, Swapping ===
+#disposability
+#hateframeworks
+
+Some libraries are easy to use: I instantiate their objects and make calls according to the needs of my program. If I need to, I can easily swap them out for another library: usually, they're used in a wrapper, so I just modify the wrapper.
+Some are not as easy to use. They instantiate my objects and make calls to them on their own schedule. They ask that my objects inherit from their base classes. These sorts of libraries suffer from delusions of grandeur: they think that their vision is more important than my program. I have to suffer all kinds of contortions to make their grand vision fit the practical requirements of my situation. I can't just swap out the library for something else: its tentacles are inextricably wrapped around my objects. I don't like these kinds of libraries.
+DontCallMe. I'll call you.
+
+I can't just swap out the library for something else: its tentacles are inextricably wrapped around my objects.
+So write your own library that does your program's real work, and get the control-freak library to call a wrapper for your library.
+
+This trend toward "frameworkfulness" probably started with OOP and Java in the mid 90s, and spread from there. Fortunately they seem to be realising the ridiculousness and gradually getting out of that mindset, but unfortunately other developer cultures like JS are now headed in that direction.
+
+
+
+=== ===
+#disposability
+Small enough to throw away
+Good example: when doing the Geotag viewing pipeline, I started with a python parser of the json properties but once I found jq I was able to swap out the python part while keeping everything else. I could "throw away" the python part.
+
+If I'd written the whole thing in python (as the original answer said) I'd have been stuck with the Python and had to rewrite everything.
+=== ===
+
+#decluttering
+#disposable
+#perishable
+
+disposable things don't accumulate
+non-disposable things do accumulate long term (rotation is the solution)
+
+2022-03-02
+
