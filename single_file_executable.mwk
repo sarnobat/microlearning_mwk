@@ -1,3 +1,41 @@
 #singlebinary
 #singlefilebinary
 #singlenativebinary
+
+
+
+=== ===
+
+#programmingtips
+#singlenativebinary
+
+only create a native binary if you are clear about the functionality boundaries, so it won't need cold tweaking (or rapid iterative prototyping to figure out what you want exactly). For everything else, use a shell script (e.g. httpcat delete category cache pipeline script after stashing a url)
+
+2023-02-17
+
+=== ===
+#singlebinary
+#funology
+#affordance
+
+affordance encourages play, experimentation, discovery
+
+java binaries are not single file binary executables. They need all manner of jre environment variable and classpath setup that requires a shell script (and that shell script is not obvious in how to use compared to a single file binary
+
+implication: apps developed in golang are more fun to use (e.g. selenium web scraping) (though not necessarily to develop)
+
+2022-07-11
+
+=== ===
+#longevity
+#singlefilebinary
+#memoization
+#productivity
+
+Staying power
+
+(-) Native binaries (instead of interpreted executables)
+(-) pdfs
+
+2022-09-09
+
