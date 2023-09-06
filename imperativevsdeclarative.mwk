@@ -1,0 +1,274 @@
+=== ===
+
+#dataflow
+#imperativevsdeclarative
+
+#fp
+
+(-) Imperative everything is a variable
+(-) Fp everything is a LOCAL variable
+
+
+2023-04-04
+
+=== ===
+#imperativevsdeclarative
+#career
+#self
+#parenting
+
+Praise the transitions (improvements), not the states
+
+2022-07-03
+
+=== Imperative less effort to write ===
+#programmingtips
+#eventsourcing
+#stateless
+#stateful
+#scripting
+#imperativevsdeclarative
+#Incrementalism
+Local maxima
+Baby steps
+
+Implicit state (both before and after) means less typing. Delta transformation step is the theoretical minimal you need to express
+
+Multi stage imperative is more divisible than final state declarative (hence you can achieve smaller goals more progressively)
+
+This is why we write stateful code. It's less information you have to feed.
+When climbing Mount Everest, you just want to worry about the next target, not the end goal.
+
+To tell the final state that encompasses steps
+A then B then C then D then E then step F resulting in state F prime, it's a lot less effort to just specify state A and stabilize your code before worrying about step B. To achieve the same statelessly requires explicitly passing/specifying the state before A and state after A. This is a lot of extra code.
+
+Imperative code has implied state, declarative has explicit state.
+
+For CSS, there is a blank initial state and the final state is just the entire CSS code. This can be tough to write all in a single step without a prior understanding. Stateful transformations don't need full knowledge of how to specify a valid (final) state, just the delta.
+
+This is why imperative Kubernetes instructions are useful for learning.
+
+
+2023-04-04
+=== ===
+#programmingtips
+#imperativevsdeclarative
+#statevstransition
+
+I keep hearing the unhelpful explanation that declarative programs don't tell you how to compute the results. 
+
+My answer is always WTF because if that really was the case, even the computer can't.
+
+the right mathematical way to explain it is:
+
+beginstate + transition = endstate
+beginstate - endstate = transition
+(the right hand side being determined by the computer)
+
+In fact in Kubernetes we even use the term "desired state"
+
+One of the advantages of declarative is that you can execute it over and over again and it should be idempotent (because the transition gets computed to take into account the state which may be evolving each time you run the transition commands).
+
+2023-03-22
+
+=== ===
+#imperativevsdeclarative
+#fp
+ 
+ 
+* imperative programming=modelling actions
+* function programming=modelling reasoning
+* logic programming =modelling knowledge
+ 
+ 
+Best answer I've read so far. None of the others are just hovering around what people like me are wondering rather than answering it. I guess both describe transformations, but say so in a different tense. Prolog and lisp say so in an "if then" style voice, while FP says it in a "here's what I do." As I type this, I'm seeing that there really is no material difference. It's just syntactic/cosmetic differences.'
+ 
+Come to think of it, in a way it's as trivial a difference as American English and British English. They are trivially mappable.'
+ 
+Logic programming and functional programming use different "metaphors" for computation. This often affects how you think about producing a solution, and sometimes means that different algorithms come naturally to a functional programmer than a logic programmer.
+ 
+ 
+ 
+ 
+knowleldge modeling is inference based. In fact, a lot of mathematics is.
+ 
+ 
+2021-09-22
+ 
+=== ===
+
+#imperativevsdeclarative
+#learning
+#reading
+
+Imperative advice - "trust me" instead of telling them what it will do
+
+2021-10-12
+
+=== ===
+
+#imperativevsdeclarative
+
+Declarative = declaring the state we want a system to be
+
+
+2021-01-26
+
+=== ===
+most books and articles and sayings about success are not wrong, but they squash the time component so you don't have a way of recreating what they did. You only know the end result, not how they got there #imperativevsdeclarative
+
+2017-12-19
+
+=== ===
+Imperative vs declarative
+
+“If you do this, it will give you that”
+
+When it comes to books, I much prefer the declarative if-then statements instead of “do this, trust me”
+
+#reading
+#imperativevsdeclarative
+
+=== ===
+#imperativevsdeclarative
+#hateoop
+#transparencyvsopacity
+#referentialtransparency
+
+Hide complexity vs Tame/Remove complexity ("sweeping under the rug")
+
+Same way there are always 2 explanations for an observation, there are 2 solutions to a problem: 
+
+OO programming encourages programmers to hold as much state as possible so you don't have to carry much around with you in your control flow. FP forbids you from carrying any state around, and minimizes what you carry around with you. You only create things when you actually need them (i.e. Lazy evaluation) rather than creating them and storing them for later consumption.
+
+=== ===
+#imperativevsdeclarative
+
+Imperative programming is like trying to cook a meal from raw ingredients (everything mixed together)
+
+Functional programming is like trying to cook a meal with off-the-shelf components (done in separate phases)
+
+=== ===
+#imperativevsdeclarative
+
+functional programming: pass functions to data (via parameters)
+imperative programming: pass data to functions (via parameters)
+
+2018-06-22
+
+=== ===
+#imperativevsdeclarative
+
+Object oriented programming = noun-centric
+Functional programming = verb centric
+
+
+=== ===
+#hierarchical
+#imperativevsdeclarative
+
+imperative - linear
+functional - hierarchical
+=== ===
+#imperativevsdeclarative
+
+Empirical = functional (i.e. You aren't interested in how the output is achieved)
+Analytical = imperative?
+
+=== ===
+#imperativevsdeclarative
+analogies
+
+Imperative vs Functional
+Applications vs Data
+Postal Service vs Packages (we don't care how we bought them, just that we took possession of them)
+Effort vs Attainment / Results orientation
+Means vs Ends
+=== ===
+#imperativevsdeclarative
+
+Times when imperative is better than functional
+
+editing a neo4j graph using neo4j-shell rather than Cypher (though the state is minimal)
+=== ===
+#imperativevsdeclarative
+
+Functional programming = Nash equilibrium?
+Whereas an imperative system is in constant flux
+
+=== ===
+#imperativevsdeclarative
+
+2 types of people
+
+they're not so much opposites as much as different dimensions. Being one in practice precludes a lot of the other but not necessarily (like functional vs imperative programming)
+
+2018-03-29
+
+=== ===
+#imperativevsdeclarative
+
+Functional style Pipelines can be written by end users
+
+Imperative style scripts with Shell variables and if statements require more effort and are less likely to be created
+
+Lesson: functional style libraries are more friendly to compose, customize
+=== ===
+#imperativevsdeclarative
+
+Functional Programming literally has 'fun' in the title; OOP is one letter away from . I rest my case.
+=== ===
+#imperativevsdeclarative
+
+imperative programming - state determines behavior (so parameter lists are short and simple). The state may have gotten set a long time ago.
+functional programming - input determines behavior (so parameter lists can be long and tiresome to keep typing out)
+
+e.g. the current working directory in your linux shell is a state variable. The current working directory is a state input to commands, which is convenient for memorizing the "same old params I'm sick of typing"
+
+same old params I'm sick of specifying:
+* app ID <!-- Oracle, Comcast? -->
+* tenant ID <!-- Its On -->
+* store ID <!-- Apple -->
+* user 
+
+=== ===
+#stateful
+#stateless
+#imperativevsdeclarative
+
+stateful / imperative programming - infinite input volume / uncountable infinite input (so non-deterministic output)
+stateless / functional programming - very limited input / countable infinite input (so deterministic output)
+
+
+2017-02-07
+
+
+=== ===
+#imperativevsdeclarative
+
+Imperative programming is popular because it allows developers to be lazy (you can rely on state instead of being context-free)
+
+2019-01-17
+
+=== ===
+#imperativevsdeclarative
+
+He started it = squashing of time component
+
+Imperative vs declarative
+
+2019-01-17
+
+=== ===
+
+#programmingtips
+#imperativevsdeclarative
+
+Declarative - tell the state you want
+Imperative - commands that change state
+It's like conjugation differences in English: indicative , subjunctive, imperative
+
+They achieve the same thing by describing the nodes or the edges in a state transition diagram
+
+2021-01-26
+
