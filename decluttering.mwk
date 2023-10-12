@@ -1,1 +1,2606 @@
+=== ===
+#decluttering
 
+broad thinking is better than deep thinking for decluttering because you don't have perspective over an item's importance in a global scope. Too local a scope makes it easier to diff the important from unimportant items and find differences that make the unimportant items seem valuable.
+
+Put another way, broad thinking allows you to evaluate if an item is in your 100 items list. Deep thinking only allows you to see its importance compared to 5 items and not consider the weighting (in importance) of the 5 items compared to the other 95.
+
+2022-12-28
+
+=== ===
+#decluttering
+Recontextualize items if your aren't ready to offload them
+
+Eg box covers after flattening (and cutting) and putting with other flattened boxes are easier to decide on the use of.
+
+
+2022-12-28
+
+=== ===
+#decluttering
+
+#memoization
+#decisiongroup
+
+
+convert tacit knowledge into explicit knowledge
+
+in other words, memoize whatever you discover about your items
+
+For digital items, stripe your files by size, extension, year
+
+For physical items, store your decision with a color coded sticky note.
+
+But ideally use attributes that are not time-dependent. I guess this is why material (plastic, paper, perishable) works
+
+2023-02-03
+
+=== ===
+#decluttering
+
+Since I haven't offloaded much until recently, i have a scarcity of regretful incidents to demonstrate the peril of aggressive offloading.
+
+So maybe I need to build my training data by taking more risks with the anticipation of some regret but with the benefit of refining my decision model.
+
+In fact, I probably never did anything wrong by offloading things. I just made some natural errors, but felt an extreme regret that a normal person does not.
+
+2022-12-28
+
+=== ===
+#phasedobsolescence
+#decluttering
+phased obsolescence works because of (lossy) logical deductions:
+
+(-) I'd still have this undescribable thing if I collapsed the box (anger use reversible)
+(-) (6 months later) I don't feel anything for this flattened, cut box cover, therefore dispose
+
+2022-12-28
+=== ===
+#decluttering
+
+replaceability becomes clearer as time passes. So does preciousness (i.e. importance of replaceability of memories)
+
+2022-12-28
+
+=== ===
+#decluttering
+
+phased obsolescence of boxes has the added benefit that when deciding years after flattening that even the remnants have no value, you are more brave to act. You can recall the hesitancy in keeping the cut box and retrospectively see that that hesitancy was unfounded. So taking step 2 in disposing of more and more of what's left (e.g. box cut remnants plus box contents inside a ziploc).
+
+"Fear of future utility"
+
+2022-12-28
+
+=== ===
+
+#toosoon
+#decluttering
+
+
+Solving an inconvenience too soon results in clutter and the cured state is worse than disease state
+
+Should I really keep hot sauce or dried chillies in my car? Or a knife and fork in my laptop bag?
+
+
+There is an occasional use for them, but every other moment there is a more junk in that physical space.
+
+2022-10-13
+
+=== ===
+
+#decluttering
+
+I think "Fear of future utility" is the biggest reason I find decluttering so hard
+
+The only way to fight it is logical reasoning (which is a flawed approach). All you can do is make the logical reasoning as comprehensive as possible (taking account of all kinds of past lessons). The downside is that codifying knowledge externally is inaccurate and looks outdated more quickly than it really is.
+
+2022-12-28
+
+=== ===
+#decluttering
+
+(documentary - minimalist: life is now)
+
+I'm watching this documentary right now and it's not resonating with me. It feels like it's oriented towards idiots who mindlessly accumulate, and you can just tell them to close their eyes and dump everything in the trash with no empathy. Maybe that works for others but not for me.
+
+
+2022-12-19
+
+=== ===
+
+#decluttering
+
+Deep thinking is the enemy of decluttering (sadly)
+
+The only solution is to feel the pain and do it anyway.
+
+
+2022-12-28
+
+=== ===
+
+#decluttering
+
+(reading about cache algorithms could help formalize some decision ambiguity)
+
+Evict and page in
+On demand
+
+Reboot (move everything out of its usual location even if you're using it)
+
+write back vs write through cache (though there's no equivalent of copying for physical items). When you evict by rotation/reboot, you are doing a write-back to disk before purging the cache.
+
+when you retrieve an archived item, you are doing a page-in
+
+If you page back in something that was donated, you have experienced a cache miss which is costly (more so in time to reacquire than the monetary cost: you may need the item urgently)
+
+Pinned pages (and unpinning)
+
+Off site storage for items you want the potential to read, but in reality are not going to use in any way (orange category - memories that aren't serving an active purpose)
+
+Implication: a readymade exact science for decluttering could be accessible to me
+
+
+2023-01-11
+
+==== more tech concepts ====
+For digital rotation: copy-on-write like overlayfs
+
+If the file is not going to change but is still referenced, symlink to a previous year's file
+If the file is likely to change, create a new file
+
+
+2023-01-11
+=== ===
+#decluttering
+
+when time comes to repopulate the current year with items per my rotation system, I wonder if my reluctance to unarchive things is a result of being jaded by the algorithm predicting that the item is going to become inconsequential again and just result in more mess. Or maybe the effort in unarchiving (e.g. a book buried under stacked boxes). I'm not sure.
+
+e.g. taking book printouts out of box.
+
+Maybe I need to write down the unarchival errand to see if it's what I really want.
+
+2023-02-03
+
+=== ===
+#decluttering
+
+when deciding on an item, try saying silently "I used to own this" and see how bad it sounds if you don't have access to it in future (and it's acceptable to find it heartbreaking even if it's just there but not serving an active purpose, but just an infiormational purpose like an old cell phone).
+
+2022-12-28
+
+=== ===
+#decluttering
+
+For all new items that come into your home:
+
+(-) the should be perishable or have a datestamp put on them
+(-) In other words, all items should have a "last used/usable" date
+
+2022-12-28
+
+=== ===
+#decluttering
+
+my problem is that everything has a story or an emotion attached to it and I want to retain that fact or feeling-
+
+even my green tie from 2003 reminds me of how colors are positive
+
+2022-12-19
+
+=== ===
+Regret donating
+#regret
+#decluttering
+
+Backpack with wheels (small backpack not big enough for weekend domestic)
+
+
+2023-04-04
+
+=== ===
+#decluttering
+
+#multifactorproductivity
+
+there are 2 types of items: perishable and non-perishable, but a third exempt category could be "containers" (when deciding what to spend money on)
+
+Containers are like multi factor productivity
+
+and it's like the (questionable) kiyosaki quote: "use your money on investments, not expenses"
+
+2023-02-03
+
+=== ===
+
+#decluttering
+#dividecombineart
+
+I'm finding with disks, and I think it applies to physical clutter too, you have to tear things apart (stripe) and put them back together to get rid of what you don't need. It can't be all striped or none striped.
+
+This is why you need to keep items in motion
+
+
+2023-02-03
+
+=== ===
+#decluttering
+recursive binary chop (spaced out over time) is the gradual proecss that undoes the gradual, undesirable accumulation (sawtooth pattern).t y
+
+2022-12-28
+
+=== by activity ===
+
+
+#decluttering
+
+Group physical items by activity / session / time of week just like tmux (e.g. "showering time", "work", "hobby"). Top down instead of my usual bottom up approach
+
+2023-06-22
+
+=== ===
+#errand
+
+
+snippets: "#decluttering<2028>"
+
+
+=== ===
+#errand
+
+
+snippets: "#decluttering<2028>"
+
+
+=== ===
+#decluttering
+
+
+Art of disposal
+
+2023-06-05
+
+=== ===
+#dividecombineart
+#decluttering
+anti-synergy in groups
+
+if you have 8 library books, it is hard to decide which ones to give back first.
+
+if you only have 1-2, it is easier to decide.
+
+I guess it's the opposite solution to grouping to find synergy. 
+
+You come up with far-fetched modes of consumption when treating items as a collection.
+
+Implication: sometimes you need to break things down to constitutents decide whether they are useful or not, contrary to what I've established for most cases (analogous to refactorings - both ways are equally valid; you need to tear apart and put back together).
+
+
+2023-02-03
+
+=== ===
+
+#pessimism
+#decluttering
+
+
+not deleting junk files or commented code is probably what pessimistic people do
+
+and it's not necessarily wrong. But it presents extra headaches.
+
+2023-06-14
+
+=== ===
+#asp
+#decluttering
+
+one reason I can't decide what to get rid of is because I need visual models of what I have
+
+a neurotypical doesn't need that. Their high processing speed can help them arrive at a decision without the physical visual like a sunburst diagram that I need
+
+2022-08-23
+
+=== ===
+#decluttering
+#regret
+
+
+Regret donating (did I? Maybe it was stolen from the box in the car in dec 2021)
+
+Red kurta
+White kurta
+orange kurta
+
+
+2023-02-28
+
+
+=== ===
+#decluttering
+#bettertowant
+
+Even with decluttering, it's better to want than own.
+
+So even if you want something, try to get rid of it (especially if you can easily get it again). You may find you don't want it again.
+
+In fact, imagining it not being there because you'd rather want than own it might be the state you should envision while deciding to give something away
+
+
+2022-08-23
+
+=== ===
+#decluttering
+
+Categories - Verbs (person centric) instead of nouns (product centric)
+
+2023-06-26
+
+=== ===
+
+#decluttering
+
+The question should not be "can I find somewhere to store this" but "can I live without it" (i.e. more aggressive disposing/digitizing/donating)
+
+hmmmm - easier said than done. Would I do this with my old tax filings?
+
+2023-06-22
+
+=== complementary items ===
+#decluttering
+#complements
+
+Logical groups, interdependencies/complements
+(Things that need each other to be fully usable)
+
+(-) reference
+Old product boxes
+Krupa clothes
+
+(-) reminisce
+Old cell phones
+Old ear phones
+Santa Clara county land book
+
+(-) Unused but works
+
+(-) Dubbing station
+VCR
+PAL TV
+transformer
+DVD Region 2 recorder
+
+(-) Home office
+Easel
+Chair
+Mechanical Keyboard
+Rain design stand
+Shoe rack platform
+2 x stools
+Infrared mouse + rain design stand for home computer
+Folding mini table
+
+(-) electronics unused
+Kinesis foot pedal
+Gold touch keyboard
+Kinesis curved keyboard
+Chromebox
+Old iPhone cables
+
+(-) TV
+Apple TV
+
+(-) paperwork archive
+Handwritten Sticky notes
+Tax
+Job offers
+House purchases
+Bank statements
+
+
+(-) Paperwork unfinished (and stationery) active
+printouts
+Fujitsu scansnap
+printer
+Arm
+Foam boards
+Sticky notes
+Sharpie markers
+easel
+guillotine
+
+(-) Graphical server
+Mac mini
+Cinema Display
+White Logitech keyboard
+Apple bluetooth keyboard
+Logitech infrared mouse
+
+(-) Headless server
+Black Logitech keyboard
+2 x mini HDMI displays
+2 x nuc
+Antec
+
+(-) Screen Media library
+DVDs
+DVD-R
+VHS tapes
+Blu ray player
+Portable DVD player
+
+
+(-) Print media
+photo prints
+Wrestling autographs
+
+(-) Book library
+Book cutter
+
+(-) edible memorabilia
+Pickles
+
+(-) Clothing memorabilia
+Soccer shirts
+
+(-) Product memorabilia
+old phones
+transformers
+Trophies
+Championship belt
+
+(-) Academic & Professional memorabilia
+T-shirts
+Sweatshirts
+
+
+(-) Travel-only accessories
+Foreign currency & passports
+Electrical adapters & converters
+Apple converters
+
+(-) Cold season clothing
+Gloves
+Hat
+Sweaters
+
+(-) hardware
+Screwdriver
+pliers
+
+(-) Photography equipment
+DSLR
+Large tripod
+Credit card tripod adapters
+
+(-) Smartphones
+Old chargers
+
+(-) Grooming & body
+Skin peeler
+nailclippers
+
+(-) Dental care
+
+(-) Facial care
+
+(-) Ingestible care
+Old medicines
+Old vitamins
+
+(-) Haircare
+
+(-) Cookware for quick meals
+Rice cooker
+Strainer with handle
+Strainers for sink
+Plates
+Bowls
+Knives, forks, spoons
+Rubber spatulas
+ziploc jars
+
+(-) Cookware for homemade meals
+Pressure cookers
+
+(-) home cleaning
+robovac
+Cordless vacuum
+ 
+(-) sleeping
+sleep mask
+blanket
+pillow tempurpedic
+pillow tempurpedic travel
+side sleeping pillow
+
+(-) laundry
+drying rack
+hangers
+hampers
+
+
+
+2023-06-07
+
+=== ===
+
+#decluttering
+
+Rotated (pink) and replaceable = offload
+
+(Like mark and sweep)
+
+But you have the right to say no at your discretion to this automatic decision. It's like pinning archived items to protect them
+
+2023-06-30
+=== ===
+#regret
+#decluttering
+
+Regret digitizing
+
+Scrum essentials
+
+
+2023-06-13
+
+=== ===
+#decluttering
+#striping
+
+#motion
+
+Space reclamation (physical or disk) means ripping apart a large mass of tightly grouped items so that a subset of the items can be identified as the primary contributors. Once you know those subgroups, you have a greater depth of understanding
+
+
+This is why:
+(-) striping files is good
+(-) There's no substitute for Constant scanning and re-refactoring of physical items in boxes
+
+2023-06-13
+
+=== accounting for inventory ===
+#decluttering
+
+Effective decluttering involves accounting. Because a significant amount of space is taken up by what we can't see and have forgotten we own.
+
+Sticky notes are a great first step. Writing a sticky note for every single item you own means they can’t hide at the back of drawers and cabinets, bottom of boxes etc
+
+2023-06-26
+
+=== ===
+#productivity
+#decluttering
+#rotate
+
+
+Rotation is a way to make non-perishable items perishable and you don't have to worry about deciding on deletion
+
+Eg errandfs
+
+
+by perishable we mean amortizing the product costs over a FINITE time (after which any usage can be considered a bonus).
+
+2023-04-05
+=== ===
+#decluttering
+
+It is better to want than own. Many things can be required through a purchase (with asymmetric desire) and near substitutes can be acquired freely (eg pdf manuals)
+
+
+Offloading with the option of Repurchasing perishables is particularly encouraged
+
+2022-08-19
+
+=== ===
+#decluttering
+created time - label printer
+last accessed time - bag + paper note (rotation)
+
+2022-06-21
+
+=== ===
+#decluttering
+
+
+when Scarcity - dispose what's unimportant (so a lot will get kept)
+
+
+when Abundance - dispose what's recoverable (so a lot will get disposed)
+
+2022-06-08
+
+
+
+=== ===
+#decluttering
+
+Bag based Year rotation for cosmetics etc
+
+2022-04-01
+
+=== decluttering ===
+
+#decluttering
+
+Kitchenware should be a lot easier to apply my ideas because I have no emotional attachment to it (actually wait, my parents' bought things)
+
+Implication: I can still try this "rotation" algorithm etc. more easily than with clothes, books which I have an emotional attachment to
+
+2021-06-21
+
+=== ===
+#decluttering
+#visualization
+#gestalt
+
+You can't tell how much is too much when you have a large apartment. You need to see everything from a single place. So a 3D visualization helps.
+
+
+2022-07-03
+
+=== ===
+#decluttering
+
+Nachi says
+
+90 percent of what we have we don't need
+
+2021-02-22
+
+
+=== ===
+#decluttering 
+coarse categorize by type? (electronics, clothes, books/photos/discs/paper, kitchenware, and just everything else) - that just might help find out why I still have so much stuff despite getting rid of a lot of the identifiable types
+ 
+2021-07-06
+ 
+=== ===
+#rotate
+#decluttering
+
+(partially) automate decisions to reduce the mental burden
+
+e.g. for decluttering, rotate using timestamp
+
+2022-08-15
+
+=== ===
+#decluttering
+#rotate
+
+Find a way to rotate physical items
+
+Moving house is one way
+Putting date labels helps but it's not quite the same thing (the label tells you the "ctime" rather than "atime")
+
+2021-06-21
+
+
+=== ===
+#decluttering
+#rotate
+
+Root cause of my hoarding: it allows me to keep my workspace clean. 
+
+e.g. I source controlled an apple note before deleting a lot of blank section headings (in errands_iphone.mwk)
+
+eg2 2nd bedroom became a dumping ground. In hindsight, "running out" of space faster would have forced me to adjust sooner (fail fast)
+
+2022-06-01
+
+
+=== ===
+#decluttering
+#algorithm
+#rotate
+
+Process = algorithm
+
+if you can prove that the algorithm doesn't have livelock and makes progress, you don't need to think about it after establishing it. It will work by itself.
+
+rotation looks promising
+
+2022-08-15
+=== ===
+#decluttering
+ 
+Forgiveness, not permission
+ 
+2021-07-06
+
+=== ===
+#salon
+#decluttering
+
+"Hoarders support group" - I need to research that more! 
+
+2022-06-10
+
+=== ===
+#decluttering
+
+To prevent junk accumulation, rotate periodically (e.g. annually)
+e.g. for errands fs, for /e/new/2020/, email smart view (last 7 days)
+The key is that the old things are still there, just out of the way of the new ones
+
+e.g. inbox - "less than 7 days" "today only"
+
+2021-01-26
+
+=== ===
+ 
+#decluttering
+ 
+Scatter gather
+ 
+2021-08-11
+ 
+
+=== ===
+#decluttering
+
+Things I don't hoard
+
+Old credit cards (not anymore, I did when I was younger)
+
+
+2022-05-16
+
+=== ===
+#decluttering
+
+The final stage of phased obsolescence is taking a photo
+
+And through "caching" your decision (eg for an old DVD player) you can lookup your decision next time you have a similar dilemma. This is why you can't bypass by hiring a consultant
+
+Implication: not sure. Maybe don’t hesitate to throw physical things as long as you have a photo?
+
+
+2022-08-02
+=== ===
+#decluttering
+#rotation
+#asymmetry
+
+Rotation
+
+Sometimes you have to clear everything (e.g. digitize every book) not because the book was useless but because you just haven't consumed it in the ideal scenario/vision that you were hoping when you bought it. You can still reacquire it or refer to it digitally though it's less convenient. What you gain back in space outweighs that inconvenience.
+
+2022-04-06
+
+=== ===
+#decluttering
+
+the fridge metaphor is definitely helpful but the limitation of it for unusual people like me is that there is no concept of archival (well, maybe taking photos). It's not enough for a whole life to have a "working set" and nothing else.
+
+That said, an apartment is inherently limited. What you need is for 20% of the fixed space to be dedicated for archival on the understanding that it is limited (unless it is digitized).
+
+
+2022-05-09
+
+=== ===
+#decluttering
+Digitize & dispose
+Paperwork
+Books no longer touched
+
+2017-12-07
+=== ===
+#decluttering
+
+Regret digitizing
+What's up with boys
+
+
+2022-02-02
+
+=== ===
+#decluttering
+#phasedobsolescence
+Phased obsolescence
+
+If you have multiple items and they are not 100% identical, it may be the first one that has the most sentimental value (e.g. polythene binding cover product labels), not to mention hardest to recover
+
+2022-06-29
+=== ===
+#hoarding
+#decluttering
+#phasedobsolescence
+
+Whenever I throw something away, I'm destroying knowledge (eg of what brand served it's purpose even if it wasn't a week known one like Magnavox, or when Sony failed me with DVD recording)
+
+I don't want to make the same mistakes as before
+
+Phased obsolescence involves eliminating redundant physical matter without destroying knowledge
+
+
+2022-08-02
+=== ===
+#decluttering
+decluttering is a physical form of refactoring
+
+2022-06-24
+
+=== ===
+#decluttering
+
+I don't regret digitnzing this but I still want it on my bookshelf for what it represents
+
+
+2022-05-23
+
+
+=== ===
+#decluttering
+Just like Juliette said with happiness, instead of having what you want, think about wanting what you have
+In other words, a lot of the things you want you already have. Focus on consuming those (to the point you could digitize/dispose them) instead of buying more that will end up unconsumed (even if they are good products). That desire is infinite (as Murali's dad said).
+
+
+2022-06-24
+=== ===
+#decluttering
+
+The reason to keep items in motion is to view the items through different axes (like a pivot table) and see if you are able to make any conclusions that you could not when viewing them through a different axis
+
+(e.g. if you've grouped by category but can't find anything to dispose, reorganize by time and see if for example you are keeping too many old items whose purpose is served by another temporally proximate item)
+
+2022-06-18
+=== productivity ===
+
+#decluttering
+
+Moving to a new apartment is like rotating your belongings (if you only unpack what you need)
+
+so was my hypothetical business idea of cheap storage in another state and being able to "order" your own belongings to be shipped to you. It's still accessible, just not as readily or intrusively as if everything is together.
+
+2021-03-19
+
+=== ===
+#decluttering
+
+When too much junk accumulates in a collection:
+(-) move the ones you want to a new collection and begin using the new collection
+(-) move everything existing to an old folder (i.e. rotate by date)
+
+
+I realized this with 600 GitHub repositories in an organization. It's best just to start a new organization and whatever is still in use should be moved to the new one.
+
+I'm trying to do this with decluttering in my new apartment.
+
+2021-02-22
+
+=== ===
+#decluttering
+
+Everything is temporary, even revision history. One day it becomes too costly to preserve (e.g. preserving SVN logs when starting to use git).
+
+Implication: the utility you get out of whatever it is you have can be replaced with something newer, even if the exact product is not the same (sadly, this included my games console being taken because I was more into Sky television)
+
+2019-01-17
+
+=== ===
+#decluttering
+
+Keeping things in motion effectively means rotation
+
+each time you move something from one container to another, you are rotating the contents to a previous period for preservation (or, more accurately, re-preservation)
+
+2022-04-01
+
+=== ===
+#decluttering
+
+bagging = everything is a collection
+
+plural-first routines
+
+lisp would be a good programming language for this!
+
+collections as first class citizens
+
+2022-07-11
+=== ===
+#decluttering
+ 
+keep scanning
+ 
+you are continuously doing a selection sort
+ 
+each selection round promotes the selected items to higher heap level, effectively.
+2021-07-06
+ 
+=== ===
+#decluttering
+
+(done) Stamp to buy
+
+Perishable (so no exit strategy needed)
+
+2020-05-20
+
+=== ==
+#decluttering
+
+Decluttering algorithms
+Recursive binary chop
+
+2022-04-13
+
+=== ===
+#decluttering
+
+I don't regret digitnzing this but I still want it on my bookshelf for what it represents
+
+
+2022-05-23
+
+=== ranking relative to each other ===
+#decluttering
+#continuousscanning
+#rank
+
+(recursive) binary chop of physical items is a way to rank items relative to each other (in deciding what to keep vs what to offload)
+
+Keep ranking items by keeping on scanning items by keeping items in motion
+
+2022-09-10
+
+=== ===
+#decluttering
+
+The longer you possess something, the harder it is to decide that it's useless. It's easier to reject it before acquisition
+
+Implication: consume immediately so you can dispose immediately (don't print articles you won't read - though I am guessing rotation will help here)
+
+
+2022-04-16
+
+=== ===
+#decluttering
+
+Non-perishables need datestamps more than perishables do. It's very difficult to rotate non perishables without this info. For perishables, their nature will make them perish (they will spoil, or they will have a sell by date)
+
+
+2022-03-16
+
+=== ===
+
+#decluttering
+
+Same way it's better to want than own, it's better to throw away than own (despite the inertia of parting with it)
+
+2019-01-17
+=== ===
+
+#decluttering
+
+Too many time capsules is unsustainable
+
+2021-06-21
+
+=== ===
+Decluttering
+#decluttering 
+Binary chop recursive. Any higher order becomes situation specific
+ 
+Perishables vs non perishables
+Replaceable vs irreplaceable
+Expensive vs cheap
+Nostalgic vs generic
+Keep vs dispose
+Delicate vs non delicate
+ 
+2021-08-11
+
+=== ===
+
+
+#decluttering
+
+when deciding what to move from transparent bags to transparent boxes, remember that you are doing so to compress the unused things (archiving).
+
+Only archive things that you are unlikely to unarchive (to start consuming again).
+
+Hopefully this makes it easier to identify what to put in clear bags and datestamp.
+
+
+2022-06-24
+
+=== decluttering ===
+#decluttering
+#branchprune
+
+Branch and prune also applies to yed diagrams, otherwise they become such a mess that they're useless 
+
+Implication: prune useful but counterproductive things
+
+2019-01-17
+
+=== ===
+#decluttering
+
+When you get to a plateau, you may consider going to a higher gear of aggression (if you feel disconnected enough from the things you were hesitant to dispose of in a different state of mind)
+
+
+2022-06-24
+
+=== ===
+#decluttering
+
+
+in-place sorting is an unfortunate reality in physical decluttering. If you did have the extra space you'd end up not throwing away the less frequently used items. So repeated scanning is the only way to effectively identify large volumes of unused items
+ 
+2021-07-06
+
+=== ===
+#decluttering
+#pretotype
+#placeholder
+#need
+
+Pretotype - printed book covers instead of buying the book (so they have a physical representation until you no longer need them)
+
+2022-07-08
+=== ===
+#decluttering
+
+getting caught between a rock and a hard place
+
+something is old and dirty, but still usable in theory. You neither want to clean it and make full use of it and manage without it, nor do you want to get rid of it.
+
+e.g. my hairbrush in the car that has dirt on it
+
+2022-04-13
+
+=== decluttering ===
+
+#asp
+#decluttering
+
+I think decluttering is hard because an item doesn't change from useful to not useful so quickly. It takes a long time for us to prove that the item no longer has a use (sometimes an entire lifetime).
+
+This is why it's better to buy high quality items. It will be more clear whether they are useful or not.
+
+2021-06-21
+
+=== ===
+#decluttering
+#grouping
+
+Delaying offloading doesn't just help with location (e.g. making decisions by having all the items in the same place) but also with time (you can digitize or photograph all items in the same day so that cross-discoverability is better with exif of filenaming by date or subdirectories)
+
+
+2022-08-06
+
+=== ===
+#learning
+#productivity
+#decluttering
+
+each book of mine represents the need for knowledge in an area, even if the book itself is a poor way to fulfil it.
+
+
+2022-05-23
+
+
+=== ===
+#productivity
+#decluttering
+#index
+
+Indexes are free unlike the content
+
+You can take photos of book covers in libraries or print table of contents from book pdfs
+
+
+2022-08-08
+
+=== ===
+#decluttering
+Productivity
+
+When boxes are labelled, you can aggregate
+
+2018-03-01
+
+=== ===
+#decluttering
+I wonder if there's an equivalent of mwk hashtagging for physical items. Hashtagging works so well because nothing gets left behind. Everything belongs to something.
+
+labelling? bagging?
+
+2022-07-08
+=== ===
+ #decluttering
+
+decluttering idea
+(may not be realistic)
+ 
+only buy products that have a UPC code (so no unreplaceable items)
+ 
+this is one benefit of buying luxury products
+ 
+2021-09-22
+ 
+=== decluttering algorithm ===
+#decluttering
+#algorithm
+
+#errands
+
+(make this a spreadsheet for physical vs virtual items)
+
+(-) create new
+(-) rotate periodically
+(-) index rotated items
+(-) retrieve rotated items out of archived stripes
+
+(-) offload oldest rotated items
+
+2022-11-07
+
+=== ===
+#decluttering
+#committmentdevice
+
+have you noticed even with old food, you don't feel like throwing it away until the second you see it has fungus on it. 
+
+Implication: That forceful shove over the edge may be what you need with non-rotting things that you just aren't using despite the tricks your mind is playing on you.
+
+
+2022-07-11
+
+=== ===
+#decluttering
+
+
+"slice keeping", redundancy filtering, lateral keeping
+
+if you have many of a specific item (e.g. a bank statement) then keep one if you feel some sense of irreplaceability and nostalgia. It will still be lossy (as most decluttering must be) but what you lose is even more marginal than in other situations where there is no repetition
+
+Thinking (and recording) what do I have multiple of might help me get more immediate payoff. So what might these be? VHS tapes, DVDs? Clothes, football shirts, Hard drives, books, photo prints,
+
+Maybe it's time to put all clothes in my main bedroom for more scrutiny
+
+2022-06-10
+
+=== ===
+#decluttering
+
+#productivity
+
+When the successful outcome is such an inevitability that you don't even feel satisfaction in it happening, you know your system is working.
+
+e.g. in decluttering, I can see my rotation bagging as the solution so much so that when I see a few old bags left that say "2022", the only thing I'll feel is sadness that I'm older than that year and it's my last untouched remnant of that era.
+
+2022-07-03
+=== death row ===
+#decluttering 
+#purge
+having a giant storage room/locker (even an entire junkyard or donation app like nextdoor) is basically a way to implement an undo (even if in practice you can't undo it; it feels like you can).
+ 
+80% of the items you put in storage are not going to be used again. BUT the 20% is painful to redo.
+ 
+Storage room = undo buffer size (recycle bin percentage)
+ 
+implication: not sure. When putting something in storage, decide if it's in that 20%
+ 
+If you think about it, when you bought that item, you probably bought it with the intention of it not being in a storage room. If it is, that must mean it's not serving its intended purpose. Document that by putting a sticky note explaining why it's being archived (e.g. in the case of a disk bought years ago: "too small, have bigger ones now")
+ 
+We store things with the intention of:
+(-) undo or 
+(-) repurposing or 
+(-) time capsule. 
+Selling something is the closest thing to getting a refund (and is a reason to invest in quality)
+ 
+2021-08-11
+ 
+=== ===
+Decluttering
+#decluttering
+
+Things may be useful but you never get around to actually consuming them (e.g. a book, food). So it's fine to get rid of these or at least digitize them.
+
+2021-09-22
+
+
+=== ===
+Decluttering
+
+#decluttering
+
+Swap test? (e.g. easel)
+
+2022-03-09
+
+=== ===
+#decluttering
+#relocation
+
+Store in usa
+Car
+ Steel post shelves
+$3000 mattress
+Sofas
+Precious unwearable clothes
+
+2017-12-07
+=== ===
+#decluttering
+Don't buy good things unless you are going to consume them (e.g. good books that you don't have time to read). You can't make your home a storage facility of every useful thing you'll ever find.
+
+Until you are ready to consume it, just index it (e.g. print the contents , add to yurl wishlist…). And make the indexing fun. Looking at my wishlist is almost as much fun as buying.
+
+2022-06-24
+
+=== ===
+
+#decluttering
+
+Decluttering is a lot easier when items are in context, I.e. when with lots of other similar items. Without it, you have something similar to local maxima problem where you can't see the wider context and judge its true importance which is often less than what you think when overanalyzing it in isolation
+2021-08-11
+
+=== ===
+#museum
+#decluttering
+
+Decluttering
+
+Museum
+
+I'm going to die one day, and a lot of items will be worthless to others (even VHS tapes of LFC season reviews won't be wanted by the club or a pub in the US). Will these physical items serve a purpose before I die? Or only in this imagined world where I live forever?
+
+If not, consider getting rid of them.
+
+
+2022-08-15
+
+=== ===
+#decluttering
+#self
+Emotional attachment
+Definition
+Non logical, inexplicable with words (e.g. latin grammar book I'm sad I digitized - though I know why that's so much more valuable than an easier to obtain grammar book)
+
+2022-08-03
+
+=== ===
+#decluttering
+
+Cleanliness allows new interests to simmer without being pulled down into drudgery of chore distractions
+
+Google offices look so clean and are a nice place to focus on innovating
+
+A library or country club too
+
+2022-07-11
+=== ===
+#decluttering
+#mobility
+
+Disposability of furniture is good for mobility
+
+
+2022-08-03
+
+=== ===
+#decluttering
+#size
+
+If you're going to buy something that lasts a long time, a small one is better since things get miniaturized over time and you don't want to be stuck with a white elephant years later because yours is still usable (e.g. 2010 antec case)
+
+2020-09-28
+=== ===
+#decluttering
+#decisiongroup
+
+Decision groups
+e.g. red (offload), orange (store), green (keep)
+
+2022-07-03
+=== ===
+#decluttering
+#digitize
+
+Can I bear the consequences of not finding the image containing the box with the model number etc. If so, take a photo and get rid of the box.
+
+2022-09-13
+=== ===
+#decluttering
+#digitize
+
+It might be best to capture the knowledge from the physical item, then digitize whatever you can of the item.
+I realized this when thinking I could sort my memories by r23c brand in a sunburst chart. What I'm really after from the Santa Clara nameplate is my desire to participate in class, make good conversation with the professor and classmates without having to socialize etc. 
+
+Same logic with keeping my old Sanyo cell phone
+
+2022-08-11
+
+=== ===
+#decluttering
+#productivity
+#digitize
+
+Productivity
+
+Digitizing everything can be unrealistic and not scalable (e.g. transcribing post it notes)
+Instead, organize the physical media so that it's easy to find, and consume (and digitize at consumption time)
+
+2018-08-01
+
+=== ===
+#decluttering
+#perishable
+#digitize
+
+Books are usually perishables, counterintuitively
+
+you read them in the first 6 months and then never pick them up again (even if they are good books)
+
+Usually you should digitize them after a year.
+
+2022-08-08
+
+=== ===
+#decluttering
+
+digitization is a rememdy for anxiety for offloading unused but emotional things. You may find that you never refer to it even if it is digitzed somewhere but you can't find it. 
+
+2022-05-09
+
+=== ===
+ 
+#decluttering
+ 
+Accept that some things seemed like a good idea at the time to acquire, but with today's knowledge you wouldn't reacquire them. Therefore, they should be offloaded
+ 
+e.g. Spanish vocabulary flash cards, magz construction toy
+ 
+you can even put a sticky note on it explaining how it diverged from expectation. That will help you get rid more easily. I already did this with some books saying 'not that useful"
+ 
+2021-08-11
+ 
+=== ===
+#decluttering
+productivity
+
+decluttering
+
+my strategy - grouping and purging/dedeuplication
+
+dad's strategy - compression (which is fine for digital things, but for physical goods you end up losing space with things you don't actually want but you are unaware are still there). This is a more sophisticated form of hoarding
+
+2020-02-21
+=== premium discretion ===
+#decluttering
+#timetolive
+
+wasted puchases don't come from what you end up disposing of soon. They come from what takes longer to decide to dispose of because you think it's useful but just not soon enough (e.g. whole foods chicken I'd be eager to consume immediately, light life mioprotein chicin I'd leave for a few days saying I'm not in the mood for it today; same with yoghurt vs dates; atkins bars vs apples)
+
+Buy the things that disappear from your home shelves at the earliest opportunity.
+
+Not only will you save space, you'll save money.
+
+2022-08-06
+=== ===
+#decluttering
+
+Others don't have clutter because they don't have the in between category. They have using and not using. That's fine for their low functioning brain but with mine I need the others to keep my brain exercising, learning, remembering etc
+
+They are a physical index to my larger brain
+
+The key is to keep the index lean (I think)
+
+2022-06-21
+=== ===
+#grouping
+#decluttering
+
+Grouping
+Trash can - for all disposable items
+
+see if this concept can be done for other decision groups. currently I use categories which help with decision grouping. but can get stuck. Trying to decide without categories might be tough or it might not. Some color coded bags might be good here.
+
+2019-07-15
+
+=== ===
+#decluttering
+#asp
+#aksudiscuss
+
+hoarding happens after retaining the lesson of past scarcity when you needed something that you had offloaded.
+
+It's good that I remember the lessons of the past better than most, but I have the opposite extreme problem where I create rules based on freak past situations.
+
+A more balanced combination of selecting/rejecting past lessons would be optimal.
+
+
+2022-09-26
+
+=== ===
+#decluttering
+#relocation
+
+Alternate USA evacuation scenarios
+
+Live in cardiff
+Live in London
+Go back to usa soon or late
+Married or single
+
+2017-12-07
+=== ===
+#decluttering
+#relocation
+
+Dispose or sell (take photo first)
+
+Wires
+Linen
+Tv
+Unused regular clothes
+Product packaging
+Furniture inexpensive (replaceable)
+Mattress (spring)
+Lights
+
+
+2017-12-07
+=== ===
+#decluttering 
+Additive decluttering instead of subtractive (identify when not looking at the item? Or aim to put colored labels on everything)
+ 
+2021-07-06
+ 
+ 
+=== ===
+#decluttering
+#asp
+My slow processing speed makes it take time for me to think through whether I should keep something or not. Months or years
+
+Sticky notes can help make microprogress so that the repetitive cache warming delay isn't incurred. I can then think about the core decision more immediately and thus more frequently.
+
+
+2022-06-21
+
+=== ===
+#decluttering
+Decluttering
+
+Physical - Books for bedside browsing
+Digitize - books for search reference (even if they're useful, I think)
+
+2021-06-25
+
+=== ===
+#decluttering
+
+Regret digitizing (well not really, but feel like still having without so many page tabs):
+
+Unix Power Tools
+
+Though it's just going to end up taking space and being heavy to move around. Don't rebuy just yet
+
+2022-04-13
+
+=== ===
+#decluttering
+
+i wonder if large boxes (e.g. my large transparent contianers) can be used as striped years regardless of category. After 4 years, you have to get rid of the contents of 1 box to make way for the most recently completed year.
+ 
+ 
+2021-08-11
+ 
+ 
+=== ===
+#decluttering
+
+
+Solutions to physical space constraints also apply digitally (e.g. ls output screen height, visible tab names in excel or chrome). Software interfaces have physical constraints and you need some rules of thumb to limit the consumption of space (e.g. show the first and the last, limit to 8 items, avoid users have to switch focus for logically connected items, reduce redundancy but keep a little to show commonality)
+
+
+2022-07-15
+
+=== ===
+#decluttering
+
+Why does getting out of the house improve my ability to decide on decluttering?
+
+
+Maybe because I see things more top down based on memory than individual items bottom up that are too numerous to see patterns in and make decisions fro
+
+
+2022-08-02
+
+=== ===
+#decluttering
+
+looking at photos of old books I rightfully donated, it's not that they were useless. But they took too much space to keep.
+
+If you kept every useful thing you could possibly get your hands on (which is a lot easier with Amazon), you would fill a stadium. Just keep the most useful ones.
+
+The rest should be buy-consume-dispose as if you just rented them. If you still want them, repurchase and keep them for a longer period
+
+2022-04-22
+
+=== ===
+#decluttering
+
+Try moving frequently used items to storage room, and moving uncommon ones in bedroom. It might help you purge unneeded things more, and make hard-to-reach items visible more often
+
+I did this and have achieved some success but again this has to be in combination with other techniques (e.g. constant motion)
+
+
+2022-04-01
+
+
+=== ===
+#decluttering
+
+During the 2010s my attitude was buy knowledge assets now if they are cheap. I never considered the day I'd run out of space.
+
+My lifecycle management was incomplete. No problem, I was younger and am learning from the experience.
+
+2022-08-03
+
+=== ===
+#decluttering
+
+
+Always think what is the minimum you can retain. Do you really need the box to remind yourself simply that you own a cherry mx key tester (even if the box is of different size to the others you have)?
+
+2022-06-08
+=== ===
+#decluttering
+#need
+
+Can i represent a need using less space
+
+(eg a book that I'm not reading but am still wanting to find a better book covering the same subject)
+
+2022-08-08
+=== ===
+#decluttering
+productivity
+
+lower confidence before purging (e.g. 80%) is fine if you have an undo mechanism (e.g. buying a new one; promising your child you'll buy them a new one if they want it back later; ebay has made this a lot easier than in the past). 
+
+2021-06-21
+
+
+=== ===
+#decluttering
+
+one way to avoid buying too many books is to see if you already have a similar one that is unread. If you really really want the other one, consider reading the current one first if it is good, or disposing of the current one if it is finished or bad (e.g. cognitive biases - do I really need another book?)
+
+2022-04-22
+
+=== ===
+#decluttering
+smaller container = easier to decide (to dispose etc)
+
+side load boxes help in theory
+we need to keep recursive binary chopping over time (scatter gather?) any box of items
+
+2022-06-21
+=== ===
+#decluttering
+#relocation
+
+Ship to uk
+Photo prints
+Current clothes
+Football shirts
+Document scanner
+Apple monitor
+Books recently touched
+
+
+2017-12-07
+=== ===
+#purchasing
+#falsepositive
+#decluttering
+
+Accept that things you've bought will be mistakes, because you don't have perfect information about them before buying. Some books may not be what you had in mind.
+
+Be brave enough to at least put a red sticker on things that you're not yet ready to offload
+
+2022-07-11
+=== ===
+#decluttering
+Colored tape codes
+Red - get rid
+Green - keep (even if it means storage)
+Blue - still in use but only keep if you have spare room in storage
+
+ideally put red on everything uncategories, then replace what you want to keep with green. Otherwise the uncategorized items dominate the space.
+
+2022-04-01
+
+===. ===
+#decluttering
+
+It's not hoarding. It's preservation of existing assets (while neurotypicals assume new = better, i.e. recency bias).
+
+Destroying old assets is fine for most people, but for people with long term memory it is simply a waste. So advice from neurotypicals or consultants on decluttering simply isn't correct.
+
+
+
+2022-03-09
+
+=== ===
+#branding
+#decluttering
+#omissioncommission
+
+Give up something to gain something
+
+E.g. To maintain quality, throw away something even if it's not useless
+
+E.g. a bakery should throw away Bread that was baked yesterday so that people only associate fresh bread with it (a Denny’s in Milpitas did not)
+
+2020-02-21
+
+=== ===
+#decluttering
+#falsepositive
+#omissioncommission
+
+decluttering does mean being a bit wasteful (I forget the context in which I realized this - maybe perishables that can be repurchased when you next need them)
+
+
+2019-01-17
+=== ===
+ 
+#decluttering
+ 
+junk yards are almost non-existent, unlike in cartoons
+ 
+this is beneficial to the environment, at the expense of hoarders having extra hurdles.
+ 
+Implication: disciplined prevention and ruthless donation are the only alternatives (this way, dad was good about getting rid of my things' though not his own)
+ 
+disciplined prevention involves timestamping of when, thinking what will you do (and will you have the courage to do it). Also collecting enough information like UPC codes to reaquire it in future
+ 
+2021-08-11
+ 
+=== ===
+#decluttering
+
+regret digitizing
+
+Guide to naming
+
+2022-06-01
+
+=== ===
+#decluttering
+
+I could probably learn a lot from onteab when it comes to decluttering, including the reluctance part (feeling that I'll destroy some context or forget to continue it later).
+
+2022-06-24
+
+=== ===
+#asp
+#decluttering
+
+One reason I have a lot of mess is that I can't make decisions quickly due to slow processing speed
+
+
+2022-08-15
+=== ===
+#decluttering
+
+If you create an unobstructed "home" with good "flow,” it will reflect on your everyday mood
+
+2021-01-26
+
+
+=== ===
+#decluttering
+
+Three D's of offloading
+Dispose
+Donate
+Digitize
+
+2022-05-09
+
+=== ===
+#decluttering
+#regret
+
+Regret donating
+
+Wire shelving melamine boards (given to Nachi)
+
+2022-07-11
+
+=== ===
+
+#research
+#recycling
+#decluttering
+
+Envelopes with plastic windows can be recycled. The paper from these envelopes is the exact type of material that is perfect for recycling. The plastic in the window CAN be recycled and will does not need to be removed before "throwing it in the blue bin."
+
+2022-03-15
+
+https://www.acedisposal.com/envelopes-with-plastic-window
+
+=== ===
+#decluttering
+
+Decluttering
+
+Everything is temporary, even source control logs. One day it becomes too costly to preserve (e.g. preserving SVN logs when starting to use git).
+
+Implication: the utility you get out of whatever it is you have can be replaced with something newer, even if the exact product is not the same (sadly, this included my games console being taken because I was more into Sky television)
+
+2019-01-17
+
+=== ===
+#decluttering
+
+
+Importance of decluttering myself instead of a consultant
+
+
+Formulating decision algorithms when they are too slow to be uninterrupted like a neurotypical
+
+2022-07-03
+=== ===
+#recycling
+#decluttering
+
+
+Refactoring = recycling
+
+It's never too late to start recycling, but it can be too soon
+
+2019-01-17
+
+
+=== ===
+#decluttering
+#productivity
+#grouping
+grouping shoud be done based on how it's going to be consumed. In the case of decluttering, group by decision (if it's easy; it will have a plateau)
+
+When you reach a plateau, then you'll have to consider groupings that are not directly decisions but may lend themselves to decisions when you graduate to a higher level of aggression in disposing
+
+2022-06-29
+
+=== ===
+#decluttering
+
+Decluttering focuses too much on the decision process in what to dispose, which is tough
+Instead, try the opposite - focus on the decision process in what to keep. Start by using bags to dispose everything, then undispose what you're still using. 
+
+You'll probably be surprised how little of it you're using. The unused but valuable things can remain in storage for your more aggressive decisions at a later date (e.g. end of year)
+
+The only difficulty is that you need space to leave the undisposable bags in the meantime. It's a space-complexity problem in algorithmic terms. And if you had the space in the first place, you probably wouldn't need to declutter.
+
+Also clearing a desk by putting everything in a box and starting with a clean desk works (on a smaller scale but same idea).
+
+2022-06-13
+
+=== ===
+#learning
+#productivity
+#decluttering
+
+each book of mine represents the need for knowledge in an area, even if the book itself is a poor way to fulfil it.
+
+
+2022-05-23
+
+=== ===
+#decluttering
+
+Electronics that stops working is a blessing. You have no reluctance to dispose of it.
+
+Implication: not sure. Buy bad electronics (e.g. cheap HDMI monitor for bedroom)?
+
+
+2022-08-02
+=== ===
+#decluttering
+#offload
+Productivity
+
+Perishables, cheap books - don't wait to offload
+
+2018-07-01
+=== ===
+#decluttering
+#offload
+
+One thing I never considered is that items become less valuable after you offload them, because they are not in your path.
+
+I see this when looking through my digitized books. Books that I previously felt I would lose by digitizing are are less use to me now (because I can survive without them even if ideally they would still be easily accessible).
+
+
+2022-11-08
+
+=== ===
+#decluttering
+#offload
+
+reverse something test
+
+a better way than would you buy it again is - if you could get a full refund for it, would you take the refund or still keep the item?
+
+
+2022-08-15
+=== accept recognizable pain ===
+#decluttering
+#offload
+
+Maybe one key to decluttering is to endure some pain in losing something, but a magnitude of pain you can live.
+
+If there were no pain, it would be easy and thus already offloaded (which it isn't).
+
+Also, it's better to deal with the devil you know than the devil you don't (yet) know.
+
+2022-08-31
+
+=== ===
+
+#decluttering
+#offload
+
+Same way it's better to want than own, it's better to throw away than own (despite the inertia of parting with it)
+
+2019-01-17
+=== ===
+#productivity
+#decluttering
+
+
+Another example of economies of scale in decision-making (apart from physical decluttering)
+
+Realizing I could free up a lot of iCloud space by deleting photos taken at home
+
+subconsciously this is why we group related things together
+
+
+2022-11-03
+
+=== ===
+#decluttering 
+When buying books, go for bottom-up tight categories. They are more likely to be useful long term (Code Complete book was too broad and was a big book)
+ 
+2021-08-11
+ 
+ 
+2021-09-08
+ 
+=== ===
+#decluttering
+ 
+striping by size is effective on a computer. I wonder if there's an equivalent for physical items. 
+ 
+Container size maybe. The smallest container it will fit in (since exact size is unnecessary). Maybe color code boxes by sizing (similar to t-shirt size in sprint)
+ 
+Volume ideally but that's not easy to measure for a lot of things.
+ 
+ 
+2021-08-11
+ 
+=== ===
+#humor
+#decluttering
+
+*Laws of cleaning before Diwali*
+
+*1st Law*
+Clutter can neither be created nor destroyed. It can only be transferred from one place to another.
+
+*2nd Law*
+If the number of people who clean out kachra are less than the number who produce it, it can never be cleared.
+
+*3rd Law*
+The clutter in a home is directly proportional to the magnitude of the laziness of the people and to the size of their homes.
+
+*4th Law*
+Cleaning is temporary, clutter is permanent.
+
+*5th Law*
+During cleaning if you throw away something you haven't used for ten years, you will need it immediately after you throw it away. 
+
+2021-11-03
+
+=== ===
+#decluttering
+#categories
+#determinism
+
+all boundaries are equally arbitrary from a merit point of view, but they are often chosen based on convenience/determinism (i.e. there is an existing property in the space)
+
+it's the equivalent of a hashing function - whose goal is to distribute items evenly. In the case of segmentation, the goal is to batch those items as input to whatever operation you want to perform
+
+2021-08-11
+
+=== ===
+
+Decluttering
+
+#decluttering
+#forgotten
+
+If you won’t remember that it’s missing, it’s a candidate for purging
+
+=== ===
+Precluttering
+#decluttering
+#habit
+
+Ongoing habits after you’ve decluttered
+=== ===
+#decluttering
+
+The dolly is the closest thing I have to a conveyor belt
+=== books I wish I still had in print ===
+
+#decluttering
+#regret
+
+x power tools (to understand display manager)
+R cookbook?
+
+
+2021-11-24
+
+=== ===
+ 
+#decluttering
+#recycling
+#perfectionism
+
+
+perfectionism in recycling makes you keep things you don't need because of guilt in impurifying the dumpsters
+ 
+2021-09-22
+ 
+=== ===
+#decluttering
+#containers
+
+Big containers are better than small containers in that you don't have to do mental "group by" calculations to see what you have a lot of.
+
+They give you a visual of the space consumption (like a treemap). Small containers do not (without doing the group by calculation and imagining it)
+
+2021-11-17
+
+=== ===
+#decluttering
+#conveyor
+
+Conveyor belt
+During transfer of items (e.g. sticky note from polytene to paper) we tend to do some purging (which is good)
+
+2022-02-28
+=== ===
+
+#decluttering
+#conveyor
+
+conveyor belt strategy
+keep scanning repeatedly and if you don't make much progress do another round. The context of previous iterations will help you refine your criteria (or reach some kind of alternate conclusion)
+
+2021-11-10
+
+
+=== ===
+decluttering
+#decluttering
+#elevate
+
+When a container (box, tray) is raised off the surface it attracts attention as being non-final location. So you are more likely to process it.
+
+(stool, kitchen shelf rack)
+
+2021-11-17
+
+=== ===
+decluttering
+#decluttering
+#fun
+
+Addictive obsolescence
+
+Make the purging process fun…or inevitable (by sinking into oblivion - rotate does this)
+
+e.g. chopping book spines is fun
+
+Sticking red post it notes on things
+
+Guillotine to open envelopes
+
+Keep a recycling bin in an opportune location
+
+Stacking bin grid for sorting
+
+Even with finances - see your median spending by month and compare (spot the difference is fun which is why we even do it with humans)
+
+Taking photos and disposing physical (e.g. perishables)
+
+redigitizing printouts
+
+2021-11-17
+
+=== ===
+#decluttering 
+#categories
+#bottomup
+
+When buying books, go for bottom-up tight categories. They are more likely to be useful long term (Code Complete book was too broad and was a big book)
+ 
+2021-08-11
+=== ===
+#decluttering
+#skim
+
+Even new books should just be skimmed, annotated, then digitized (most of the time) after 6 months in 95% of cases
+
+2021-07-06
+
+
+=== ===
+ 
+#decluttering
+#undo
+
+(Even for digital things like smart mailboxes when you have too many)
+ 
+If it's undoable, be aggressive in purging (e.g. you can recreate a smart mailbox if it was useful after all). Things that used to be useful may not be useful now but are still hanging around (and they still 'look useful")
+ 
+And again, there are probably so many you won't even think what you lost but how there are still too many remaining.
+ 
+Another example: perishables
+ 
+2021-08-11
+ 
+=== ===
+
+#decluttering
+
+i haven't figured out a rule of thumb for when to transfer things to a bigger box. It just "feels" like it's necessary sometimes but I can't reverse engineer the rule
+
+2021-11-17
+
+=== ===
+#decluttering
+#context
+#containers
+
+Large containers provide more context (and we know it’s easier to evaluate an items in the context of complements, substitutes, duplicates/quantity) 
+
+2021-11-24
+
+=== ===
+#decluttering
+#breadth
+#redundant
+#dispose
+
+As N tends to infinity
+Keep one of each thing (like in WWE 'never been done before" or in business "be the first in a new category")
+ 
+e.g. old cell phones (well, maybe not a single one but only a subset of all your old phones.)
+ 
+2021-08-11
+ 
+=== decluttering ===
+
+#decluttering
+#containers
+
+Not sure if this is true:
+
+Big boxes should not be final resting places, because a lot of junk will accumulate in them (i.e. they will lose cohesion more easily than smaller boxes)
+
+They should only be used for scatter gather intermediate steps when you have too many small containers of a single category (e.g. stationery; unsorted)
+
+2021-11-10
+
+
+=== ===
+Decluttering
+#decluttering
+#scattergather
+
+Scatter - move small box contents to big box
+gather - move big box contents to small box
+
+when done in combination, these find more groupings
+
+
+The biggest reason to transfer from one to the other (either way) is that you feel there is unused free space (i.e. you can perform compression).
+
+
+2021-11-10
+
+=== ===
+declutterinig
+#decluttering
+
+When moving items from big box to small box, ask yourself first "then what?" That will help you decide if it's of any use or not (not to mention consuming an otherwise useful box)
+
+i.e. work backwards?
+
+2021-11-24
+
+=== ===
+ 
+#Decluttering
+#motion
+#conveyor
+#canvas
+#workspace
+ 
+When you don't have workspace to lay out all your items, the next best thing is to keep transferring items from one container to another, like a conveyor belt where you can keep binary chopping
+ 
+2021-08-11
+ 
+=== ===
+#decluttering 
+
+Loose Groupings (usually higher level - top down) make scatter-gather difficult, so sometimes it's best to take things out of larger container bags (and only retain the small bag groupings). Multiple transparent boxes saying 'electronics" (instead of a single box) makes it harder.
+ 
+to be honest even tight groupings undermine scatter gather which is ultimately what helped me do my 2021 decluttering. You find elements of tight groupings that are no longer essential (e.g. usb cables and manuals that come with devices you've kept)
+ 
+top down groupings should be actions (e.g. donate, dispose; maybe implied actions such as datestamps)
+ 
+2021-09-08
+ 
+=== decluttering ===
+
+#decluttering
+#perishable
+
+Buying perishables is fine, they don't accumulate if you are actually consuming them (well they do but they are easier to dispose because they are easily replaceable)
+
+Implication: don't hesitate buying them on amazon. If perishable and non-perishable options exist, the perishable option might be good (but don't confuse perishable with cheap non-perishable; the latter is still difficult to retire)
+
+2021-04-26
+
+=== ===
+#decluttering
+
+knowledge does not take much space
+
+2021-12-30
+
+
+=== ===
+#decluttering
+ #scattergather
+
+The problem with too many containers is that you can't consolidate similar items (unless that container contains a very tightly defined category - which is uncommon - e.g. USB cables)
+ 
+too many containers:
+(-) fragmentation of similar items (so not enough context to decide on an action)
+ 
+too few containers: 
+(-) items too dissimilar (so also not possible to easily decide on a single action)
+ 
+it's impossible to get this right first time, and even if you do, what's right at time t=1 is not right at time t=2
+ 
+You can only repeatedly scatter gather to defragment periodically
+ 
+2021-08-11
+ 
+=== ===
+ 
+#decluttering
+ #compact
+
+Items with a lot of air in them take much more space than needed. Collapse them, cutting them up if necessary
+ 
+2021-08-11
+ 
+=== ===
+#decluttering
+#lossy
+
+Preservation often means destroying an item's original state (e.g. to digitize magazines)
+
+
+2022-01-06
+
+=== productivity ===
+#decluttering
+#perishables
+
+Perishables generally are cheaper to replace
+
+They often but not always have an expiration date anyway
+
+Expired is a subcategory of perishables. If you are keeping these you have crossed the line on acceptable hoarding
+
+2021-03-31
+
+=== ===
+#decluttering
+#aggressive
+
+even if you need something later in the future, the temporary need for space to do decluttering is greater so it’s still worth giving away
+
+e.g. melamine boards + chrome wire shelf
+
+That’s why rotation is good. It removes the judgement call and automates decisions
+
+=== ===
+#decluttering
+#test
+
+Test of whether something is worth keeping
+If there was a site where you could give away your things for free if they came right to your door, would you give them away?
+
+2021-01-26
+
+=== ===
+#decluttering
+#force
+
+In practice, there are only two ways to declutter
+
+(-) Be conditioned into throwing out (even in cases when you miss out on something - like grandad's slides)
+
+(-) When you run out of space and are forced to throw out the biggest things or the least recently used things
+
+
+2021-01-26
+
+=== ===
+#decluttering
+#sentimental
+#category
+
+memory = something that has an emotion but not a function
+
+=== ===
+#decluttering
+ #dispose
+
+To leverage survivorship bias, you often have to wait until a product is no longer easy to get (e.g. transformer toys).
+ 
+Otherwise you end up with a lot of things and onlly a fraction of them are useful but you aren't comfortable offloading them
+ 
+2021-08-11
+ 
+=== productivity ===
+
+#decluttering
+#scattergather
+
+Scatter gather
+
+2021-04-26
+
+=== ===
+#decluttering 
+#dispose
+#sentimental
+
+Dispose/digitize things before they accumulate (false) nostalgiac value
+ 
+This applies to files on a computer too (e.g. watched videos)
+ 
+2021-08-11
+ 
+=== ===
+#decluttering
+Things I regret donating
+
+(-) Tens unit
+
+=== ===
+#decluttering
+#museum
+
+Decluttering
+I feel like I'm losing a part of my memory if I get rid of something
+
+
+Mom's valid response: You don't have space for a museum
+
+2022-01-06
+
+
+=== ===
+#decluttering
+#regret
+
+Regret digitizing
+
+Unix power tools
+Guide to banning naming
+Latin grammar
+Knowing doing gap
+
+2022-06-03
+
+=== ===
+#decluttering
+#interior
+ 
+If you create an unobstructed "home" with good "flow,” it will reflect on your everyday mood
+ 
+2021-01-26
+ 
+=== productivity ===
+#decluttering
+#algorithm
+
+Decluttering algorithms
+
+Full scan
+1 full big box, 1 full empty box (more in place)
+lay items on bed or floor (temporary workspace)
+
+Hashing
+Bags for categories, deduplication
+
+Partial ordering/binary chop
+Colored labels
+
+2021-04-26
+
+=== ===
+
+#decluttering
+#recycling
+
+For recycling, false positives are worse than false negatives
+
+2021-11-10
+
+=== ===
+#aksu
+#decluttering
+#reacquire
+
+my hoarding is due to seeing value in everything that a neurotypical cannot.
+
+I need to get rid of things that still have use but can be reacquired.
+
+I already knew this but hearing her say it is more memorable and powerful
+
+=== ===
+
+#decluttering
+#falsepositive
+
+retention (quantity) vs cleanliness (quality)
+
+when it comes to decluttering, I've not considered the quality of the experience in my physical constraints.
+
+That quality is improved by false positives - getting rid of items even though they aren't useless 
+
+2021-06-21
+
+=== ===
+#decluttering
+ #dispose
+#breadth
+
+Something may be valuable when n = 1 (number of items) but what happens as n tends to infinity (e.g. you have loads of old cell phones). Which ones would you keep?
+ 
+That helps with the shades of grey decisions.
+ 
+2021-08-11
+ 
+=== ===
+
+#decluttering
+#disposable
+#perishable
+
+disposable things don't accumulate
+non-disposable things do accumulate long term (rotation is the solution)
+
+2022-03-02
+
+=== ===
+#decluttering
+#priority3
+#remnantvalue
+
+The more books you get rid of, the more valuable what remains will be. 
+
+
+It will have more visibility and more consumption
+
+Opportunity cost?
+
+2021-11-03
+
+=== ===
+#regret
+#decluttering
+
+Regret digitizing
+x power tools
+
+2022-02-17
+
+=== ===
+#decluttering
+#containers
+
+since you have to keep rescanning items, having too many containers might make full scanning harder. So maybe have large containers?
+(this only applies to physical items, not digital ones)
+
+2021-10-12
+
+=== ===
+#decluttering
+#schoolofhardknocks
+#force
+
+you will only declutter when you are forced to, because you have run out of space
+
+
+=== ===
+
+decluttering
+#decluttering
+#bottomup
+
+When grouping items bottom up, try to do it by units of disposal (e.g. shampoos by brand that are inappropriate for use)
+
+2021-11-17
+
+=== ===
+#decluttering
+Things I regret giving away
+
+Birchwood Melamine boards for smaller chrome wire clothing rack
+=== ===
+#decluttering
+#size
+#striping
+ 
+striping by size is effective on a computer. I wonder if there's an equivalent for physical items. 
+ 
+Container size maybe. The smallest container it will fit in (since exact size is unnecessary). Maybe color code boxes by sizing (similar to t-shirt size in sprint)
+ 
+Volume ideally but that's not easy to measure for a lot of things.
+ 
+ 
+2021-08-11
+ 
+=== ===
+#decluttering 
+For items that take a lot of space, phased destruction/disassembly works well
+ 
+Eg box to flattened after 6 months, to cut after a few years, to scanned after a few more years
+ 
+you may not feel comfortable doing the final step at the beginning but can still benefit from compaction as a first phase. Plus you might be more willing to do the last phase when you have already done n-1 stages.
+ 
+2021-09-08
+ 
+=== ===
+#decluttering 
+#tagging
+#label
+#fragmented
+
+tree labels allow for fragmented grouping
+ 
+But unfragmented grouping is better. In fact, labels can serve as a prior step to defragmenting
+ 
+2021-08-11
+ 
+=== ===
+#decluttering
+#movinghome
+
+Another reason to live light is to make it easier to sell your home with less financial stress (you can vacate the property and put your items in storage and live somewhere cheap)
+
+
+=== ===
+
+#decluttering
+
+when small transparent boxes have issues, I must ask myself why do I use them (apart from the sunk cost of buying so many). Why not instead have larger containers?
+
+I think it becomes harder to find items for use, but more importantly it allows you to prune at a larger granularity than individual items (so you don't need context of other items which is difficult with weak rote memory)
+
+Smaller boxes are easier to move around, which becomes a practical if not theoretical need.
+
+Smaller containers allow tighter categories (so higher cohesion)
+
+2021-11-17
+
+=== ===
+#decluttering 
+#algorithm
+
+Decluttering Patterns/algorithms
+ 
+ 
+(-) Mark and sweep
+(-) Scatter gather
+(-) Defragment
+(-) Recovery log
+ 
+2021-08-11
+ 
+=== ===
+ #decluttering
+#defragment
+#algorithm
+
+decluttering is 80% defragmentation (the rest is akin to garbage collection; actually another is equivalent to mv and rm).
+ 
+Implication: see what you can learn from defragmenting algorithms to gain clarity of action when overwhelmed. The flow diagram I've sketched is a more visual but less formal representation of it. See if there are any defragmentation algorithms represented this way already.
+ 
+2021-08-11
+ 
+=== ===
+decluttering
+#decluttering
+
+entropy cannot be prevented. You can only fight it by re-scanning or re-scatter-gathering
+
+even if you create very tight groupings, at time t > 0 what is previously a tight grouping may no longer be (e.g. now I find multi-colored pens useless. Had I grouped those tightly with papermate felt pens, I'll end up with junk hiding in a way that is difficult to spot and dispose)
+2021-11-17
+
+=== ===
+
+#decluttering
+#scattergather
+
+Scatter gather works because you separate tightly bound things that have useful and useless components¬†(by putting them in a wider context). You can then dispose of the parts that you don't need.
+
+
+2021-11-10
+
+=== ===
+#decluttering
+#sentimental
+
+Excessive attachment
+Due to anchor bias
+
+
+2022-05-01
+
+=== decluttering ===
+#decluttering
+#preoccupation
+
+Preoccupation effect
+You will be much more concerned with what is still present than what you have lost
+
+this also applies with files on your computer
+
+2021-06-21
+
+=== ===
+#decluttering 
+When buying books, go for bottom-up tight categories. They are more likely to be useful long term (Code Complete book was too broad and was a big book)
+ 
+2021-08-11
+ 
+ 
+2021-09-08
+ 
+=== ===
+#decluttering
+ 
+striping by size is effective on a computer. I wonder if there's an equivalent for physical items. 
+ 
+Container size maybe. The smallest container it will fit in (since exact size is unnecessary). Maybe color code boxes by sizing (similar to t-shirt size in sprint)
+ 
+Volume ideally but that's not easy to measure for a lot of things.
+ 
+ 
+2021-08-11
+ 
