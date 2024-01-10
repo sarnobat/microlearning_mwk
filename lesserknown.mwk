@@ -1,0 +1,313 @@
+
+=== ===
+#linux
+
+#lesserknown
+
+xargs options I'm not familiar with
+
+-p
+	ask y/n before each execution
+
+-t
+	echo the command to be executed	
+
+-r, --no-run-if-empty
+
+2021-01-31
+
+
+=== ===
+#linux
+#lesserknown
+
+unix find options I was not aware of
+
+-d
+	post-order traversal
+-f
+	specify directory anywhere in the line
+
+time args
+	-1h30m
+	
+-depth
+	exact depth	
+
+-ls
+
+-ok
+	prompt before executing a command (but this is like 'exec'. I wonder if xargs has something similar)
+	find  -ok ls \;
+
+-perm
+	(I can't get this to work)
+
+or
+	find / \( -newer ttt -or -user wnj \) -print
+
+prune
+	only useful in combination with "or" I think
+
+2021-01-31
+=== ===
+#lesserknown
+#programmingtips
+#linux
+
+Unusual unix tools
+
+tldr
+fd
+bat
+vd
+dutree
+z
+proselint
+
+
+2020-05-04
+
+=== ===
+#lesserknown
+#programmingtips
+
+Lesser known linux commands
+
+tabs
+indent
+fmt
+
+2022-04-13
+=== ===
+#lesserknown
+
+#programmingtips
+
+Lesser known utils that I should use more
+
+These are useful:
+fc (fix command)
+ccze (log colorizer)
+
+Might be but not sure:
+gron (grep for json)
+go2
+Interactive grep (forgot what it was called)
+
+
+Ones I do use:
+
+tee
+
+Ones that look useful but in reality are not:
+
+fold
+pr
+fzf
+
+Common but I rarely use
+
+tr
+
+
+2022-04-16
+=== ===
+#programmingtips
+#lesserknown
+Lesser known tools
+lolcat
+
+2022-04-01
+
+=== ===
+#programmingtips
+#lesserknown
+
+Lesser known tools
+
+Needs installing with homebrew
+
+NAME
+     hr – insert horizontal rule
+
+The output by default is a bunch of pound/hash signs
+
+2022-03-16
+
+
+=== unix tools ===
+#lesserknown
+#tools
+#apt
+ 
+      lorem - Generate random Latin looking text using Text::Lorem
+
+
+2022-03-16
+
+
+=== colorful grep ===
+#programmingtips
+#apt
+#lesserknown
+
+ack is a colorful version of grep
+
+
+2022-03-16
+
+=== ===
+#lesserknown
+
+pacat /dev/urandom
+
+
+pacat
+netcat
+cat
+
+2019-06-09
+
+=== ===
+#programmingtips
+#lesserknown
+
+lesser known tools
+
+xdiskusage (requires X11)
+
+2021-10-13
+
+
+
+=== lesser known command line tools ===
+#lesserknown
+#linux
+
+Builtin:
+//pr - pagerize
+
+// Roamer file manager
+// mc
+// nnn
+// lf
+// ranger
+// vifm
+// zmv
+// w3c
+// noice
+// dirvish
+// vidir
+// qmv
+// qcp
+ 
+mtr
+ss
+last
+percol
+rg
+fd
+dfshow
+unp
+units
+atool
+cheat.sh
+anypaste
+
+https://www.reddit.com/r/linux/comments/99yk72/lesser_known_terminal_utilities/
+
+inxi
+jot
+iftop
+xxd
+mdfind
+iotop
+dig
+man ascii
+dstat
+slurm
+bmon
+fuser
+lsmod
+fc
+fmt
+multitail
+bc
+zless
+zgrep
+zcat
+nping
+iostate
+Split
+atop
+
+Nice screenshots:
+https://kkovacs.eu/cool-but-obscure-unix-tools
+
+logsave
+lsblk
+ldd
+
+figlet
+banner
+rig (fake names)
+
+https://www.binarytides.com/linux-fun-commands/
+
+script
+Strings
+w
+whom
+mpstat
+pmap
+iptraf
+
+2021-01-26
+
+=== ===
+#linux
+#lesserknown
+
+renameutils
+moreutils
+rntools
+ 
+2021-01-26
+
+=== lesser known command line tools ===
+moreutils
+#lesserknown
+ #linux
+
+* chronic: runs a command quietly unless it fails
+* combine: combine the lines in two files using boolean operations
+* errno: look up errno names and descriptions
+* ifdata: get network interface info without parsing ifconfig output
+* ifne: run a program if the standard input is not empty
+* isutf8: check if a file or standard input is utf-8
+* lckdo: execute a program with a lock held
+* mispipe: pipe two commands, returning the exit status of the first
+* parallel: run multiple jobs at once
+* pee: tee standard input to pipes
+* sponge: soak up standard input and write to a file
+* ts: timestamp standard input
+* vidir: edit a directory in your text editor
+* vipe: insert a text editor into a pipe
+* zrun: automatically uncompress arguments to command
+
+2021-01-26
+=== ===
+#programmingtips
+#lesserknown
+
+Lesser known tools
+
+fzf
+exa
+fd
+lsd
+ripgrep
+bat
+
+2022-06-18
