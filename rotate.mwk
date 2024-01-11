@@ -1,1 +1,301 @@
+=== ===
+#productivity
+#work
+#rotate
+
+When rotating yed work tasks at the end of the month, make sure there is a jira ticket with next steps
+
+2022-08-25
+
+=== ===
+#rotate
+#datestamp
+#inclusive
+Rotate is a cruder, quicker and more inclusive way of date stamping
+
+But it's often not possible, so datestamping is the only safe way (e.g. medicine bottles)
+
+2022-02-28
+=== ===
+
+
+#productivity
+#rotate
+#goodredundancy
+
+rotation of contex pdfs allows you go keep old ones even when the urls have expired.
+
+this is a form of good redundancy too
+
+2023-11-30
+
+=== ===
+#productivity
+#rotate
+
+Rotation is like putting an expiry date, not just on products in the home but emails that are still left on unread
+
+2023-08-18
+
+=== ===
+
+#rotate
+#productivity
+
+
+"No squatting" in floating office or library stations is to allow rotational decluttering of a workspace
+
+2023-07-11
+
+=== ===
+
+#rotate
+
+File annual rotation cleanup is my version control for everything not in git (e.g. for removing junk commented code from scripts)
+
+2023-06-14
+
+=== Why logos change (master) ===
+#branding
+#rotation
+#pinned
+
+A new logo isn't so much about depicting what a new identity constitutes as much as deleting the old identity and associations and getting a blank slate. It's the visual equivalent of a meaningless word generator (which is great for naming your own company), or rebooting a computer to get a clean cache.
+
+Minor changes to the logo mark a new era for a company. The visual changes don't have to reflect WHAT is new. They just indicate that past experience is different to the current one (and so lapsed consumers need to forget their past associations and consider (re)joining).
+
+Unlike with a lot of nostalgia, old logos aren't usually missed. In fact, when people look at them retroactively, the old logo usually draws minor derision (think Google).
+
+We call this, "Rejuvenating a tired brand" but that wrongly implies the brand has been neglected. This isn't really true. It's just that you are trying to subconsciously indicate that past associations should be reserved for the old logo, and that the new logo indicates business is conducted differently without any allusions to "how" (e.g. a change of logo to reflect latest technology and economics like use of Zoom, Youtube for teaching; it could even indicate that the old google logo font are associated with a slow search engine, while the new logo font has a different experience).
+
+
+Other examples:
+
+(-) Microsoft's 90s logo for Windows 95, Flight Simulator I have fond feelings for. But that identity for Microsoft came to become correlated unintentionally with white PCs, CRT monitors, desktop apps with grey widgets ("accidental branding"). When other companies emerged with faster search engines, newer functionality, Microsoft needed to shed its skin and erase the old identity that customers inherited which had made it seem old compared to Google, Amazon etc.
+
+Counter examples
+
+(-) Atletico Madrid fans hate their new logo
+
+(-) WWF's logo changes HAVE provided visual indicators of WHAT is new
+
+	New generation - safe and playful like baby lego blocks or a play pen
+	Attitude era - gang warfare, violence
+	Digital era - consumable content available across all digital platforms
+
+2023-08-17
+
+
+=== ===
+
+#productivity
+#rotate
+
+Rotation date-stamps everything (well, year stamp)
+
+2023-08-23
+
+=== ===
+
+#business
+#disruptive
+#rotation
+#branchandprune
+
+Maybe blockbuster, AMC & Kodak were not complacent. The owners had other brand holdings and it was cheaper to just rebalance their investments within their portfolio than shoehorn an old brand into a new landscape. Rotation.
+
+
+2023-11-24
+
+=== Productivity ===
+#productivity
+#rotate
+
+ideal for hoarders who can't delete
+
+2021-05-19
+
+=== productivity ===
+#productivity
+#rotate
+Rotate
+
+bin/ scripts (but I think this one does more harm than good)
+Watch later
+Bookmarks
+One tab
+Emails with "reply" label
+
+2021-05-19
+
+=== Productivity ===
+#productivity
+#rotate
+
+Rotate annually
+
+Crontab (hmmm, or whenever you format a new computer - but that is problematic in different ways. At least review it once a year to find outdated jobs)
+
+2021-05-19
+
+=== ===
+#rotate
+
+/tmp automatically does the rotation/purging
+
+2021-06-21
+
+=== productivity ===
+#productivity
+#rotate
+
+Onetab is a rotation to clean your  workspace 
+
+2021-04-26
+
+=== productivity ===
+#rotate
+#productivity
+
+rotate - phased deletion?
+
+2021-04-26
+
+=== productivity ===
+#productivity
+#rotate
+
+Rotate example
+
+task_tree.graphml
+In fact I deliberately call it Temp.graphml to remind me it shouldn't be a permanent archive
+
+2021-04-26
+
+=== productivity ===
+#productivity
+#rotate
+
+Moving apartments is like rotating hard disks - examining everything during the process of transfer (lift and shift?)
+
+2021-03-31
+
+=== ===
+
+Rotate
+#productivity
+#rotate
+
+offload to more specific long term location to clear out the easy access one (eg Google maps starred locations to my maps)
+
+2021-02-22
+
+=== === 
+#productivity
+#rotate
+
+Rotate to get blank slate
+OS User
+
+2021-02-22
+
+
+=== ===
+#rotate
+#purge
+#productivity
+
+Sometimes just deleting everything is better than organizing what you have, especially if you can easily regenerate the items
+
+(e.g. temp.graphml errand tree)
+
+Implication: don't agonize about purging if it's just an index (i.e. a pointer rather than an actual payload), for fear of losing something valuable.
+
+2021-02-22
+
+
+=== productivity ===
+
+#productivity
+#rotate
+
+instead of the two extremes of commenting out things in your files or just relying on version control, make named revision copies. For example:
+
+.zshrc.ubuntu_12.04
+.zshrc.ubuntu_16.04
+
+this is better than git tagging which will bloat the repository
+ 
+2021-03-19
+
+=== productivity ===
+#productivity
+#rotate
+#purge
+
+/tmp does autorotating/autopurging
+
+2021-03-19
+
+=== productivity ===
+#productivity
+#rotate
+
+rotate (without autopurging) gives you the best of both worlds
+
+clean canvas and lossless reference/archival/retention
+
+2021-03-19
+
+=== ===
+#rotate
+#productivity
+
+What Unix teaches you about life
+
+You need to rotate/autopurge
+
+2021-03-19
+
+=== ===
+#rotate
+#productivity
+
+Sprints are a way of rotating (auto purging) tasks
+
+2021-03-19
+
+=== ===
+#productivity
+#rotate
+Rotation
+ 
+Asks for forgiveness rather than permission by clearing the deck
+ 
+(Forgiveness = undo)
+ 
+ 
+2021-08-11
+ 
+=== ===
+#productivity
+#rotate 
+yurl does rotation through boosting. Things that are old but more important than the newer items are made current again
+ 
+2021-08-11
+ 
+=== ===
+
+#productivity
+#rotate
+
+Items that get rotated out of prime location are not useless. It's just that they are not useful often enough to justify their consumption of scarce resources (space, visibility etc)
+2021-07-13
+ 
+=== ===
+#rotate
+ 
+Git branches
+2021-07-06
+
 

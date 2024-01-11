@@ -1,0 +1,95 @@
+=== ===
+#obscure
+#programmingtips
+
+Notice process substitution is more than just an idiom. It's a redirection plus a sub shell:
+grep foobar < somefile.txt
+grep foobar < (find -type f)
+
+2022-03-16
+
+=== ===
+#obscure
+#research
+#programmingtips
+
+Similar to !$, you use !^ for the first argument. 
+=== ===
+#programmingtips
+#obscure
+#research
+
+! invokes history expansion
+=== ===
+#obscure
+#programmingtips
+
+#sysadmin
+
+OUTPUT=`find`
+echo  $OUTPUT - removes newlines
+echo "$OUTPUT" - preserves newlines
+
+2023-06-14
+
+
+=== ===
+#research
+#obscureshellsyntax
+#programmingtips
+
+history expansion
+
+  Reuse and expand the shell history in sh, bash, zsh, rbash and ksh.
+  More information: https://www.gnu.org/software/bash/manual/html_node/History-Interaction.
+
+  - Run the previous command as aroot (!! is replaced by the previous command):
+    sudo !!
+
+  - Run a command with the last argument of the previous command:
+    command !$
+
+  - Run a command with the first argument of the previous command:
+    command !^
+
+  - Run the Nth command of the history:
+    !n
+
+  - Run the command n lines back in the history:
+    !-n
+
+  - Run the most recent command containing string:
+    !?string?
+
+  - Run the previous command, replacing string1 with string2:
+    ^string1^string2^
+
+  - Perform a history expansion, but print the command that would be run instead of actually running it:
+    !-n:p
+
+2023-04-10
+
+=== ===
+#obscure
+#programmingtips
+
+Obscure shell syntax
+
+dollar before open single quote - so \t is passed verbatim
+$''
+
+e.g.
+cat /tmp/results.txt | awk -F $'\t' '{print $1,$2}'
+2020-09-10
+
+=== ===
+#obscure
+#programmingtips
+
+
+obscure shell syntax
+$_ (dollar underscore) is another special bash parameter and used to reference the absolute file name of the shell or bash script which is being executed as specified in the argument list. 
+
+2020-03-05
+
+
