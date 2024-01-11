@@ -1,1 +1,751 @@
+=== ===
+#r23c
+
+You can't guarantee that a book you write will be backed by strong consumership. But you can guarantee that it is rigorous and transcends adoption, serving as a historical document (a lot like research papers).
+
+
+2022-08-03
+
+=== ===
+#r23c
+#programmingtips
+#programminglanguages
+Programming language phrase Matrix to template script
+
+
+2022-08-03
+
+=== ===
+#r23c
+#programmingtips
+
+File system as a database (well, more accurately a temporal, spatial, multimedia data warehouse)
+
+Approximate fast querying (find, locate, grep, pipes) > slow exact querying (sql)
+
+2022-08-03
+
+=== ===
+#r23c
+Prakash's virtual university
+
+2022-09-02
+
+=== ===
+
+#r23c
+
+Book titles that resonate with me
+I did it my way
+(-) Strikingly different
+(-) Art of non conformity
+(-) I did it my way
+
+2022-08-31
+
+=== ===
+#r23c
+
+
+Hypersensitivity, HSP as a subculture
+
+2022-09-19
+
+=== ===
+#r23c
+
+r23c attributes
+
+archaeologist
+faithful preservation
+journaling
+reconstruct
+"wayback playback" (stolen name from Pat McNeil)
+creep logo: vector (dot and arrow)
+
+
+2022-08-30
+
+=== ===
+
+#r23c
+
+resurface - for old web content lost and republished (like internet wayback machine)
+
+e.g. owen hart going up to rafters
+atletico face pictures
+NHB wwfrulez
+Bob Bamber podcast
+Anfield Wrap detailed look back (at 99-00 season)
+
+
+We need async download of html files so we don't miss out on a lot of good content
+
+
+2022-08-30
+
+=== ===
+#r23c
+#partners
+
+r23c partners
+wayback machine
+
+2022-08-30
+
+=== ===
+#r23c
+#contentpipeline
+#productivity
+
+Data harvesting I've done (not enough)
+
+(-) Video slideshows on 3rd monitor
+(-) Url titles scrolling banner on monitor
+(-) Atletico English ffplay
+(-) Then and now family photos?
+
+2020-07-27
+
+=== ===
+#r23c
+#dataflowdiagrams
+
+Data flow diagrams to create
+
+Vlc
+Rsync
+linux
+Minix
+git
+
+2022-10-28
+
+=== ===
+#r23c
+Sridhar'll fix it
+
+2022-11-01
+
+=== ===
+#r23c
+
+idea germs
+
+2022-11-01
+
+=== ===
+#r23c
+code comprehension wiki
+
+tools of the trade
+
+(-) structured system design book (Tom DeMarco)
+(-) yed
+(-) ironcamel grapheasy
+(-) gv2grapheasy
+
+my potential tools
+(-) csv2tree
+(-) java callgraph
+
+others
+(-) cflow
+(-) cscope
+(-) fuse
+
+2022-10-22
+
+=== ===
+#r23c
+#asp
+#jobcarving
+
+Architecture foresnicologist
+
+2022-10-22
+
+=== ===
+#r23c
+#jobcarving
+
+My brand
+Code maintenance (via longevity)
+Code comprehension
+Code documentation
+
+2022-10-22
+=== ===
+#r23c
+
+Zero keystrokes is my branding for all the automation through scripting I do
+
+It’s the equivalent of:
+Apple - champions of ux
+Google - champions of scale
+Cisco - champions of connecting everything
+
+Everyone is capable of this excellence but only if you choose to spend your time developing expertise in it. I spend a lot of my time writing throwaway scripts so it’s my r23c tech arm’s brand
+
+2022-08-05
+
+=== ===
+
+#r23c
+
+book idea: instant gratification software development, rapid prototyping
+
+(-) use phrase matrix of templates
+(-) explain that everything in software development is a prototype
+
+(-) maybe a poster 
+maybe a cheat sheet appendix
+
+
+2022-08-17
+
+
+
+=== ===
+#r23c
+
+r23c Story of my life in 25 objects
+
+This might even help with decluttering. You retain the knowledge but don’t occupy physical space
+
+2022-08-11
+
+=== ===
+
+#r23c
+
+A corporate Intranet may have content that has disappeared from the web. My saved web content can be a similar repo of extended life useful content
+
+2022-08-11
+=== ===
+#r23c
+#microlearning
+#index
+#productivity
+
+the problem with my microlearning sheets is that there is no unified structure for all of them (macro; micro has no challenge if hyperfocused)
+
+The "table of contents" for my publishing business would probably resemble my attempt at indexing all my printouts. 
+
+Somehow, I feel that hierarchical listings enforces a subjectivity and loses alternate relationships.
+
+Maybe a flat, alphabetical listing reduces this enforcement ("worse is better" in that it doesn't invest heavily and just sits on the fence).
+
+2022-12-19
+
+=== ===
+#dataflowdiagram
+#r23c
+#research
+
+Data flow diagrams
+
+I have installed doxygen on a handful of projects. In hindsight, it was a waste of time. No one reads generated codedoc, yet everyone just read the code.
+Doxygen should be replaced with rendered comments in IDEs/code editors. That's the real solution.
+
+
+
+mosra on Jan 3, 2019 | next [-]
+
+Exactly. Doxygen implicitly generates useless info about what file is included by what file, list of places from where a function gets called, what line was this and that function declaration in (and where is the definition), huge class inheritance diagrams, entangled monstrous file dependency diagrams, alphabetical file index, alphabetical symbol index, including every possible undocumented symbol and file it can find and tons and tons of other stuff that has a total value of 0.
+The user should visit docs to get to know a high-level overview of a library or human-readable explanation of an algorithm. Not to see stuff that's already explained by the code itself.
+
+
+
+2022-11-03
+
+=== ===
+#bookidea
+
+#r23c
+
+Decluttering in the age of abundance
+21st century decluttering
+
+2023-11-29
+
+
+=== ===
+#r23c
+#sealofapproval
+
+r23c seal of approval
+
+linux pocket guide
+
+(seal of approval products I could sell as an affiliate to try and make some side money)
+
+2023-11-24
+
+=== ===
+#r23c
+#partner
+
+r23c partners
+
+tldr
+
+2023-11-24
+
+=== ===
+#r23c
+
+digital decluttering
+
+
+
+2023-12-03
+
+=== ===
+
+#r23c
+
+Lost knowledge
+Recovered knowledge
+
+2023-10-21
+
+=== ===
+#r23c
+#other
+
+Incidental nudity vs gratuitous nudity
+
+2023-10-21
+
+=== ===
+
+#r23c
+
+Hmmmm. If I start my own company my slogan could be "Are you a developer, or a Rohideveloper?"
+
+2023-09-16
+
+=== ===
+#r23c
+
+Increase  r23c brand visibility by answering stack overflow questions
+
+You could create purpose-built cheat sheets for single problems (making them authoritative), becoming a destination for micro learning.
+
+
+2023-08-14
+
+=== ===
+#r23c
+
+flashcards (via latex)
+The work is to create phrases
+
+
+2023-08-14
+
+=== ===
+#r23c
+
+Lightweight software
+
+
+2023-07-25
+
+=== ===
+#r23c
+
+
+r23c branding
+
+Theory and practice - a 2 column table.
+
+R23c is the apex between the columns
+
+
+2023-07-25
+
+=== ===
+#scripting
+#programmingtips
+#sheet
+#r23c
+
+Book of r23c tools (and all associated scripts)
+
+every script should belong to one of these efforts/projects/epics
+
+(-) photo sorter (tcltk, exiftool), video sorter (ffplay), thumbnailer (cgi), screensaver, volumes (zfs)
+(-) disk space, duplicates (including golang groupby, locate), striper (find, rsync)
+(-) url saver, video downloader (cron, youtube-dl)
+(-) mwk note taker (awk slicer, timestamper, apple note sync), cheat sheet creation (pandoc, pdflatex)
+(-) data comprehension: genealogy (fuse), call graph (d3), finances (csvkit)
+
+this is basically my unix cmsfs
+
+"content management without paying a penny"
+
+2023-08-28
+
+=== ===
+
+#r23c
+#branding
+
+places i have put my logo:
+
+(-) email signature
+(-) github
+(-) Cheat sheets
+(-) youtube channel
+
+places I should put it:
+(-) resume
+(-) facebook
+(-) linkedin
+(-) twitter
+(-) whatsapp
+(-) videos
+
+2023-08-29
+
+=== ===
+#r23c
+#cheatsheet
+
+Cheat sheet : Debunking software development myths
+
+(-) Design patterns are important
+
+(-) You need a database
+
+(-) Early returns are bad
+
+(-) Less loops are better than more loops (functional programming is the opposite)
+
+(-) Static methods should not be the norm
+
+(-) You need object oriented programming
+
+(-) Common libraries and util classes are good
+
+(-) Splitting code into separate files is preferred
+
+(-) You don't need books, online has everything (value in integration)
+
+(-) Everything must be a browser app
+
+(-) Content must be generated dynamically
+
+(-) Test driven development
+
+(-) Up front design
+
+(-) Unit tests are useful indicators of code quality
+
+(-) You can get old code from source control
+
+(-) Use a debugger and not print statements (programmatic gdb)
+
+(-) You need a framework / beans
+
+(-) Move everything to config so you don't have to code
+
+(-) Write once run everywhere is good
+
+(-) Loose coupling is good
+
+(-) Dynamic Shared libraries are better than static linked libraries
+
+(-) Abstraction (and layering) is better than transparent
+
+2023-08-18
+
+=== ===
+#r23c
+#pinned
+
+Command line valley - meetup where I cover my cheat sheets and distribute them (and encourage redistribution)
+
+People can also request dedicated individual or group meetings (like I did at work to teach functional programming) and I should state so on the cheat sheets.
+
+2023-08-18
+
+=== ===
+#r23c
+
+Cataloging, indexing
+
+2023-08-18
+
+=== ===
+#r23c
+
+R23c brand - city maps that remove noise
+
+Diagrams of places that simplify maps to shapes, but retain enough terrain detail to be interesting (see how the Bart map shows the bay area land as a backdrop to the transit network)
+
+Unique media maps do the same but oblique instead of overhead
+
+R23c - modeling the world around us
+
+
+2023-08-09
+
+=== ===
+#r23c
+
+when it comes to my r23c brand collections, maybe I should consider every brand to be a git repository. It gives some sense of top levelness.
+
+Maybe I should create a parent repo r23c.git to house each of them. That may not be a good idea, all I can do is try it.
+
+
+2023-08-09
+
+=== ===
+
+#r23c
+
+For the long haul
+
+
+2023-07-14
+
+=== ===
+
+#branding
+#r23c
+
+
+emotional branding for my code comprehension business
+
+that feeling you get when you say "ah NOW I get it" with the accent on "now"
+
+or "NOW that makes sense"
+
+2023-07-11
+
+=== ===
+#r23c
+
+
+Unrandomize (the opposite of storytelling where you create unpredictability)
+
+2023-07-10
+
+=== ===
+#r23c
+
+datarizing / datarising - preserving data that will otherwise end up buried in the earth's crust
+
+2023-08-09
+
+=== ===
+
+#r23c
+
+Enduring knowledge
+
+
+2023-08-18
+
+=== ===
+#r23c
+Partners
+
+Lesswrong
+
+
+2023-08-15
+
+=== ===
+#r23c
+#funology
+
+I like unification of knowledge
+
+e.g. map of US stereotypes
+Periodic table of programming languages
+
+2023-08-28
+
+=== ===
+#r23c
+
+[10:30 PM, 8/23/2023] Jason Xu: Your snippets are like koans or sacred Hindu verses in a sense, so much value in career direction by repeating them as mantras
+[10:30 PM, 8/23/2023] sridhar.sarnobat@gmail: wow I'd never thought of them that way. That's another way to brand my product
+
+
+2023-08-28
+
+=== ===
+#funology
+#r23c
+
+
+"The noblest pleasure is the joy of understanding" (Sandro Botticelli)
+"The noblest pleasure is the joy of understanding" (Leonardo Da Vinco)
+
+2023-08-23
+
+=== ===
+#r23c
+#idea
+
+
+idea: brand Essays on a subject (e.g. programming)
+
+
+use logo ink stamp for book chapters?
+
+2023-08-19
+
+=== ===
+#r23c
+#sealofapproval
+
+R23c seal of approval, warrant
+
+Rubbermaid
+
+2023-11-24
+
+=== ===
+#research
+#r23c
+#learning
+
+"The noblest pleasure is the joy of understanding." (Leonardo da Vinci) If you're familiar with the term "Renaissance man," you may also know there was one person who best exemplified such a man. His name was Leonardo da Vinci. Leonardo was born April 15, 1452 in Anchiano, Italy.Apr 29, 2019
+
+2023-08-19
+
+=== ===
+#research
+#branding
+#r23c
+
+DK publishes highly visual, photographic non-fiction for adults and children
+
+DK's aim is to inspire, educate and entertain readers of all ages, and everything DK publishes, whether print or digital, embodies the unique DK design approach. DK brings unrivalled clarity to a wide range of topics, with a unique combination of words and pictures, put together to spectacular effect. We have a reputation for innovation in design for both print and digital products.
+
+2023-08-19
+
+=== ===
+#r23c
+
+
+the metadata man (I may not have been the one who captured a photo, but I will be the one to find them thanks to my metadata i.e. index. e.g. Imperial 2004-2005 new lab photos)
+
+2023-03-27
+
+=== Self ===
+#hobbies
+#profile
+#self
+#evolution
+#r23c
+
+Retracing my childhood hobbies
+brand reincarnations
+
+(-) european football (through unmentionable computer game)
+geography name game
+(-) Flight simulator, Scenery design
+(-) worldwise quiz team
+(-) bedside atlases 
+(-) Language families
+(-) google my maps
+(-) exif photo data (gps part, or apple photosmap lookup)
+(-) Location sharing
+(-) reddit mapporn
+(-) Yakko's world
+
+
+I was into space as a child (mental model of solar system?)
+
+2021-03-31
+
+=== ===
+brand reincarnations
+
+#r23c
+#profile
+#hobbies
+#evolution
+
+2004 excel todo printout
+2005 email
+2007 ms access
+2008 todo.txt
+2013 do it later
+2014 yed errands
+2021 errands fs
+
+2021-04-26
+
+
+=== ===
+#hobbies
+#evolution
+#r23c
+
+brand reincarnations
+
+atletico face pics
+atletico english articles
+atletico season reviews
+atletico english videos
+atletico documentary
+
+theme: atletico for non-spanish speakers; atletico archive
+
+2021-04-26
+
+=== Asp ===
+#asp
+#r23c
+
+Typing is my form of fidget spinners (which is why I feel at peace when I have a command line in front of me)
+
+Maybe I should design webdav2/coagulate_tk such that it is also really comfortable to use since there will always be a need to sort.
+
+
+2020-01-24
+
+=== ===
+#business
+#r23c
+#programmingtips
+Business
+
+Rohidekar syllabus
+
+For aspiring architects: 'What is this A functional house for ants-bbkx4s93rq241.fhls-2099.mp4"
+
+2020-06-11
+
+=== ===
+
+#r23c
+
+Rohidekar
+Relive
+
+
+2020-05-20
+
+=== ===
+#r23c
+#atletico
+#unauthorized
+
+Atletico WhatsApp montage
+New version
+
+Valeron pretemporada real Madrid 98-99 skill
+
+2020-08-25
+
+
 

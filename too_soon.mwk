@@ -1,1 +1,141 @@
+=== ===
+#programmingtips
+#toosoon
+
+#copypaste
+
+Code templates (copy and paste) are better than frameworks
+People "refactor/automate too early" in the hope of fame
+
+Implication: anything that is a framework should have a copy and paste equivalent. Find out what those are and try those first.
+
+2022-07-05
+
+=== ===
+#toosoon
+
+(-) iteration over innovation
+(-) iterate fast on good enough solutions
+
+
+2022-06-10
+
+=== ===
+#toosoon
+#business
+
+Most new applications don't have full hierarchical organization of items capability (e.g. apple notes) because of YAGNI.
+
+Only when customers request the feature is there a proven need.
+
+As a producer, I can sympathize with it. As a consumer, I'm slightly frustrated.
+
+2022-11-10
+
+=== ===
+#toosoon
+
+It’s never too late to delegate as a lead or manager, but it can be too soon
+
+2022-11-28
+
+=== ==
+#productivity
+#toosoon
+
+By not automating too soon, you get to quantify the return on investment by seeing how much manual labor is really being incurred (and thus likely to be saved).
+
+2022-04-13
+
+
+=== ===
+#toosoon
+#type1error
+
+
+Wrong subcategory is worse than no category
+
+Implication: it's fine to leave things as unsorted. Don't put them in places that a few years from now are not going to occur to you as the location 
+
+2023-12-20
+=== ===
+#toosoon
+#research
+
+Duplication is better than inappropriate sharing. 
+
+
+2023-03-27
+
+=== ===
+#copypaste
+#programmingtips
+#wrongabstraction
+#toosoon
+#research
+
+Your abstraction is often wrong.
+Here is why:
+(-) You see duplication.
+(-) You extract duplication into a new abstraction (method, class).
+(-) You replace the duplication with the new abstraction.
+(-) You think your code is perfect.
+(-) Time passes.
+(-) The product manager has new requirements. Your abstraction is almost perfect for them.
+(-) You start to implement the new requirements.
+(-) And here's the little but: Your abstraction is almost perfect. Why? The new requirements affect only 95% of the old code you extracted into abstraction. The other 5% is not affected. And instead of creating a new abstraction with 95% copied code from the current one, you decide to change the code of your abstraction. You add a conditional statement, if..else for example, and pass a parameter, so your abstraction can perform different actions for different decisions.
+Now your abstraction behaves differently for different cases.
+Another new requirement arrives. Another additional parameter. Another new conditional. (Loop until code becomes very difficult to understand and maintain.)
+Congrats, you've created a wrong abstraction
+
+The code no longer represents a single, common abstraction. It becomes a condition-laden procedure. It's hard to understand and easy to break. Adding new features is incredibly hard and every new feature complicates the code even more.
+It's an infinite loop.
+So what to do?
+Write Everything Twice.
+
+WET (Write Everything Twice) is the opposite concept to DRY. When you start to develop a new system you don't know all the future requirements. So don't rush into abstractions.
+You need to remember: Duplication is far cheaper than the wrong abstraction.
+
+Copy that code. Don't be afraid.
+After a while, you will know what your buttons will look like in the future. Then you can analyze the current codebase, find duplicated code in the button components, and move them to the good abstraction.
+
+If you find that it's too late to deal with a wrong abstraction, the fastest way to move forward is back.
+Do the following:
+Move the abstracted code back.
+Delete the unused parameter that's passed to the abstraction to perform different actions for different decisions.
+Delete unused logic.
+This removes the abstraction and conditional statements for each caller.
+
+If you find yourself passing parameters and adding conditional statements through shared code, your abstraction is wrong.
+Prefer duplication over the wrong abstraction.
+
+2023-01-31
+
+=== ===
+#toosoon
+#productivity
+#indirection
+
+#programmingtips
+#codereading
+
+Every piece of software auto mates something physical. Software is just an indirection. Same can be said of computers themselves.
+
+Implication: do things the manual way until you know what is actually repetitive
+
+Too soon
+
+
+same way you can create software to automate sticky notes systems, the reverse is possible: you can model an app as a system for managing sticky notes for variou tasks.
+
+2019-01-17
+
+=== ===
+#programmingtips
+#toosoon
+
+Another reason to go for the biggest ROI with productivity scripts is that you may forget the less-frequently used ones exist. Stick to automating flows you regularly experience,
+
+2021-03-19
+
 
