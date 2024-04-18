@@ -1,1 +1,243 @@
+=== Obscure linux syntax ===
+#obscure
+
+!p<tab> - expand to last command starting with p
+
+2021-04-26
+
+=== ===
+#programmingtips
+#obscure
+
+If '|&' is used,"command1's standard error, in addition to its standard output, is connected to"command2's standard input through the pipe; it is shorthand for"2>&1
+
+2021-07-06
+
+=== ===
+#programmingtips
+#obscure
+
+Backticks are syntactic sugar for eval, (and instead of sh -c which uses a subshell)
+
+For a subshell, you can also use round parentheses
+
+sh -c"  is the same as (eval "")
+
+backticks should be used for capturing the output of commands
+
+
+
+2022-05-01
+
+=== ===
+#programminglanguages
+#shellscripting
+#scripting
+#obscureshellsyntax
+
+Perhaps we could think of `$` as a dereferencing operation. For example `echo $var` and `echo $(func)` are bash equivalents to C's `*var` and `*func()`. Though I don't know if that approximation is consistent with `$'some\n odd \n string'`
+
+Similarly, “!” typically means escape the current environment/context into a metaenvironment
+
+2022-09-12
+
+===  ===
+Obscure shell syntax
+#obscure
+
+==== Process substitution ====
+
+* Piping the stdout of a command into the stdin of another is a powerful technique. But, what if you need to pipe the stdout of multiple commands? This is where process substitution comes in.
+
+
+Using output of a command as a file, that can be the input of another command
+
+syntax:
+	<(cmd arg1)
+
+examples:
+
+	grep "hello" <(echo "hello my name is Sridhar\nGoodbye")
+
+
+When cat was passed the file name it read it's contents for us, but echo just showed us the name that it was passed. This difference becomes more obvious if you add more substitutions:
+http://unix.stackexchange.com/questions/17107/process-substitution-and-pipe
+
+==== Pipe to multiple commands ====
+
+syntax:
+	tee file1 file2
+	emit | tee >(cmd1) >(cmd2)
+
+examples:
+	find | tee >(wc -l) | sort  
+
+==== multiple commands to pipe ====
+
+syntax:
+	paste <(cmd1)  <(cmd2)  | grep
+
+	or
+
+	cmd1 | combine_command - <(cmd2)
+
+examples:
+	paste <(seq 20) <(find) 
+	paste <(echo "abc") <(echo "123") | hgrep 123
+
+=== ===
+#obscureshellsyntax
+
+Subshell for grouping: ( … ) does nothing but create a subshell and wait for it to terminate). Contrast with { … } which groups commands purely for syntactic purposes and does not create a subshell.
+
+2019-01-17
+
+=== ===
+#obscure
+
+shell syntactic sugar
+
+Grouping Commands
+
+Bash provides two ways to group a list of commands to be executed as a unit. When commands are grouped, redirections may be applied to the entire command list. For example, the output of all the commands in the list may be redirected to a single stream.
+
+	()
+	( list )
+Placing a list of commands between parentheses causes a subshell environment to be created (see Command Execution Environment), and each of the commands in list to be executed in that subshell. Since the list is executed in a subshell, variable assignments do not remain in effect after the subshell completes.
+
+	{}
+	 { list; }
+Placing a list of commands between curly braces causes the list to be executed in the current shell context. No subshell is created. The semicolon (or newline) following list is required.
+
+In addition to the creation of a subshell, there is a subtle difference between these two constructs due to historical reasons. The braces are reserved words, so they must be separated from the list by blanks or other shell metacharacters. The parentheses are operators, and are recognized as separate tokens by the shell even if they are not separated from the list by whitespace.
+
+The exit status of both of these constructs is the exit status of list.
+
+=== ===
+Obscure shell syntax
+#obscure
+
+dollar before open single quote - so \t is passed verbatim
+$''
+
+e.g.
+cat /tmp/results.txt | awk -F $'\t' '{print $1,$2}'
+2020-09-10
+=== obscure shell syntax ===
+#obscure
+#programmingtips
+
+curly brace variables
+variable default values
+substitution in a shell variable
+
+2021-02-22
+
+=== ===
+#programmingtips
+#obscure
+obscure shell syntax:
+#!/usr/bin/sh
+literally I think it means drop to the parent process and interpret the standard input as a line for that interpreter
+
+!^ - run a substitution in the parent shell I think
+
+
+as with other uses, exclamation mark usually involves refering to the history in some way
+
+read up what exclamation mark generally means. You’ll have more power at your fingertips
+
+
+=== ===
+#obscure
+#programmingtips
+
+like irregular verbs, the paradox of obscure shell syntax is that it’s inconsistent and illogical because it’s used so much that it’s been refined for convenience/brevity rather than consistency
+
+=== obscure shell syntax ===
+#obscure
+A lot more can be done with ! such as:
+
+execute a command which is typed before 3 commands: !-3
+execute a command that starts with !ls
+
+2020-01-24
+
+
+=== obscure shell syntax ===
+#obscure
+#programmingtips
+
+Dollar escape string
+
+2021-01-26
+
+==== ====
+When a string is expanded inside of"$'', the escape sequences are interpreted. From the manpage:
+Words of the form $'string' are treated specially. The word expands to
+string, with backslash-escaped characters replaced as specified by  the
+ANSI  C  standard.
+An easy example is the \n escape sequence for a newline:
+$ echo 'foo\n'
+foo\n
+$ echo $'foo\n'
+foo
+
+$ 
+
+2021-01-26
+
+==== ====
+
+There are two different things going on here, both documented in the"bash"manual
+$'
+Dollar-sign single quote is a special form of quoting:
+ANSI C Quoting
+Words of the form $'string' are treated specially. The word expands to string, with backslash-escaped characters replaced as specified by the ANSI C standard.
+$"
+Dollar-sign double-quote is for localization:
+Locale translation
+A double-quoted string preceded by a dollar sign ('$') will cause the string to be translated according to the current locale. If the current locale is C or POSIX, the dollar sign is ignored. If the string is translated and replaced, the replacement is double-quoted.
+
+2021-01-26
+=== ===
+#programmingtips
+#obscure
+Obscure shell syntax
+Exclamation mark - look these up
+
+Get all tokens from previous command except first
+
+Re-execute command before last one
+
+
+
+2021-01-26
+
+=== Obscure shell syntax ===
+
+#obscure
+
+$$ - generate random number in Bourne shell (actually it creates a sub-shell temporarily and returns the process id)
+
+2021-03-19
+
+=== ===
+#programmingtips
+#obscure
+Obscure shell syntax
+
+Single exclamation mark
+
+!-2 : execute command before last
+
+2021-03-03
+=== ===
+obscure shell syntax
+#obscure
+
+$_ (dollar underscore) is another special bash parameter and used to reference the absolute file name of the shell or bash script which is being executed as specified in the argument list. 
+
+2020-03-05
+
 
