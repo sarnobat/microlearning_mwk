@@ -1,0 +1,212 @@
+
+=== ===
+
+#programmingtips
+#programminglanguages
+
+golang: clean code, clean build output
+c: messy code, clean build output
+java: messy code, messy build output (tricky to execute)
+python: clean code, messy build output
+
+golang is easy to maintain for this reason
+
+2024-03-04
+
+=== O'Reilly Running Linux ===
+#programming
+#programminglanguages
+#scripting
+#unixphilosophy
+
+13.4 Using Perl
+Perl gets rid of the common Unix philosophy of using many small tools to handle small parts of one large problem. Instead, Perl does it all, and it provides many different ways of doing the same thing. In f docstore.mik.ua/orelly/linux/run/ch13_04.htm
+
+2021-06-21
+
+=== ===
+#programminglanguages
+#programmingtips
+
+
+Choosing the right programming language for a program isn't difficult. Often the path of least resistance will guide you
+
+e.g. for writing a google API script, java is too annoying to set up a new project and get the right dependencies, while python is too sensitive to its runtime environment. Golang, while not perfect, is probably the winner by default
+
+2022-11-07
+
+=== ===
+#programminglanguages
+#shellscripting
+#scripting
+#obscureshellsyntax
+
+Perhaps we could think of `$` as a dereferencing operation. For example `echo $var` and `echo $(func)` are bash equivalents to C's `*var` and `*func()`. Though I don't know if that approximation is consistent with `$'some\n odd \n string'`
+
+Similarly, “!” typically means escape the current environment/context into a metaenvironment
+
+2022-09-12
+
+=== ==
+#programmingtips
+#programminglanguages
+
+Shell scripts need zero environment setup. Python, Golang, Java, C, Javascript etc. can't claim that
+
+
+Implication: cold tweaking of shell scripts is easier? When teaching others to code, start with shell scripting?
+
+2023-03-14
+
+=== ===
+#programmingtips
+#programminglanguages
+
+it would be nice if javascript was better with data frames. Then I'd find it hard to think of a reason to use python.
+
+2022-08-23
+
+=== ===
+#scripting
+#programmingtips
+#bash
+#programminglanguages
+
+even if shell scripting is not in fashion anymore, I believe its day will come again
+
+currently python and 2010 langauages are getting all the attention (scala, groovy, golang, ruby, node.js) but there will come a day when modularity is back in fashion just because human idiocy is to get bored of what's not new.
+
+As an autistic person I stick with what works and only gradually relinquish it if the alternative is objectively better (and thus my status quo will have no future advantage)
+
+2022-08-23
+
+=== ===
+
+#programmingtips
+#programminglanguages
+
+If you're wishing there was a programming language that supports all the enterprise requirements like queueing, caching etc, Spring is supposed to be that language.
+
+But enterprise requirements keep changing so there's no sense of stability. It's about churning out new features for new businesses without much regards for the ones that have abandoned their projects.
+
+2023-05-17
+=== ===
+
+#phrasematrix
+#programminglanguages
+
+For my phrase matrix to be properly effective, it should make it easy to rewrite httpcat in C (or whatever language I'm electing to fill those particular phrases for).
+
+
+2022-10-13
+
+=== ===
+#programmingtips
+#programminglanguages
+
+java is good for server side daemons, not for client side command line tools.
+
+graalvm aotc could change this because of the rust movement but I've got a feeling crapware will continue to be the most profitable market segment
+
+2022-09-08
+
+=== ===
+
+#programmingtips
+#programminglanguages
+
+In C, everything is a memory address. This is a useful attitude to take into java, though gets forgotten when you stop using C.
+
+2023-02-10
+
+=== ===
+#scripting
+#programminglanguages
+#programmingtips
+
+Shell script vs Java
+
+The nominal case is quicker to code in shell, but dealing with other cases to make the tool robust and fail gracefully is easier with a compiled language where you can reason about each flow and write if statements whose syntax I don't have memorized
+
+2020-08-19
+
+=== ===
+#scripting
+#rapid
+#interactive
+#programminglanguages
+#mature
+
+One-liner-ability of a language makes prototyping and gradually building a program much more opportune (e.g. at work when you're doing other things, or even at home watching TV)
+
+This is why bash is better than python for prototyping. No one uses a python or java shell (except when they are learning).
+
+Of course no one will say shell scripting is sexy. It is not new, so not cool.
+
+2022-10-17
+
+=== ===
+#scripting
+#programminglanguages
+
+Having a compiler decreases the feedback time, ensuring you fail fast. This is why java is preferred over javascript.
+
+Without it, you end up with time-consuming edit-submit-job-wait-for-outcome loops that can take hours
+
+<!-- As is the case with saas-api build verification failures -->
+
+That said, if you have an interactive shell interpreter like you do for bash, you don't need a compiler (though interpreters like jshell for multi-statement langauges don't benefit beyond toy programs).
+
+2017-01-18
+=== ===
+#programminglanguages
+
+Desktop programming in general is on the decline, it's not particularly related to Java.
+People want to use services without installing things. Of course Java Webstart meets there half way, but it still requires Java to be installed and might not be so obvious to all users.
+
+It would be a very bad career move (if you intend to have a career in programming) to concentrate only on desktop/Swing applications.
+
+=== ===
+#programminglanguages
+
+"use the simplest tool for the job" is only for personal productivity scripts or prototyping. It's not the case for a team. Too many technologies causes knowledge siloes
+
+(e.g. should I use SQS or DynamoDB for apple keys. SQS is more natural but we're using Dynamo DB for other things so there is more transferable knowledge)
+
+2018-06-29
+
+=== ===
+#programminglanguages
+#career
+
+instead of learning new frameworks, learn new updates to the language syntax
+
+2018-07-04
+
+=== ===
+#programminglanguages
+#programmingtips
+
+Alll the programming languages I know are nice for different reasons
+
+Javascript - elegant map reduce; can be used in browser unlike everything else
+Shell - easy to compose
+Python - so compact
+Java - the compiler weeds out mistakes before runtime
+Golang - code is clean
+
+Python is better than nodejs because libraries are more likely to be preinstalled (I think, I could be wrong)
+
+2021-12-23=== ===
+#programmingtips
+#programminglanguages
+
+Languages that are hard to use will get neglected
+This is another reason why scala is doomed
+Ironically, maybe Kotlin will succeed by this logic.
+=== ===
+#gradle
+#programminglanguages
+#groovy
+#programmingtips
+Groovy is good for creating DSLs (e.g. gradle)
