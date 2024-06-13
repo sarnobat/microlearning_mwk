@@ -1,1 +1,520 @@
+=== ===
+#plaintextjourney
+#editors
+
+#sysadmin
+#reddit
+
+I loved XEmacs at my first job but after that
+
+1) I found only vim was available on some severs so just being young and open minded I learned that too
+
+2) I started using Mac os and never found aquamacs or x11 XEmacs seamless enough (I've tried and failed more than once).
+
+3) most significantly, emacs pinky crippled me, and MacBooks only have one Ctrl key so I couldn't even alternate to give my left pinky a break 
+
+2024-01-02
+
+=== ===
+#programmingtips
+#plaintext
+
+One of the main reasons we stop using a plaintext data store is the need for distributed clients. 
+
+For example, as soon as I thought about making yurl multi-node, I had to think about using a proper database because of support for remote data.
+
+Hopefully I can find a solution for that without considering a different data store. In theory, and maybe in practice, ssh cat should be all I need (hmmmm, actually there's a different problem of the server host not being set up. This is where separate files and compaction becomes a consideration). 
+
+THen, to make yurl host independent I need to consider docker. Probably first I should do manual moving of the data store before getting too clever and  discouraging the whole effort with bloated setup.
+
+2022-05-01
+=== ===
+#programmingtips
+#unixphilosophy
+#plaintext
+
+Essence of unix philosophy
+
+If database is plaintext, you don't need apps. Just legacy shell programs and a comfortable text editor editor.
+
+
+2022-08-06
+=== ===
+#programmingtips
+#unixphilosophy
+#plaintext
+
+Essence of unix philosophy
+
+If database is plaintext, you don't need apps. Just legacy shell programs and a comfortable text editor editor.
+
+
+2022-08-06
+
+=== ===
+#plaintext
+
+Plaintext tips
+
+When bullets are interrupted for multi-line details, it's better to use subheadings
+
+2020-09-28
+=== ===
+#plaintext
+plaintext is repeatable (through copy and paste), whereas mouse clicks are not
+
+so learning fdisk rather than gnome-disks or gparted is better
+
+2019-11-17
+=== ===
+#programmingtips
+#plaintext
+#vim
+Spreadsheets are the easiest way to create documents where column editing is needed.
+
+For geeks, this means you have to unlearn the habit of everything being done in a plaintext editor. It's a lot more obvious to casual computer uses.
+
+2022-08-03
+=== ===
+#plaintext
+#programmingtips
+
+Github README.md or wiki is a lot better than confluence wiki because:
+
+(-) Plaintext is easier to update without unintentional changes
+(-) colocated
+
+
+2022-11-08
+
+=== ===
+#programmingtips
+#cli
+#plaintext
+
+Changing an app's settings via a UI gets tiresome when they keep relocating between releases (which you are harassed into migrating to). A script that sets them stays put and you never need to do anything other than run your settings script
+
+2022-02-02
+
+=== ===
+#plaintext
+
+
+use Decorators (like slash to emphasize that something is a directory, or .git to state that something is a source code repo)
+
+2022-10-22
+
+=== ===
+#productivity
+#longevity
+#plaintext
+wasting asset
+Plaintext may be one of the very very few things that is near-permanent, while everything else in life is impermanent. But the NEED to refer back to that plaintext diminishes.
+
+Education is impermanent unless you keep using it.
+
+Source code may seem permanent (e.g. in the oracle rdbms binary), BUT the code that gets executed is probably no longer used, or has mutated over time so much that it's really not old code anymore. We don't remove it because the storage cost is zero.
+
+Implication: not sure. Keep indexing your best content so that it can be referred back to for longer?
+
+2019-01-17
+
+
+
+=== ===
+#productivity
+#plaintext
+
+Plaintext tips
+
+When bullets are broken for multi-line details, it's better to use subheadings
+
+2020-09-28
+=== ===
+#bottomup
+#iterative
+#rapid
+#productivity
+#plaintext
+
+Plaintext is low effort, which is great as a content creator (though not publisher for consumption)
+
+2022-09-02
+=== ====
+#plaintext
+#productivity
+#memoization
+
+ascii block diagrams are a memozation of whatever came before. Things like graphml, ppt are not. Which is why you end up in situations where you can't modernize old diagrams because you don't have the original source.
+
+With memoization, the output IS the source. (well, even plaintext block diagrams are dynamically generated. But it's a lot easier to modify than a source that bares no resemblance to the dynamically output)
+
+2019-01-17
+
+
+=== ===
+#productivity
+#plaintext
+
+plaintext is better than binary because you can resolve merge conflicts manually in a worst case. With binary, you're screwed permanently if you ever fall into it.
+
+2021-11-26
+
+=== ===
+#productivity
+#plaintext
+#captiveuserinterface
+
+Confluence is a captive user interface
+You can't edit the document in your text editor. You have to use the web browser (which takes a lot of memory, loses text with erratic ctrl Z behaviour, has limited keyboard shortcut support).
+(In old versions you could, and in Jira you still can)
+
+unfortunately, power users are treated as 2nd class citizens
+
+2020-09-10
+=== ===
+#plaintext
+
+#productivity
+
+Plaintext data is more available offline (e.g. in a plane)
+
+That's why mwk organizing is an activity I do on the plane, but not smartphone things
+
+2023-02-28
+
+=== ===
+#plaintext
+#productivity
+
+the hashtag is similar to regex "\b"  (or "\z"), allowing you to find text while excluding matches in the middle of words
+
+2022-10-24
+
+=== ===
+#plaintext
+
+#productivity
+
+To represent a graph in plaintext pictorially, it's best to duplicate nodes and print it as a tree (like gradle dependencies does).
+
+If you can't afford redundancy, use csv but that's not spatially representative.
+
+2023-05-17
+
+=== ===
+
+
+#plaintext
+#unglorification
+
+
+most computer systems are just plaintext that connects people with other people (e.g. twitter tweets, expedia reservations)
+
+Well, information systems specifically (which is what most of my career and even most of my recreational computer usage is about).
+
+plaintext is cheap to throw away
+
+2023-02-17
+
+=== ===
+#unixphilosophy
+#ux
+#design
+#plaintext
+
+#bottomup
+
+Unix philosophy bypasses UX design considerations by being designed for a very simple theoretical use case (plain text steams), and not the unpredictable use case combinations of end users (with task analysis etc).
+
+It is either UX-design independent, or fixed UX-design, whichever way you interpret it.
+
+
+2022-10-13
+
+=== ===
+#programmingtips
+#plaintext
+
+One of the best things you can do to become a good programmer is to get comfortable manipulating plaintext (e.g. how to search for references in infrastructure as code)
+
+2022-12-28
+
+===  ===
+#pipeline
+#unixphilosophy
+#plaintext
+
+In Unix the collection is a text file whose items are the lines in the file. Each line contains various values, separated by whitespace. The meaning of each value is given by its ordering in the line. The operations are unix processes and collections are composed using the pipeline operator with the standard output of one process piped to the standard input of the next.
+
+In an object-oriented program the collections are a collection class (list, array, set, etc). The items in the collection are the objects within the collection, these objects may be collections themselves or contain more collections. The operations are the various methods defined on the collection class itself - usually on some high level superclass. The operations are composed through a method chain.
+
+=== ===
+#plaintext
+#pipeline
+
+pipelines aid application development because the file acts as a plaintext interface / protocol for interchanging data
+
+=== ===
+#lowestcommondenominator
+#plaintext
+
+End-resulting language / intermediate formats
+
+The key is to use the lowest common denominator language (well, really the highest common factor). 
+
+Java is the common denominator of Spring, EJB, Swagger, ADF, WebObjects
+
+Javascript is the lowest common denominator of JQuery, Closure, Node JS
+
+HTML is the lowest common denominator of JSF, JSP, Angular
+
+Plaintext (txt, mediawiki markup, csv) is the lowest common denominator of mediawiki php, HTML, ms word, pdf, flash text
+=== ===
+#plaintext
+
+I sometimes wonder what format to use in my file system database for yurl.
+Sometimes i think JSON (so that I can get key-values), other times free text which is unix friendly.
+But now I just realized - HTTP requests are just like this:
+* key - values in the header
+* Free text in the body
+
+Actually, they are dynamic (god I hate that word):
+Depending on what the value of a certain property is, you interpret the body accordingly. It could be JSON, plaintext, even CSV
+
+Come to think of it, files are structured this way at the physical layer. They have a header and a body, and the header tells you information about the body.
+
+=== ===
+#rdb
+#plaintext
+#unixphilosophy
+#nosql
+
+Rand/Hobbs /rdb
+
+There are currently over 20 /rdb modules (operators and utilities) written in Perl.
+
+It pretty closely follows The Unix Philosophy in its approach of using filters and shell scripts to construct database applications.
+
+
+2017-11-07
+
+=== ===
+#plaintext
+
+plaintext vs rich text
+* you can read plaintext files over ssh
+** markup can be read in theory, but in practice needs a command line tool to strip the tags (I forget which one)
+===  ===
+#rdb
+#plaintext
+#nosql
+
+Shell scripts commonly, if unknowingly, compose five (of six) primitive relational-algebraic operations on these tables: union, difference, projection, selection and renaming:
+
+* cat acts like union;
+* sed and grep act like selection;
+* cut acts like projection;
+* awk can perform renaming; and
+* diff acts (almost) like difference.
+
+2017-11-06
+
+===  ===
+#recfile
+#plaintext
+#csv
+
+the problems with recfiles / rec files / rec format are:
+
+* underscores not allowed in heading name
+* blank headings not allowed in heading name
+
+Probably csvql is better
+
+2017-04-20
+
+=== representing data structures in plaintext ===
+#plaintext
+
+List, Set - txt file of freetext lines
+Tree, Heap - a pair of elements delimited, e.g. by "::", "->", tab
+
+2017-09-04
+
+=== ===
+#rdb
+#unixphilosophy
+#filter
+#plaintext
+
+/rdb uses the `operator/stream' DBMS paradigm described in Unix Review, March, 1991, page 24, entitled A 4GL Language. The operators are Unix filters, i.e. they read STDIN and write STDOUT so they can be connected by pipes.
+
+It pretty closely follows The Unix Philosophy in its approach of using filters and shell scripts to construct database applications.
+
+
+2017-11-03
+
+===  ===
+#eventsourcing
+#plaintext
+#appendonly
+#rdb
+
+plaintext database using event sourcing 
+
+2017-07-29
+
+=== ===
+#regex
+#plaintext
+#rapidprototyping
+
+Storing data in plaintext allows you to write application logic as regex transformations (both read and write)
+
+All you really need is jq, and perl regex and you can do pretty much anything you want.
+=== ===
+#plaintext
+#rapidprototyping
+
+binary formats are difficult to understand, test, and debug
+binary formats usually imply proprietary formats
+object or relational databases hinder portability
+
+during development, it is much easier to see what is happening to your stored resources. Plain-text format can be parsed or deserialized "by eye"; spotting data corruption due to your application is easy. Plain-text resources can be placed under version control, where a quick "diff" will usually narrow down why something broke.
+
+Examples:
+Most of what's in /etc under Unix/Linux
+Many internet protocols
+Netscape preferences file (which looks like JavaScript)
+Lots of databases. (See TabDelimitedTables)
+Interchange formats, such as CommaSeparatedValues or ExtensibleMarkupLanguage
+The .mdl files created by RationalRose
+Some wiki-like systems
+AlmostFreeText
+StructuredText
+YamlAintMarkupLanguage
+
+=== Plaintext ===
+#plaintext
+#flatfile
+
+Sqlite (www.sqlite.org) gives you all the advantages of a flat-file while having all the features of an RDBMS.  Might be worthwhile choice for something like this.
+
+But I checked and a SQLite DB isn't fully plaintext. It has a binary preamble
+
+CSV is better
+
+2019-01-17
+
+=== ===
+#plaintext
+#flatfile
+#index
+
+Indexed Sequential Access Method.  A precursor to RDBM. It's essentially key-value pairs in flat files, with indexes.
+=== ===
+
+2018-02-14
+
+2018-02-13
+
+=== ===
+#plaintext
+#export
+
+The problem with relying on export for your ad-hoc queries is that no one does the exports regularly (or at all) so you don’t have a good enough plaintext store. Plus that’s only good for read-only operations, not for updating the data.
+
+2019-01-17
+
+=== ===
+#plaintext
+#longevity
+
+Plaintext programs never show their age. Almost everything else does, even file formats that are no longer popular (e.g. smil)
+2019-01-17
+
+=== ===
+#rapidprototyping
+#plaintext
+
+For rapid prototyping
+
+Prefer file system over database
+
+=== ===
+#memoization
+#plaintext
+
+plaintext flat file key-value data allows you to ignore how the result was obtained but just store the result instead of recomputing it, as web pages often do (e.g. biggest image, title)
+memoization
+
+2018-06-28
+
+=== ==
+#standards
+#plaintext
+
+Unix philosophy - open file standards
+M3u
+Gedcom
+2019-01-17
+
+=== ===
+#plaintext
+#captiveuserinterface
+#sridharaxiom
+
+reasons not to use a database
+
+it's harder to backup  (because it gets bloated with unnecessary files that are too big to source control, and are binary so cannot be versioned meaningfully)
+it's harder to recover (because of the captive user interface - it's not plaintext)
+
+People who say "there is a backup tool that comes with the product itself" are not speaking from experience (CMS for atleticomadrid.de ultimately failed despite having "logically colocated backups"). Of course it's easy when disasters within the scope of expected events happen. But data disasters are usually from unforeseen situations (like when circular rsync removed all my files from my yurl.db and I had no recent backup).
+
+It's better to use source-controlled plaintext.
+
+Binary data, even if decipherable (which usually it isn't), is completely muddled. The best data is just key-value rows in plaintext files, which I'm starting to use now.
+
+
+Prefer plaintext export / transaction logs (event sourcing) over colocated backups with captive user interface needed for recovery
+
+2017-08-09
+
+=== ===
+#captiveuserinterface
+#plaintext
+
+the only data that isn't captive is plaintext
+the only app that isn't a captive user interface is a text editor
+
+2018-01-12
+
+=== The export/takeout prerequisite (and why geeks love plaintext) ===
+#plaintext
+#captiveuserinterface
+
+Applications are just a means to an end - i.e. data. Data lasts decades. Apps just last 2-3 years.
+But so many applications don't allow you to take your data away with you, you can only acces them through the app. Beware of reliance on such applications.
+
+===  ===
+Spreadsheets are evil #SLA2014 #plaintextrules
+
+They are, but unlike word processors occasionally they are a necessary evil.
+
+
+
+2017-12-31
+
+
+=== ===
+
+#programmingtips
+
+#plaintext allows repeatability if something doesn't get applied successfully.
+
+Without this, form data gets lost, whatsapp messages sent with poor coverage get lost when you lose battery power before getting network back (e.g. responding to messages on a plane)
+
+2021-10-03
+
 
