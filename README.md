@@ -1,7 +1,7 @@
 # microlearning
 
 
-
+* remove incriminating mentions of people who might find these notes (PR, MK, RW)
 * Done: Print 4up slides to a page (eg spending)
 
 
