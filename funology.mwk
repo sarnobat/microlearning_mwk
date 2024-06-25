@@ -1,1 +1,291 @@
+=== ===
+
+#funology
+#vim
+
+Vim (and xemacs) really put the fun back in using computers. You can do literally anything once you have power over plaintext
+
+2024-01-02
+
+=== ===
+
+#decluttering
+#funology
+rotate
+
+a new computer (or docker image) is clean with lots of empty space for you to fill up. You don't get attention being misdirected into cognitive loads.
+
+This is why I crave a country lub / library / hotel feel to my home. Empty space (physical and thus mental) for me to play with.
+
+2024-02-21
+
+=== ===
+#funology
+
+"It just works" / relief memoization of compiled code cross platform
+
+
+2024-02-23
+
+=== ===
+#funology
+
+"It just works" / relief memoization of compiled code cross platform
+
+
+2024-02-23
+
+=== ===
+
+#funology
+#learningthroughdiffs
+
+I wonder if learning through diffs is the same as enjoying something familiar (I feel this while listening to the intros to all wrestle manias in the new generation era. Each year has some similarities with the year before: the music, the "and now", "welcome to...". Funology through anticipation?)
+
+2024-02-12
+
+=== ===
+
+#decluttering
+#funology
+rotate
+
+a new computer (or docker image) is clean with lots of empty space for you to fill up. You don't get attention being misdirected into cognitive loads.
+
+This is why I crave a country lub / library / hotel feel to my home. Empty space (physical and thus mental) for me to play with.
+
+2024-02-21
+
+=== ===
+#funology
+
+Adding data that makes a visualization more complete (once you get the pattern, it's not fun to keep adding data). e.g. csv file for R output
+
+2022-07-03
+
+=== ===
+#singlebinary
+#funology
+#affordance
+
+affordance encourages play, experimentation, discovery
+
+java binaries are not single file binary executables. They need all manner of jre environment variable and classpath setup that requires a shell script (and that shell script is not obvious in how to use compared to a single file binary
+
+implication: apps developed in golang are more fun to use (e.g. selenium web scraping) (though not necessarily to develop)
+
+2022-07-11
+
+=== ===
+#funology
+Funology
+
+Seeing a large amount of data processed quickly due to a working script is a very gratifying and empowering feeling (e.g. seeing the geocode of all my iPhone photos)
+
+2021-06-21
+=== ===
+
+funology
+#funology
+
+Seeing scambaiting videos - seeing arrogant people humbled?
+
+2021-06-21
+=== ===
+#funology
+
+What I love doing at work
+
+Command line, scripting (gradle grep dependencies, finding new tools, ssh hacks)
+Documenting (README.md, OWNERS.md)
+Drawing diagrams (yed, plantuml, graph easy) 
+Sharing knowledge (brown bag)
+
+2021-05-19
+=== ===
+#programmingtips
+#funology
+
+what makes programming less fun
+
+struggling with incompatible versions (even more so at runtime than compile time since the feedback loop is elongated).
+
+it's the opposite of "it just works" (i.e. immediate feedback)
+
+implication: not sure. You can't avoid it if the framework is that way. THat's one reason I avoid third party libraries even if it's extra work. The runtime may be backward compatible but the dependencu is not.
+
+2022-07-11
+=== ===
+#profile
+#hobbies
+#funology
+
+I have a passion for note-taking
+
+Implication: make this your life's work.
+
+but leverage linux tools like grep when creating your own. Don't create a poor substitute of what already exist (stand on the shoulders of giants, to use another annoying americanism)
+
+2022-05-01
+
+=== ===
+#funology
+
+Funology
+
+Indexing (e.g. yurl stashing amazon products, youtube videos). Or is this fun of accumulation?
+
+2020-10-13
+
+=== ===
+#funology
+
+Indexing things (e.g. yurl stashing amazon videos)
+
+2020-10-13
+
+
+=== ===
+#funology
+(not sure if it's exactly funology but it's the closest category)
+
+Things that have made me feel empowered
+
+discovering zfs volumes with shared space (after seeing apfs volumes)
+
+more generally the command line. Specifically, I'm guessing:
+(-) key bindings
+(-) coloring (prompt, dircolors, grep, grc, not really vim)
+(-) piping large number of lines and seeing a lot of output
+(-) regular expressions
+(-) rsync?
+(-) du?
+
+2022-05-01
+=== ===
+#funology
+
+It's only fun when it works (e.g. linux kernel compilation)
+
+2022-07-15
+=== ===
+#funology
+
+Funology
+
+Indexing (e.g. yurl stashing amazon products, youtube videos). Or is this fun of accumulation?
+
+2020-10-13
+
+=== ===
+#funology
+
+Funology
+
+Indexing (e.g. yurl stashing amazon products, youtube videos). Or is this fun of accumulation?
+
+2020-10-13
+=== ===
+#funology
+
+Exciting if you have mechanisms to manage them
+
+Computer file organization - via year rotation, plus exiftool_cwd.sh (reclaim
+Decluttering via rotation
+Finances if well automated (somewhat elusive but I'm getting ideas)
+
+2023-03-27
+
+=== ===
+#funology
+#mentalmodel
+#asp
+
+maybe the command line is fun because it is a robust mental model / abstraction. I can use it as an end in itself and not an incomplete layer of understanding
+
+
+2023-01-11
+
+=== ===
+
+#asp
+#artificialintelligence
+#funology
+#hoarding
+
+What is my hobby?
+
+I collect data
+
+That sounds better than "I hoard things" now that chatgpt is in vogue
+
+2023-06-28
+
+=== ===
+#funology
+#asp
+
+What I'm good at = what I have a lot of experience in
+Find satisfying = Find fun
+
+e.g. code reading, architecture recovery
+
+2022-10-17
+
+=== ===
+#funology
+
+Exciting if you have mechanisms to manage them
+
+Computer file organization - via year rotation, plus exiftool_cwd.sh (reclaim
+Decluttering via rotation
+Finances if well automated (somewhat elusive but I'm getting ideas)
+
+
+
+2023-03-27
+
+=== ===
+#funology
+
+Scambaiting videos are fun because you see people behaving badly get punished for it
+
+2021-11-10
+
+=== ===
+
+funology
+#funology
+
+Moving files to the right locations using the command line (creating order and patterns from chaos and randomness)
+Sorting a large number of unsorted files (when it's easy with wildcards - you get a quick payoff)
+
+2020-11-04
+
+=== ===
+#funology
+
+Therapeutic activities
+
+Sketching (doesn't have to be real - diagrams are good too as long as they use coloured pencils or paints)
+=== ===
+#funology
+#ux
+
+Instant gratification = immediate feedback
+
+implication: design your systems to give feedback (e.g. visible state change) immediately. Don’t make the user imagine the future benefits of their actions.
+
+
+=== ===
+#productivity
+#travel
+#funology
+
+Systems and networks (of transport)
+
+
+a transport documentary presenter said how he found them fascinating
+
+2021-11-03
 
