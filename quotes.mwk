@@ -1,1 +1,348 @@
+=== ===
+#research
+#atletico
+#quotes
+#unauthorized
+
+"When I see Solari play, it's like watching myself," said Enzo Francescoli at the time.
+
+2023-10-28
+
+=== ===
+#quotes
+#favorites
+
+favorite quotes
+
+life's fun when you're having flies
+
+
+2023-08-18
+
+=== ===
+
+#soccer
+#quotes
+
+
+Soccer quotes
+
+The germans always win
+
+Life and death
+
+
+long ball grass in the air
+
+can trap the ball further than I can kick it
+
+2024-08-29
+
+=== ===
+#research
+#ketki
+
+#quotes
+
+The world is a tragedy to those who feel, but a comedy to those who think. - Horace Walpope
+
+2024-07-03
+
+=== ===
+#research
+#humor
+#quote
+
+Steve Perry has said, "I tried north Detroit, I tried east and west and it didn't sing, but south Detroit sounded so beautiful. I loved the way it sounded, only to find out later it's actually Canada."
+
+2023-05-11
+
+=== ===
+#research
+#tech
+#discoverability
+#quote
+
+Unless your UI discoverability is really good, saying "the feature isn't documented" is the same as saying "the product can't do it."  Nick Coghlan
+
+2023-05-09
+
+=== ===
+#research
+
+#ketki
+#quotes
+
+
+Life is the only flaw in an otherwise perfect nonexistence -- Schopenhauer
+
+2024-07-05
+
+=== ===
+#research
+#tech
+#quotes
+
+Here is what Bjarne Stroustrup mentions about Java when asked "Is Java the language you would have designed if you didn't have to be compatible with C?":
+
+No. Java isn't even close. If people insist on comparing C++ and Java - as they seem to do - I suggest they read The Design and Evolution of C++
+
+ (D&E) to see why C++ is the way it is, and consider both languages in the light of the design criteria I set for C++. Those criteria will obviously differ from the criteria of Sun's Java team. Despite the syntactic similarities, C++ and Java are very different languages. In many ways, Java seems closer to Smalltalk than to C++.‚Äö√Ñ√∂‚àö√ë¬¨√ÜMuch of the relative simplicity of Java is - like for most new languages - partly an illusion and partly a function of its incompleteness. As time passes, Java will grow significantly in size and complexity. It will double or triple in size and grow implementation-dependent extensions or libraries. That is the way every commercially successful language has developed. Just look at any language you consider successful on a large scale. I know of no exceptions, and there are good reasons for this phenomenon. [I wrote this before 2000; now (2012), the language part of the Java 7 specification is slightly longer in terms of number of pages than the ISO C++11 language specification.]‚Äö√Ñ√∂‚àö√ë¬¨√ÜI have commented (negatively) about Java hype and ascribed much of Java's success to marketing. For example, see my HOPL-3 paper
+
+. Today (2010), the claims made about Java are more reality based and less gratuitously derogative about alternatives. This was not always so. For example, compare the original 1995 Java white paper
+
+ with the versions you find on the web (sometimes labelled "the original Java whitepaper"); page 69 would be a good place to start.‚Äö√Ñ√∂‚àö√ë¬¨√ÜJava isn't platform independent; it is a platform. Like Windows, it is a proprietary commercial platform. That is, you can write programs for Windows/Intel or Java/JVM, and in each case you are writing code for a platform owned by a single corporation and tweaked for the commercial benefit of that corporation. It has been pointed out that you can write programs in any language for the JVM and associated operating systems facilities. However, the JVM, etc., are heavily biased in favor of Java. It is nowhere near being a general reasonably language-neutral VM/OS.‚Äö√Ñ√∂‚àö√ë¬¨√ÜPersonally, I'll stick to reasonably portable C++ for most of the kind of work I think most about and use a variety of languages for the rest.‚Äö√Ñ√∂‚àö√ë¬¨√Ü
+
+2023-10-28
+
+=== ===
+#research
+
+#schumatize
+#quotes
+#tech
+#computerscience
+
+Being abstract is something profoundly different from being vague. The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise. - Edsger Dijkstra
+
+System designers who do not allow users to type far ahead ought to be tarred and feathered, or worse yet, be forced to use their own system.
+
+I say, forget all that and ask yourself, "What's the simplest thing that could possibly work?"
+
+A lack of planning on your part does not constitute an emergency on my part.
+ - anonymous
+
+UNIX was not designed to stop its users from doing stupid things, as that would also stop them from doing clever things.
+ - Doug Gwyn
+
+Software obeys the law of gaseous expansion - it continues to grow until memory is completely filled.
+ - Larry Gleason
+
+A language that doesn't have everything is actually easier to program in than some that do.
+ - Dennis M. Ritchie
+
+Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders.
+ - anonymous
+
+34. The string is a stark data structure and everywhere it is passed there is much duplication of process. It is a perfect vehicle for hiding information.
+
+5. If a program manipulates a large amount of data, it does so in a small number of ways.
+
+"In theory, theory and practice are the same. In practice, they're not."
+- Yoggi Berra
+
+"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+- Martin Fowler
+
+"Programming is like sex. One mistake and you have to support it for the rest of your life."
+- Michael Sinz
+
+"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."
+- Brian W. Kernighan
+
+"Being a good software engineer is 3% talent, 97% not being distracted by the internet."
+- Unknown (motivation)
+
+"Optimism is an occupational hazard of programming. Feedback is the treatment." 
+- Kent Beck
+
+"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off."
+
+Hardware eventually fails. Software eventually works.
+
+Programming is the art of adding bugs to an empty text file.
+
+"Nothing works better than just improving your product." - Joel Spolsky
+
+7. "One of my most productive days was throwing away 1,000 lines of code." - Ken Thompson
+
+
+"I'm not a great programmer; I'm just a good programmer with great habits." - Kent Beck
+
+"Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning." - Rick Cook
+
+"A program that has not been tested does not work." - Bjarne Stroustrup
+
+"You might not think that programmers are artists, but programming is an extremely creative profession. Its logic-based creativity." - John Romero
+
+"Tests are stories we tell the next generation of programmers on a project." - Roy Osherove
+
+2024-06-05
+
+
+=== ===
+#research
+#investing
+#quotes
+#finance
+#priority3
+
+quotes on investing
+
+Let someone else get the last couple percent.
+
+Emotions cause more losses in the market than the stock going in the wrong direction . . .
+
+"I will tell you how to become rich. Close the doors. Be fearful when others are greedy. Be greedy when others are fearful."
+
+"In the next 53 years," Buffett said, "our shares (and others) will experience declines resembling those in the table."No one"can tell you when these will happen. The light can at"any time"go from green to red without pausing at yellow."
+
+2020-06-22
+=== ===
+#research
+
+#quotes
+#computerscience
+
+#schumatize
+
+"If, at first, you do not succeed, call it version 1.0." - Khayri R.R. Woulfe
+
+"Programmer: A machine that turns coffee into code."
+
+3. Syntactic sugar causes cancer of the semicolon.
+
+Every language has an optimization operator. In C++ that operator is //'
+
+2024-06-05
+
+=== ===
+#research
+#atletico
+#quotes
+
+Dani Carvalho
+
+Redknapp, when he was manager at West Ham, once said about the player: "Dani is so good-looking I don't know whether to play him or fuck him".[15]
+
+2023-11-01
+
+=== ===
+#quotes
+
+"Life is something to do when you can't get to sleep"
+
+=== ===
+#pavithra
+#quotes
+
+Pavithra
+
+???Chop your own wood and it will warm you twice??? ~~~~~~ Henry Ford
+
+"To believe with certainty we must begin with doubting."~~~~~~Stanislaus
+
+"There are so many men who can figure costs, and so few who can measure values."~~~~~ Unknown
+
+=== ===
+#humor
+#pavithra
+#quotes
+
+Pavithra
+"Inflation is when you pay fifteen dollars for the ten-dollar haircut you used to get for five dollars when you had hair"~~~~Sam Ewing
+
+===  ===
+Quotes[edit]
+
+Misery is almost always the result of thinking.
+To teach is to learn twice.
+When my friends are one-eyed, I look at them in profile.
+Today there are no more irreconcilable enmities, because there are no more disinterested emotions: that's a good thing born from a bad thing.
+All gardeners live in beautiful places because they make them so.
+Justice is the truth in action.
+Ask the young. They know everything.
+The mind's direction is more important than its progress.
+A part of kindness consists in loving people more than they deserve.
+Imagination is the eye of the soul.
+Never cut what you can untie.[1]
+???The aim of argument, or of discussion, should not be victory, but progress.???
+
+
+https://en.wikipedia.org/wiki/Joseph_Joubert#Quotes
+
+=== ===
+#atletico
+#quotes
+
+Atletico Madrid quotes
+
+Diego Costa (when asked how he feels about Suarez joining Atletico): "It's great. One will fight, one will bite."
+
+2020-11-30
+
+=== ===
+#quote
+#delayedgratification
+#career
+
+The best lesson of life
+"Don't get frustrated doing continious unresulted efforts, Sometimes the last key of the bunch opens the lock..."                               
+=== programming tips ===
+#quotes
+#programmingtips
+#backup
+#recovery
+
+'data that's not backed up is data you're prepared to lose'
+
+2021-10-12
+
+=== ===
+Programming quotes
+
+#programmingtips
+#quotes
+
+There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult." C. A. R. Hoare, The Emperor's Old Clothes, 1980¬†Turing Award¬†Lecture
+
+
+"Simplicity is prerequisite for reliability." Edsger W Dijkstra, EWD498, 18 June 1975
+
+
+2021-11-03
+
+=== ===
+#quotes
+
+2012-12-21 Facebook (Suwarna)
+
+I'm not afraid that the world might end tomorrow. I fear that it will continue without any change.
+
+
+
+=== ===
+#quotes
+#humor
+
+W.C Fields (1880-1946):
+'Start every day off with a smile and get it over with.'
+
+Tony Hancock (1924-1968):
+'This radio lark's a wonderful hobby, y'know. I've got friends all over the world, all over the world... none in this country, but friends all over the world.'
+
+Les Dawson (1931-1993):
+'My wife sent her photograph to the Lonely Hearts Club. They sent it back saying they weren't that lonely.'
+
+Spike Milligan (1918-2002):
+'Chopsticks are one of the reasons the Chinese never invented custard.'
+
+Dorothy Parker (1893-1967):
+'If you want to know what God thinks of money, just look at the people he gave it to.'
+
+Gore Vidal (1925-2012):
+'Every time a friend succeeds, I die a little.'
+
+Bob Newhart ( September 5, 1929-):
+'I don't like country music, but I don't mean to denigrate those who do. And for the people who like country music, denigrate means 'put down'.
+
+Jimmy Carr (15 September 1972):
+'I saw that show, 50 Things To Do Before You Die. I would have thought the obvious one was "Shout For Help". '
+
+Ken Dodd (8 November 1927-):
+'I have kleptomania. But when it gets bad, I take something for it.'
+
+
+Noel Coward (1899-1973):
+'Never trust a man with short legs??? his brain???s too near his bottom.'
 
