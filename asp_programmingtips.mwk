@@ -1,0 +1,73 @@
+=== ===
+#career
+#programmingtips
+#asp
+
+To deal with tight deadlines, use feature flags
+
+2020-05-20
+
+
+=== ===
+#asp
+#autisticprogrammer
+#programmingtips
+#change
+
+Asp
+Autistic programmer
+
+Immutability is easier because autistic people find change difficult to adapt to.
+
+2020-06-22
+
+=== ===
+#programming
+#asp
+leap of faith coding
+
+writing masses of code or making changes without really understanding what they do, expecting them to magically work
+
+This seems to be how neurotypicals think. They don't perform systematic analysis of cause and effect through tight feedback and gradually maker steady progress
+
+2022-09-02
+
+=== ===
+
+#programmingtips
+#oop
+#hateoop
+#mutablestate
+#asp
+
+OOP encourages (mutable) shared state
+
+you can't pass the output of one OO subsystem to another as easily as you can pass the output of a data flow subsystem to another since you can't represent the entirety of that subsystem's result textually (well, you can with json but no OO program does this ...unless it is distributed and sent over a wire)
+
+in other words, function (de)composition is possible, but object (de)composition is effectively impossible.
+
+This is why I hate OOP.  You can't model components of a system precisely. All you have is vague english prose to describe pieces (which is difficult for autistic people)
+
+2023-01-11
+
+=== ===
+#programmingtips
+#codecomprehension
+#asp
+
+
+Neurotypicals don't mind stateful code as much as me because they don't need context-free analysis of code. They can retain (short term) some background information simultaneously to analyzing the code (to whatever extent they really do)
+
+
+2023-04-19
+
+=== ===
+#asp
+#programmingtips
+
+pushing / merging code to main makes code "immutable" which makes followup code changes easier
+
+2017-01-17
+
+
+
