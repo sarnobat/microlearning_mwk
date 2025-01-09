@@ -1,0 +1,162 @@
+=== ===
+
+#indirection
+#tradingcomplexity
+
+
+Trading complexity = indirection?
+
+
+e.g. chef instead of shell scripts
+
+2024-06-17
+
+=== ===
+#programmingtips
+#tradingcomplexity
+
+code generation like stringtemplate is trading complexity (and in my opinion barely gaining anything)
+
+2022-07-11
+
+=== ===
+#programmingtips
+#tradingcomplexity
+#memoization
+
+build systems would be more tolerable if they memoized the build process. Instead of using their own wrappers, they generated makefiles or shell scripts and you could execute those while gaining more visibilty into the inner workings. I wonder if there is a project out there that does it this way (e.g. executes wget under the hood to get a dependency). Post a question on stackoverflow
+
+Buildroot cheat is a rare example, though even that doesn't store the output
+
+The key that makes this hard is I don't think the shell has a concept of result bearing async tasks (futures) where you can wait for a result before proceeding but do other tasks while you wait.
+
+2022-03-09
+
+=== ===
+#tradingcomplexity
+
+protobuf has some advantages but you are still trading complexity
+
+
+2022-11-28
+
+=== ===
+#memoization
+#tradingcomplexity
+#programmingtips
+
+memoization is the solution to trading complexity. Store the output, not the input plus transformer binary (and its implicitly required execution context / environment which may not be there in future)
+
+2022-11-28
+
+=== ===
+#programmingtips
+#tradingcomplexity
+
+A lot of externalization of config is to avoid recompiling and just change text files. But when you move ALL logic externally you are effectively converting a compiled language to an interpreted scripting language. In which case what's the point of even using Java rather than javascript?
+
+(Ok people have made this argument against me with functional programming so it's not so binary)
+
+2020-09-28
+
+
+
+=== ===
+#hateframeworks
+#tradingcomplexity
+
+Framework
+Similar to agency problem
+You’re changing the problem from doing it yourself to trying to describe to someone else how to do it
+Imagine trying to explain to someone how to whistle instead of whistling yourself
+
+2019-01-17
+
+=== ===
+#strongtyping
+#tradingcomplexity
+	
+I seriously doubt any non traditional language shell is used (or useful in reality) by 99.999999% of developers. I was excited about jshell thinking I could replace bash scripts with jshell scripts but the lack of basic features makes it nothing more than a toy for 12 year old programmers. – Sridhar-Sarnobat 5 hours ago    
+  	 	
+In fact it’s not just about strong typing. I find the jsc JavaScript shell useless too (though node.js I can’t speak to) 
+
+2017-12-11
+
+=== ===
+#codegeneration
+#pointlessindirection
+#tradingcomplexity
+
+pointless indirection - code generation (Stringtemplate)
+
+2017-12-27
+
+=== ===
+#tradingcomplexity
+#toosoon
+#debuggingdifficulty
+
+I have a bit of experience with GWT RPC and my conclusion was…
+
+(to steal @rwoerner’s nicely phrased tidbit)
+“It’s great when it works, but when it doesn’t work it’s worse”
+
+It hides the protocol related stuff….
+
+but when things don’t work, it really helps to see the underlying HTTP calls in plaintext
+
+my opinion with such things, as always is….
+
+“it’s never too late to commit to something, but it can be too soon”
+
+What I’ve found over the years is that no matter how awesome something is today and the next few years, if it never becomes a standard, we are stuck with it and migrating to newer versions etc. is a chore
+(Spring, CXF…)
+My (biased) opinion is, stick to standards. Any additional layers of abstraction/indirection are mixed blessings
+
+2018-04-20
+
+=== ===
+#alienation
+#disconnection
+#tradingcomplexity
+
+The problem with indirection
+e.g. ORM
+code is no longer colocated with where the error will happen
+
+imagine a schema change in a descriptor (xml or annotation) that causes a query to fail. The failure will be where the query is executed 
+
+2018-03-12
+
+=== ===
+#tradingcomplexity
+#hateframeworks
+
+Frameworks transform one program into another (and the standard language compiler can't help you with errors in the source, you push more errors to runtime)
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#tradingcomplexity
+
+Configuration instead of code fallacy
+
+Framework designers think that they can save you the impossible job of writing code by instead asking you to specify runtime configuration (i.e. code declaratively/configuratively) for your app's behavior.
+
+The trouble is, that configuration is almost as long as the code it is intended to replace (at least, if you want to create a meaningful application). But unlike with code, there is no compile-time checking for configuration (by definition; if it did have compile time checking, it would not be declarative. It would simply be a different programming language). You will only find that something is wrong when you attempt to run the application and it blows up in your face.
+
+I know how to write code thank you very much. To the designers of any framework: your desire to get rich and famous by having us masses follow your lead is, for lack of a better description, delusions of grandeur.
+
+2018-03-27
+
+=== ===
+#enforcedautomation
+#tradingcomplexity
+
+Enforced automation is bad
+
+e.g. Stringtemplate to generate java classes <!-- itson -->
+The shell doesn't enforce anything to be automated. You can feed things in manually or through a script and the consumer cannot tell the difference.
+
+2016-12-02

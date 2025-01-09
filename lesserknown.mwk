@@ -1,3 +1,248 @@
+=== ===
+#lesserknown
+
+#programmingtips
+
+Lesser known utils that I should use more
+
+These are useful:
+fc (fix command)
+ccze (log colorizer)
+
+Might be but not sure:
+gron (grep for json)
+go2
+Interactive grep (forgot what it was called)
+
+
+Ones I do use:
+
+tee
+
+Ones that look useful but in reality are not:
+
+fold			- Wraps each line in an input file to fit a specified width and prints it to the standard output.
+pr				- Paginate or columnate files for printing.
+fzf				- Command-line fuzzy finder.
+sk				- Fuzzy finder written in Rust.
+
+Common but I rarely use
+
+tr				- Translate characters: run replacements based on single characters and character sets.
+
+
+2022-04-16
+=== ===
+#programmingtips
+#lesserknown
+Lesser known tools
+
+lolcat			- Put a rainbow in everything you cat to the console.
+
+2022-04-01
+
+=== ===
+#programmingtips
+#lesserknown
+
+Lesser known tools
+
+Needs installing with homebrew
+
+NAME
+     hr � insert horizontal rule
+
+The output by default is a bunch of pound/hash signs
+
+2022-03-16
+
+
+=== unix tools ===
+#lesserknown
+#tools
+#apt
+ 
+      lorem - Generate random Latin looking text using Text::Lorem
+
+
+2022-03-16
+
+
+=== ===
+#lesserknown
+#programmingtips
+
+Lesser known linux commands
+
+tabs
+indent	- Change the appearance of a C/C++ program by inserting or deleting whitespace.
+fmt		- Reformat a text file by joining its paragraphs and limiting the line width to given number of characters (75 by default).
+
+2022-04-13
+=== colorful grep ===
+#programmingtips
+#apt
+#lesserknown
+
+ack is a colorful version of grep
+
+
+2022-03-16
+=== ===
+#programmingtips
+#lesserknown
+
+Lesser known tools
+
+fzf
+exa			- A modern replacement for ls (List directory contents).
+fd
+lsd			- List directory contents.
+ripgrep		- ripgrep is the common name for the command rg.
+bat			- Print and concatenate files.
+
+2022-06-18
+=== ===
+#lesserknown
+
+pacat /dev/urandom
+
+
+pacat
+netcat
+cat
+
+2019-06-09
+=== ===
+#programmingtips
+#lesserknown
+
+lesser known tools
+
+xdiskusage (requires X11)
+
+2021-10-13
+
+
+
+=== lesser known command line tools ===
+#lesserknown
+#linux
+
+Builtin:
+//pr - pagerize
+
+// Roamer file manager
+// mc
+// nnn
+// lf
+// ranger
+// vifm
+// zmv
+// w3c
+// noice
+// dirvish
+// vidir
+// qmv
+// qcp
+�
+mtr			- Matt's Traceroute: combined traceroute and ping tool.
+ss			- Utility to investigate sockets.
+last		- View the last logged in users.
+percol		- 
+rg			- Ripgrep is a recursive line-oriented CLI search tool.
+fd			- An alternative to find.
+dfshow
+unp
+units		- Provide the conversion between two units of measure.
+atool		- Manage archives of various formats.
+cheat.sh
+anypaste
+
+https://www.reddit.com/r/linux/comments/99yk72/lesser_known_terminal_utilities/
+
+inxi		- Print a summary of system information and resources for debugging purposes.
+jot
+iftop
+xxd			- Create a hexadecimal representation (hexdump) from a binary file, or vice-versa.
+mdfind		- List files matching a given query.
+iotop		- Display a table of current I/O usage by processes or threads.
+dig			- DNS lookup utility.
+ascii		- Show ASCII character aliases
+dstat     	- Versatile tool for generating system resource statistics.
+slurm           - 
+bmon            - Monitor bandwidth and capture network related statistics.
+fuser           - Display process IDs currently using files or sockets.
+lsmod           - Shows the status of Linux kernel modules.
+fc              - Open the most recent command and edit it.
+fmt             - Reformat a text file by joining its paragraphs and limiting the line width to given number of characters (75 by default).
+multitail       - Extension of tail.
+bc              - An arbitrary precision calculator language.
+zless           - View gzip and xz compressed files.
+zgrep           - Grep text patterns from files within compressed file (equivalent to grep -Z).
+zcat            - Print data from gzip compressed files.
+nping           - 
+iostate         - 
+split           - Split a file into pieces.
+atop            - Linux system and process monitor.
+
+Nice screenshots:
+https://kkovacs.eu/cool-but-obscure-unix-tools
+
+logsave         - Save the output of a command in a logfile.
+lsblk           - Lists information about devices.
+ldd             - Display shared library dependencies of a binary.
+
+figlet          - Generate ASCII banners from user input.
+banner          - Print the given argument as a large ASCII art.
+rig (fake names) - Utility to piece together a random first name, last name, street number and address, along with a geographically consistent (ie, they all match the same area) city, state, ZIP code, and area code.
+
+https://www.binarytides.com/linux-fun-commands/
+
+script          - Make a typescript file of a terminal session.
+Strings         - Find printable strings in an object file or binary.
+w               - Show who is logged on and what they are doing.
+whom            - 
+mpstat          - Report CPU statistics.
+pmap            - Report memory map of a process or processes.
+iptraf          - 
+
+2021-01-26
+
+=== ===
+#linux
+#lesserknown
+
+renameutils     
+moreutils
+rntools
+
+
+2021-01-26
+
+=== lesser known command line tools ===
+moreutils
+#lesserknown
+
+#linux
+
+* chronic: 	- runs a command quietly unless it fails
+* combine: 	- combine the lines in two files using boolean operations
+* errno: 	- look up errno names and descriptions
+* ifdata: 	- get network interface info without parsing ifconfig output
+* ifne: 	- run a program if the standard input is not empty
+* isutf8: 	- check if a file or standard input is utf-8
+* lckdo: 	- execute a program with a lock held
+* mispipe: 	- pipe two commands, returning the exit status of the first
+* parallel: - run multiple jobs at once
+* pee: 		- tee standard input to pipes
+* sponge: 	- soak up standard input and write to a file
+* ts: 		- timestamp standard input
+* vidir: 	- edit a directory in your text editor
+* vipe: 	- insert a text editor into a pipe
+* zrun: 	- automatically uncompress arguments to command
+
+2021-01-26
 
 === ===
 #linux
@@ -52,132 +297,36 @@ prune
 2021-01-31
 === ===
 #lesserknown
-#programmingtips
+
+Lesser known command line tips and tricks
+
+Disjunct
+grep -e term1 -e term2
+
+2021-03-10
+
+=== ===
+#lesserknown
+
+Lesser known command line tools
+
+Lynx
+
+2021-06-21
+
+
+=== ===
+#lesserknown
 #linux
 
-Unusual unix tools
-
-tldr
-fd
-bat
-vd
-dutree
-z
-proselint
+Linux Lesser known commands
 
 
-2020-05-04
-
-=== ===
-#lesserknown
-#programmingtips
-
-Lesser known linux commands
-
-tabs
-indent
-fmt
-
-2022-04-13
-=== ===
-#lesserknown
-
-#programmingtips
-
-Lesser known utils that I should use more
-
-These are useful:
-fc (fix command)
-ccze (log colorizer)
-
-Might be but not sure:
-gron (grep for json)
-go2
-Interactive grep (forgot what it was called)
+m4 - Macro processor
 
 
-Ones I do use:
+2021-08-11
 
-tee
-
-Ones that look useful but in reality are not:
-
-fold
-pr
-fzf
-
-Common but I rarely use
-
-tr
-
-
-2022-04-16
-=== ===
-#programmingtips
-#lesserknown
-Lesser known tools
-lolcat
-
-2022-04-01
-
-=== ===
-#programmingtips
-#lesserknown
-
-Lesser known tools
-
-Needs installing with homebrew
-
-NAME
-     hr – insert horizontal rule
-
-The output by default is a bunch of pound/hash signs
-
-2022-03-16
-
-
-=== unix tools ===
-#lesserknown
-#tools
-#apt
- 
-      lorem - Generate random Latin looking text using Text::Lorem
-
-
-2022-03-16
-
-
-=== colorful grep ===
-#programmingtips
-#apt
-#lesserknown
-
-ack is a colorful version of grep
-
-
-2022-03-16
-
-=== ===
-#lesserknown
-
-pacat /dev/urandom
-
-
-pacat
-netcat
-cat
-
-2019-06-09
-
-=== ===
-#programmingtips
-#lesserknown
-
-lesser known tools
-
-xdiskusage (requires X11)
-
-2021-10-13
 
 
 
@@ -201,7 +350,8 @@ Builtin:
 // vidir
 // qmv
 // qcp
- 
+ 
+
 mtr
 ss
 last
@@ -216,6 +366,7 @@ cheat.sh
 anypaste
 
 https://www.reddit.com/r/linux/comments/99yk72/lesser_known_terminal_utilities/
+
 
 inxi
 jot
@@ -263,51 +414,36 @@ mpstat
 pmap
 iptraf
 
+
 2021-01-26
 
 === ===
 #linux
 #lesserknown
 
-renameutils
-moreutils
-rntools
- 
-2021-01-26
+Unix Lesser known commands
 
-=== lesser known command line tools ===
-moreutils
-#lesserknown
- #linux
+ts from moreutils will prepend a timestamp to every line of input you give it
 
-* chronic: runs a command quietly unless it fails
-* combine: combine the lines in two files using boolean operations
-* errno: look up errno names and descriptions
-* ifdata: get network interface info without parsing ifconfig output
-* ifne: run a program if the standard input is not empty
-* isutf8: check if a file or standard input is utf-8
-* lckdo: execute a program with a lock held
-* mispipe: pipe two commands, returning the exit status of the first
-* parallel: run multiple jobs at once
-* pee: tee standard input to pipes
-* sponge: soak up standard input and write to a file
-* ts: timestamp standard input
-* vidir: edit a directory in your text editor
-* vipe: insert a text editor into a pipe
-* zrun: automatically uncompress arguments to command
+'but not in a form that allows you to plot on asciidoctor / asciigraph (whatever it's called)
 
-2021-01-26
+2021-09-08
+
+
 === ===
-#programmingtips
 #lesserknown
+#programmingtips
+#linux
 
-Lesser known tools
+Unusual unix tools
 
-fzf
-exa
+tldr		- Display simple help pages for command-line tools from the tldr-pages project.
 fd
-lsd
-ripgrep
 bat
+vd
+dutree
+z			- Tracks the most used (by frecency) directories and enables quickly navigating to them using string patterns or regular expressions.
+proselint
 
-2022-06-18
+
+2020-05-04

@@ -1,0 +1,711 @@
+=== ===
+#r23c
+#programmingtips
+#programminglanguages
+Programming language phrase Matrix to template script
+
+
+2022-08-03
+
+=== ===
+#programminglanguages
+
+Java Robustness production (as said in recent meetup) for server side
+Python is getting the desktop automation, or remote script jobs (for data science)
+
+2022-09-02
+
+=== ===
+#programmingtips
+#scripting
+#programminglanguages
+
+Python has huge libraries support which is powerful to build any application including Web development, Machine Learning, AI, Robotics and Data Science.
+
+If you want to become Data Scientist, Machine Learning, Deep Learning or AI expert, Python is a good choice to go with.
+
+2021-06-21
+
+=== ===
+#programmingtips
+#programminglanguages
+
+The best code (and best programming languages) doesn't need you to extract wrapper methods but puts everything compactly in the top level method with full transparency
+
+java Lambdas improve this over loops because they have high level primitives for collection pipelines. Same with the shell.
+
+
+2022-07-08
+
+
+=== ===
+#programmingtips
+#programmignlanguages
+
+When people say higher level language, what they mean is higher level of abstraction of computation primitives (usually data read or write operations, but sometimes arithmetic)
+
+2022-10-22
+
+=== ===
+#programminglanguages
+#cython
+#golang
+#programmingitps
+golang is not suited to code that needs tweaking cyclically/iteratively (e.g. like python visualizations).
+
+Since a lot of development is cyclical ("low hanging fruit") and pareto-like, this sadly means finalized single binaries fall behind (that said, golang is better than cython because the builder just works, unlike cython which is quite environment sensitive).
+
+2022-08-06
+
+=== ===
+#programmingtips
+#programminglanguages
+#golang
+I guess golang is good for filters (i.e. programs that have input and output plaintext), while python etc is better for final-payoff callouts, side effects, renderings (e.g. producing a ggplot, gui)
+
+2022-08-06
+
+=== ===
+#programmingtips
+#programminglanguages
+
+Nodejs advantage
+Everything is plaintext - so is easy to print. No object or type to string conversion when debugging with print statements
+
+2022-02-02
+
+=== ===
+
+#research
+#programmingtips
+#programminglanguages
+
+Tk readily adapts to the UI conventions (the "look-and-feel") of the host operating system or graphical system. 
+
+2022-01-26
+
+=== ===
+
+#research
+#programmingtips
+#programminglanguages
+
+The Tcl interpreter has a simple syntax, making it suitable as an interactive command language 
+
+Tcl programs consist of commands. Commands consist of a command name, optionally followed by arguments separated by whitespace. Commands are sepa- rated by newline or semicolon characters. 
+
+The user can create new commands (usually called procs), which operate just like built-in commands. 
+
+Double quotation marks are used to group characters, possibly containing white- space, into one word. Curly braces group arguments. They can cross lines and be nested, and no further substitutions are performed within them. Square brackets perform command substitution. The text within the brackets is evaluated as a Tcl command and replaced with the result. The dollar sign is used to perform variable substitution and supports both scalar and array variables. 
+
+The pound sign or hash mark (#) is the null command, acting as a comment. 
+
+all data is represented as strings. Strings often take one of three forms. Lists are strings consisting of whitespace-separated values. Using curly braces, list ele- ments can in turn be other lists. 
+
+Strings often represent commands, the most common use being as arguments to control structure com- mands such as if and pr oc. 
+
+{string} 
+Quoting with no substitution 
+
+gets 
+Read line of input. 
+puts 
+Write to channel. 
+exec Invoke subprocesses. 
+after 
+Execute a command after a time delay. 
+
+global Access global variables.
+Declare given names as global variables. Meaningful only inside a procedure. 
+ 
+set
+Read and write variables.
+Set the value of variable varName to value and return the value. If value 
+is omitted, return the current value of varName. 
+ 
+upvar 
+Create link to variable in a different stack frame. 
+variable 
+Create and initialize a namespace variable. 
+
+for each varname list body 
+regexp [options ] exp string [matchVar ] [subMatchVar...] 
+Return 1 if regular expression exp matches string string; otherwise, return 0. If specified, matchVar will contain the portion of string that matched, whereas subMatchVar variables will contain strings matching parenthesized expressions in exp. 
+
+gsub [options ] exp string subSpec varName Match regular expression exp against string string, making replacements 
+defined by subSpec, and store the result in variable varName. 
+
+split string [splitChars ] 
+string compare string1 string2 
+Compare strings lexicographically. Return –1 if string1 is less than string2, 0 if equal, or 1 if greater. 
+
+upvar 
+.sp -1p upvar [level ] otherVar myVar... 
+Make local variable myVar become an alias for variable otherVar in the stack frame indicated by level, where level is either a number indicating the number of levels up the stack relative to the current level or a number preceded by "#", indicating an absolute level. The default level is 1. 
+
+Image items are used to display Tk images in the canvas. They are created with a widget method of the following form: 
+pathName cr eate image x y [option value option value... ]
+
+2022-01-26
+
+=== ===
+
+#research
+#programminglanguages
+
+Tcl"is a macro language, it derives from macro-assemblers, the C preprocessor, and older, text-oriented languages like TRAC (text reckoning and compiling)"... 
+
+https://wiki.tcl-lang.org/page/Why+is+TCL+syntax+so+weird
+
+
+2022-05-23
+
+=== ===
+#research
+#programmingtips
+#programminglanguages
+
+And learning too. The job market for C++ is hit and miss. But C# holds my hand way too much for my taste.
+
+2020-08-07
+=== ===
+#programminglanguages
+#research
+#clang
+
+There are hundreds of system calls available, but some effort is made by kernel maintainers to keep that number as small as possible, to keep the kernel simple (Unix philosophy; [Thompson 78]). More sophisticated interfaces can be built upon them in user-land as system libraries, where they are easier to develop and maintain. Operating systems generally include a C standard library that provides easier-to- use interfaces for many common syscalls (e.g., the libc or glibc libraries). 
+
+
+Also shown are system libraries, which are often used to provide a richer and easier programming interface than the system calls alone. Applications include all running user-level software, including databases, web servers, administration tools, and operating system shells. 
+
+Golang runtime has its own syscall layer that doesn't require the system library, libc 
+
+
+2022-05-13
+
+https://www.informit.com/articles/article.aspx?p=3104531&seqNum=2
+
+=== ===
+#programminglanguages
+#programmingtips
+
+You can either glue a shared library into your code (through an import), or glue the CLI executable into the shell script. The two are quite similar (in fact some shared libraries are callable from the command line). I prefer the latter since it gives you a lot of shell pipeline logic without coupling the components too tightly.
+
+I guess scripting languages are half way between the two, but the extra verbosity of a general purpose language discourages me. A shell script that fits in half a screen is a lot more desirable than a program that spans more than one screen.
+
+
+2023-08-15
+
+=== ===
+
+#programminglanguages
+#programmingtips
+
+C is meant for running on a physical machine (e.g. embedded systems)
+
+Java is meant for running on a virtual machine
+
+2023-08-15
+
+=== ===
+#programminglanguages
+#programmingtips
+
+python can be a runtime glue for native libraries if you are using SWIG (like java would be for native shared libraries via JNI
+
+This is only of value when performance is important (e.g. for realtime robotics/vehicles, or a database). Pure java or pure python is good enough for non-industrial grade tools
+
+Neo4j is pure java I believe.
+
+2023-08-15
+=== ===
+#programminglanguages
+#programmingtips
+
+
+I'm not finding a compelling use-case for golang (or C) CLI tools
+
+For text-in-text-out transformations (filters), awk is more rapid and more tweakable. groupby is barely worth it.
+
+C is more compelling if you're reading file content (which awk is not the case when it's operating on stdin). In other words, it's for sinks and sources and cantrips but not filters. But even if secondary storage was needed, then a shell script does the kind of file operations I want.
+
+I guess it might be good for gedcom, but even then its best to first create separate awk scripts for each operation and only create a tool if you want to make usability a priority for the public rather than yourself as a prosumer.
+
+One thing awk is not good for is connected data (tree or graph structures). It doesn't have stacks or recursion to deal with depth / traverse data non-linearly. This is an intentional case of "craft the first mile" and let someone else get the last 10%"
+
+
+2023-11-08
+
+=== advantage of python ===
+#programminglanguages
+#programmingtips
+
+Python
+
+"Java tax"  (heard at Rust meetup by elderly but smart white haired man short hair, not the long haired one who is also smart but looking for a job)
+
+"No wasted motion"
+
+2023-09-09
+
+=== ===
+#visualization
+#programmingtips
+#programminglanguages
+
+
+(See if you can depict this as an inverted pyramid)
+
+Wide - Bash 
+Less wide - Awk
+Less wide - Python
+Narrow - Golang
+Narrowest - C
+
+2023-07-31
+
+=== first class citizens ===
+#programminglanguages
+#programmingtips
+
+Bash - everything is a file
+SQL - everything is a field
+Java - everything is an object
+C - everything is a memory pointer
+
+
+2023-07-31
+
+=== ===
+#programminglanguages
+#programmingtips
+
+team environments rather than personal code is a good candidate for a strong type checking language or mode, so that others don't have to read your mind.
+
+The Indian at NASA said this when I asked when to use strong type checking.
+
+2023-08-18
+
+=== ===
+#python
+#programminglanguages
+#programmingtips
+
+Python does have strict type checking, but it's off by default
+
+python Classes make LSP development better via stronger typing
+
+2023-08-18
+
+=== ===
+#programminglanguages
+#scripting
+
+Refactoring code is hard without a compiler. That's the reason that scripting languages should not be used if both a) the code is large b) it is going to be used for a long time. Keeping the code working is too difficult with a language like python.
+
+And refactoring is inevitable as you want to support more and more functionality. You could keep creating new programs but unless you have an abundance of free time (or money) it's more likely you'll have to have a program support 2 slightly different cases (e.g. flying a device in a test chamber, then augmenting it to run in free flight)
+
+2023-08-15
+
+=== ===
+
+#disposability
+#programminglanguages
+#programmingtips
+
+Be clear about the distinction between throwaway scripts which are fine if they break as time passes (including python which have terrible share library dependencies), and CLI tools (nodep like binary golang single file is ideal)
+
+
+ask yourself what the deliverable is. For scripts, it’s the output data (whether it’s a txt file, a file system in a new state, or a matplotlib png; thereafter the script that produced it is of no use). For CLI tools, it’s the tool itself that must retain its integrity. Golang (and awk?) is better for the latter, python and bash for the former.
+
+2023-07-19
+
+=== ===
+#python
+#scripting
+
+#rapid
+#programminglanguages
+
+One line payoff
+
+The nice thing about python is that there is no feeling of "before you can do this, you have to first” do something else for any statement. If you want to read a csv file into an array, it occupies one line of code. If you want to plot a chart, it takes one line. If you want to extract a column from a data frame, it takes one line.';+
+
+2023-07-14
+
+=== ===
+#pinned
+#programminglanguages
+
+(done) Tabulate these (in github templates.git/README.md?):
+
+Scripting languages are for fast modification and only occasional running
+
+Compiled languages are more for finalized code that is to be run a lot more often than it is modified
+
+Occasionally you'll get prprun changed. 
+
+2023-08-09
+
+=== ===
+#programminglanguages
+#programmingtips
+
+At imperial, year 4 students were telling me how OpenGL was easier with Tcl.
+
+Only now at Nasa JPL am I realizing that the 2023 equivalent of this conversation is using python.
+
+
+2023-08-15
+
+
+
+=== ===
+#research
+#singlefileexecutable
+#tech
+#programminglanguages
+
+Dart is statically typed and can be built to native code; it might be a better option if we intend to create large, sophisticated apps
+
+2023-08-19
+
+=== ===
+#research
+#programminglanguages
+
+Dart is more Java-ish than Typescript
+
+2023-08-19
+
+=== ===
+#research
+#programminglanguages
+
+Dart has lost its mojo after all the major browsers anounced that they wouldn't support it natively. Its VM is no longer developed and now, Dart is simply a transpiler that compiles Dart code to JavaScript. So in practice, it's just another alternative to JavaScript, such as TypeScript or Coffeescript.
+
+2023-08-19
+
+=== ===
+#research
+#scripting
+#programminglanguages
+
+Bash is a single-pass interpreter which means it reads one command at a time, interprets, and runs it then and there.
+
+2023-04-13
+
+=== ===
+#research
+#programminglanguages
+
+Smalltalk, Ruby, Python, and Self are all "strongly typed" in the sense that typing errors are prevented at runtime and they do little implicit type conversion, but these languages make no use of static type checking: the compiler does not check or enforce type constraint rules.
+
+2023-04-13
+
+=== ===
+#research
+#scripting
+#programminglanguages
+#golang
+
+Unlike scripting languages such as Python, Go code compiles to a fast-running native binary. And unlike C or C++, Go compiles extremely fast - fast enough to make working with Go feel more like working with a scripting language than a compiled language.
+
+Go is a compiled language ,not a scripting language . It is a procedural language .Though it doesn't support classes unlike Java and C# ,it supports structs
+
+2023-04-13
+
+=== ===
+#research
+#scripting
+#programminglanguages
+#statictyping
+
+Haskell is statically typed. And you can probably embed ghci or hugs (both are interpreters) into another programm. But it's not easy, afaik.
+
+2023-04-13
+
+=== Lisp ===
+#programminglanguages
+#research
+(from operating systems implementation tanenbaum book)
+
+Google contributes a lot because Google Flights is internally an immense Common Lisp codebase they bought from ITA Software.
+
+2023-01-31
+
+=== tcl ===
+#research
+#tech
+#programminglanguages
+(expect; Scripts for Controlling Interactive Processes)
+
+a classic example of a little language synergistically generating large power when combined with the rest of the UNIX workbench. 
+
+An expect programmer can write a script describing the dialogue. Then the expect program can run the "interactive" program non-interactively. 
+
+expect can also be used to automate parts of a dialogue, since control can be passed from the script to the keyboard and vice versa. 
+
+Tcl is actually a subroutine library, which becomes embedded into an application and provides language services 
+
+send sends strings to a process. expect waits for strings from a pro- cess. 
+
+The exact string matched (or read but unmatched, if a timeout occurred) is stored in the variable expeclmatch 
+
+Tcl providing two forms of string quoting: braces and double quotes. (If unambiguous, Tcl does not require strings to be quoted at all.) 
+
+The brackets cause the enclosed text to be evaluated as a command, and the result is substituted for the original text. 
+
+expect uses ptys (pseudo-terminals) to connect spawned processes. Ptys provide terminal semantics so that programs think they are performing I/O with a real terminal. 
+
+expect_user and send_user perform I/O with the standard input and the standard output 
+
+Multiple commands may be strung together on a single script line or within braces, separated by semi-colons. Naturally, this extends to the -c argument. For example, the following command runs program foo for 20 seconds. 
+expect -c "set timeout 2O; spawn foo; expect" 
+
+
+expecluser, send-user, and send-error (for writing to the stan- dard error) are frequently used in longer expect scripts which translate a complex interaction from a process to a simple one for the user. 
+
+
+
+The arguments to interact are actually string-action pairs. (The de- fault action is to invoke the interpreter interactively.) This generalized 
+mechanism can support all the usual styles of escapes. such as tip's --prefixed commands or csh's single-character job control keys 
+
+
+Interact \
+	-y {yes} 
+An unrealistic but amusing application of character mapping is the following script which runs a shell with a Dvorak keyboard. For brevity, only lowercase letters are mapped. 
+
+proc dvorak {} { interact -q {return continue} -d {} \  r sendp t sendy v sendf u sendg i sendc o sendr p sendI S sendo d sende f sendu bd sendi h sendd j x sendq c sendj v sendk b sendx n sendb 
+sendh k sendt I sendn sendw 
+send - 
+send v send z I \; {sends}z {send f;Ì \ 
+}
+
+Some interactive programs have non-interactive alternatives. However, it is often the case that these alternatives are controlled in a way quite unlike the original interactive program. Thus, you need to learn two ways of doing things: interactively and non-interactively 
+
+
+you can automate a procedure you know how to do interactively by simply translating it into send/expect sequences. 
+
+
+he speed of expect operations is described by Libes [19904]. One side-effect not discussed is that expect can overrun input buffers designed for hlman typists. send supports a slow option (send -s) specifically to avoid this problem. 
+
+send also supports a simulation of actual human typing speed (send -h) according to a modiûed Weibull distribution [Johnson-Kotz l97}l, a coûtmon statistical tool to simulate interarrival times. 
+
+expect provides help even when you want to run programs inter- actively. If they lack a programmable interface, you can partially automate the interaction and then share control. 
+
+For new applications, there is no excuse not to use Tcl. It is small, efficient, easy to use, and probably suffices for 90Vo of all tools. Build- ing Tcl into an application will always be better than an after-the-fact solution like expect. But for tools which don't warrant the Tcl library, or are too old to be rewritten, expect is a fast solution. 
+
+
+Do you need to communicate with a serial line? Use tip, cu, or kermit. With a TCP socket? Use telnet. 
+
+this building block philosophy is very much in keeping with the UNIX tradition of hooking small programs together to build larger ones. In this respect, expect functions as a new kind of glue, much like the shell itself. 
+
+Unfortunately, shell job control was designed only with interactive use in mind and cannot automatically control interac- tive processes. expect's job control is generalized and has no such restriction. The two forms of job control do not interfere and can 
+be used together 
+
+
+
+2023-01-24
+
+===  ===
+#programmingtips
+#programminglanguages
+
+Java is notoriously known for their obsession with backwards compatibility. If we built our CLI in java 6, we can be extremely confident that we would not face any compatibility issues with other projects. Running with the same code base on anything from IOT devices to supercomputers.
+
+(Golang's) strict adherence to a rather opinionated standard is a pain. For example, compiler will refuse to compile if you have unused dependencies in your code - among many many other things. This works both to frustrate the developer, and force better quality code.
+Personally I both hate and respect this part of the compiler, as I have looser standard when experimenting in "dev mode", while at the same time have deep respect for it, as I follow a much stricter standard on "production mode".
+
+The final showdown boiled down to either shell script or go.lang
+
+2021-04-26
+
+=== ===
+#programmingtips
+#programminglanguages
+
+node js is a bit like shell scripting where json is native, which is great. But it does not give a clean composition syntax like the shell. Neither does golang surprisingly. Nor python. Thus, shell scripting is still superior.
+
+Until someone understands the need for opaque composition there will be no progress. I wonder if erlang would be work (from what I looked at, I'm not impressed but maybe that's because I'm not used to it. We hate what we can't have)
+
+2021-04-26
+=== ===
+#programmingtips
+#scripting
+#programminglanguages
+
+For server side daemons, Java is fine.
+
+For command line apps, something easier to launch is better: bash, golang, cython...
+
+2021-09-22
+
+
+=== ===
+#programmingtips
+#programminglanguages
+
+VBscript - spreadsheet desktop
+JavaScript - web browser
+Java - application server
+PHP - backend for website (and nothing else)
+Python - data science processing
+R - data science visualization
+Golang - devops? Sre?
+C - system kernel, graphics for gaming
+Rust - CLI tools
+Bash - files
+Perl - plaintext
+Awk - plaintext
+
+Tcl - desktop UI interaction
+Scala
+Ruby
+Groovy
+Applescript
+
+
+What primitives do each provide, or what is a first class citizen?
+
+2021-06-21
+
+=== ===
+#programmingtips
+#programminglanguages
+
+Python and JavaScript existed long before they found their true purpose
+
+implication: don't decide solely based on usage what language is worth knowing. I like Golang not because of what it's popular for, but what it excells in for me
+
+2021-06-21
+
+=== ===
+#programmingtips
+#programminglanguages
+#scripting
+
+AFAIK tck/tk was the first usable script language capable of working with X-Windows at xlib level
+
+
+
+Tcl is a string-based command language.
+The language has only a few fundamental constructs and relatively little
+syntax, which makes it easy to learn. The Tcl syntax is meant to be simple.
+Tcl is designed to be a glue that assembles software building blocks into
+applications.
+A simpler glue makes the job easier.
+
+2021-06-21
+
+=== ===
+#programmingtips
+#programminglanguages
+
+4th generation languages
+
+Sql
+Unix shell
+R
+Xquery
+Xslt
+jq
+gradle
+
+implication: find 4th gen / DSL languages or create your own (I think groovy makes this simple - see if golang can)
+
+2021-06-21
+
+=== ===
+#programminglanguages
+#programmingtips
+
+Perl was originally developed as a text-processing and glue language, for the same domain as AWK and shell scripts, but was mostly used as a general-purpose programming language later on. By contrast, PostScript is a Turing complete language, and in principle can be used for any task, but in practice is narrowly used as a page description language.
+
+
+2021-06-21
+
+
+
+=== When should I use Perl CGI instead of PHP (or vice versa)? ===
+#cgi
+#scripting
+#programminglanguages
+#research
+#programmingtips
+
+Many people push the idea that CGI is obsolete don't really understand what CGI is. There is a widespread misconception that CGI is an inherently Perl-based technology. Many people attack CGI as a way to pad out cultic attacks on Perl in support of whatever language they support. If you want to be a real technologist, you need to understand the fundamental issues and make a choice based on the facts of the situation.
+
+CGI is an interface with a webserver that allows you to write interactive pages in any language--even befunge. When a server gets a request for a page controlled by a CGI script, the server runs the script and returns the results to the requester.
+
+https://stackoverflow.com/questions/824730/when-should-i-use-perl-cgi-instead-of-php-or-vice-versa
+
+2021-06-15
+
+=== Is CGI Dead (1999) ===
+#cgi
+#scripting
+#programminglanguages
+
+There was a good reason for CGI's rapid adoption six years ago, and there's good reason for its enduring popularity today. It's simple. So simple that a fully compliant CGI script can be written with three lines of Perl. So simple that someone who has never written a line of code, let alone a network server, can install and customize a CGI script with ease.
+Under the CGI protocol the script can recover all the relevant information about the server, the connection, the browser, and the requested document by reading from a handful of environment variables, or, in the case of a POSTed Web form, by reading text from standard input. To send data back to the browser, the script merely needs to print what it wants to display to standard output. True, there are a few gotchas (such as correctly decoding URL-encoded form strings), but those things are handled well by the many CGI support libraries and collections of example code.
+Because a CGI script runs as an independent process from the Web server, it has no language limitations. You can write scripts in C or C++, in Perl or Python, in Java or JCL. CGI scripts are also easy to debug, since you can easily create an environment that simulates the Web server in various states and steps through the script in your favorite debugger.
+CGI scripting gives developers' imaginations free rein. CGI scripts can do anything that stand-alone programs can do. They can control external devices, open up network connections, and talk to databases. Do you need a Web page to interface with a 1970s-era tape-punch device? No problem! You can whip up a CGI script to do it.
+Properly written CGI scripts are also highly portable. Plenty of scripts written five years ago for now-obsolete Web servers on now-obsolete platforms are running today in completely different environments. The combination of language independence and a simple, widely supported protocol makes CGI portability a cinch.
+Contrast the simplicity and flexibility of CGI scripting to some of
+
+https://legacy.cs.indiana.edu/classes/a348-dger/fall99/lectures/lincoln/CGI.html
+
+2021-06-21
+=== Using Java 9 Modularization to Ship Zero-Dependency Native Apps ===
+#programminglanguages
+#research
+#java
+
+When Java was first introduced, mainstream programming languages mostly either compiled to standalone executables (e.g. C/C++, COBOL), or else ran in an interpreter (e.g. Perl, Tcl). For many programmers, Java's need for both a bytecode compiler and a runtime interpreter was a shift in thought. The compilation model made Java better suited for business programming than "scripting" languages. 
+
+JDK 8's javapackager tool.
+
+embedding a JRE adds roughly 200 megabytes. It's difficult to trim that down
+
+in a nutshell, the new module system is about isolating chunks of code and their dependencies.
+
+At a superficial first glance, jlink is similar to javapackager. It generates a bundle
+
+
+jlink establishes "link time" as a new optional phase, in between compile-time and run-time, for performing optimizations such as removing unreachable code. Meaning that unlike javapackager, which bundles the entire standard library, jlink bundles a stripped-down JRE with only those modules that your application needs.
+
+If your project has third-party library dependencies, then you'll want to use your choice of "shaded" or "fat-JAR" plugins to generate a single JAR with all dependencies included.
+
+building an executable JAR is a simple matter of telling Gradle's jar plugin to include a META-INF/MANIFEST.MF file declaring the executable class:
+
+Although Go has been very high-profile in the early wave of cloud infrastructure CLI tools (e.g. Docker, Kubernetes, Consul, Vault, etc)‚  Java is becoming a strong alternative, especially for shops with established Java experience. 
+
+https://www.javacodegeeks.com/2020/10/using-java-9-modularization-to-ship-zero-dependency-native-apps.html
+
+2021-10-18
+
+=== ===
+#clang
+#programminglanguages
+#career
+#programmingtips
+
+And learning too. The job market for C++ is hit and miss. But C# holds my hand way too much for my taste.
+
+2020-08-07
+
+
+=== ===
+#clang
+#programmingtips
+#programminglanguages
+
+C has no builtin regex parsing
+For that reason, doing application logic is not a good application. It's only if the string is already parsed into data structures for you (with flex and bison).
+
+2020-08-25
+
+
+
+

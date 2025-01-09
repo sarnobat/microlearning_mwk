@@ -1,0 +1,134 @@
+=== ===
+#programmingtips
+#sridharaxiom
+#toosoon
+
+Transparency is the opposite of abstraction
+
+initially, favor transparency over abstraction. (same with decluttering too I think)
+
+only 10% of the time will the patterns be so static that the abstraction will be of any benefit (or non-detriment)
+
+2022-06-21
+
+=== ===
+#programmingtips
+#wrongabstraction
+#axiomssridhar
+
+the wrong abstraction is more damaging than no abstraction
+
+
+=== ===
+#programmingtips
+#axiomssridhar
+
+Hi Ayub.
+
+Thank you for adding this functionality and testing it on the lab environment. To make the code for me or future developers to understand, there are 2 alternatives: add lots of comments, or make the code self-documenting by making it as obvious as possible what it's doing. I prefer the latter, so I'd like to tweak it slightly:
+
+1) Pure functions: Helper methods should only return values, and not have no side effects (i.e. either return a value, or for void methods, do not modify class field values).
+
+Returning a value and modifying state is confusing because if the return value is not used, it looks like the method call is removable when it's not.
+
+It's easier to move helper logic to a separate class as the code grows.
+
+2) Referential transparency: Pass input values to helper methods explicitly as parameters rather than methods with hidden dependencies on fields.
+
+3) Global State immutability: when passing fields to helper methods, make it impossible for the helper method to modify the value, and leave the modifications to fields in the top-level entry point method (i.e. public methods)
+
+4) Minimize variable scope. The less variables "in play" at any given position in the code, the less likely future developers are to introduce bugs (e.g. via copying and pasting similar code). And the easier to understand what inputs are relevant to a block of logic. And variable names can be kept short because there is less possibility of misunderstanding what the variable is for.
+
+Avoid magic numbers (e.g. index = -1). In C it's common but is not considered java style.
+
+The above are core practices in functional programming will make the code easier to understand, debug, maintain and augment in future.
+
+2023-03-16
+=== ===
+#r23c
+
+#axiomsridhar
+
+axiomsridhar = uncool-aid programmer
+axiomsridhar = radical programmer
+
+2022-10-24
+
+=== Thou shalt not fragment code ===
+
+#axiomsridhar
+
+#fragmentation
+#segmentation
+
+
+DRY often creates the wrong abstraction, and the wrong abstraction is worse than no abstraction. Copy paste programming is better initially.
+
+Only when double duty becomes a problem THEN create a common method. If you create common code because it seems like tangential logic but there is only one use, you will end up with split code where the util method is only used in one place but has greater visibility than it should; this makes code archaeology harder).
+
+common logic should be initiated bottom up, not top down. Or as most programmers say, YAGNI
+
+2022-10-24
+
+=== ===
+#sridharaxiom
+
+prefer string input and output to your APIs/programs than objects. Strings can be easily manufactured for testing during your test-and-code cycle
+
+e.g. for my mwk snippets, a program that gets the date of a snippet that takes a Snippet object as input is a pain. Taking a snippet string (or file containing text) is much easier to try things out on.
+
+2017-08-16
+
+=== ===
+#flatfile
+#sridharaxioms
+
+Prefer file system over database
+
+I'm slowly realizing relational databases are (allegedly) for people who want "free" scalability. Vendors claim they can support trillions of rows or petabytes of data. But anyone who had such a business need should use their brain more: they should divide their data by date range, and split their data into separate files by some key (e.g. user ID). Don't get locked in by a vendor.
+
+At most, use a captive interface only for indexing, not for the source of truth.
+
+Come to think of it, RDBMS customers still have to deal with scalability issues but they are much more abstract than just splitting your data using your own plaintext file system solution. So there is no advantage to RDBMSs, just a perceived one that has been inherited through generations.
+
+You could argue this is how Google evolved. They gave the middle finger to relational databases.
+
+
+=== ===
+#plaintext
+#captiveuserinterface
+#sridharaxiom
+
+reasons not to use a database
+
+it's harder to backup  (because it gets bloated with unnecessary files that are too big to source control, and are binary so cannot be versioned meaningfully)
+it's harder to recover (because of the captive user interface - it's not plaintext)
+
+People who say "there is a backup tool that comes with the product itself" are not speaking from experience (CMS for atleticomadrid.de ultimately failed despite having "logically colocated backups"). Of course it's easy when disasters within the scope of expected events happen. But data disasters are usually from unforeseen situations (like when circular rsync removed all my files from my yurl.db and I had no recent backup).
+
+It's better to use source-controlled plaintext.
+
+Binary data, even if decipherable (which usually it isn't), is completely muddled. The best data is just key-value rows in plaintext files, which I'm starting to use now.
+
+
+Prefer plaintext export / transaction logs (event sourcing) over colocated backups with captive user interface needed for recovery
+
+2017-08-09
+
+=== ===
+#transparent
+#abstraction
+#sridharaxiom
+#opacity
+
+Prefer transparency over abstraction - so other developers don't have to learn a new domain (i.e. the new abstraction layer).
+
+Maybe people abuse the success of TCP, and hardware abstraction.
+
+
+
+===  ===
+#sridharaxiom
+#hateunittesting
+
+prefer preconditions over unit tests

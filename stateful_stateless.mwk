@@ -1,0 +1,558 @@
+=== ===
+#progrmamingtips
+#stateless
+#dataflowprogramming
+
+dataflow programming has no global state (thank god).
+
+2022-08-11
+
+=== ===
+#progrmamingtips
+#stateless
+#dataflowprogramming
+
+dataflow programming has no global state (thank god).
+
+2022-08-11
+
+=== ===
+#functionalvsimperatative
+#lambdas
+#stateless
+
+the value of functional programming boils down to the difference between a process and a thread: one is just a code segment, the other is a footprint in memory (i.e. on represents a function, the other represents a state).
+
+Parallel prcessing (via multicore processors) relies on stateless units of computation.
+
+2022-09-09
+
+=== ===
+#programmingtips
+#dataflow
+#stateless
+
+Docker is like a stateless operating system, in the sense that you just use the OS as a means to an end (e.g. a build artifact) and destroy the workspace before it has a chance to accumulate anything useful.
+
+Computationally it’s less efficient but instead of storing a mess of intermediate build output it leaves a clean state on the host system.
+
+it’s somewhat the opposite of memoization. Instead of storing the ending state, you store the instructions that will get you there.
+
+
+2022-08-02
+=== ===
+#programmingtips
+#dataflow
+#stateless
+CPU = stateless
+Disk = stateful (by definition)
+
+Apps vs data same thing, ideally
+
+2022-07-14
+
+=== ===
+#programmingtips
+#dataflow
+#stateless
+CPU = stateless
+Disk = stateful (by definition)
+
+Apps vs data same thing, ideally
+
+2022-07-14
+
+=== ===
+#programmingtips
+#dataflow
+#stateless
+
+Docker is like a stateless operating system, in the sense that you just use the OS as a means to an end (e.g. a build artifact) and destroy the workspace before it has a chance to accumulate anything useful.
+
+Computationally it’s less efficient but instead of storing a mess of intermediate build output it leaves a clean state on the host system.
+
+it’s somewhat the opposite of memoization. Instead of storing the ending state, you store the instructions that will get you there.
+
+
+2022-08-02
+=== ===
+#productivity
+#context
+#state
+
+State, context
+Browser tabs
+Inbox emails
+
+2020-09-28
+
+=== ===
+#imperative
+#stateful
+
+#dataflow
+
+stateful, imperative programming causes global impact because you don't know who logic depends on the state you are modifying. Data flow programs / functional programs have a very localized impact.
+
+2023-02-17
+
+=== ===
+#imperative
+#stateful
+
+#dataflow
+
+stateful, imperative programming causes global impact because you don't know who logic depends on the state you are modifying. Data flow programs / functional programs have a very localized impact.
+
+2023-02-17
+
+=== ===
+
+#programmingtips
+#hateoop
+
+#staticmethods
+#stateful
+
+OOP code is trying to accomplish too many things. This is because objects store state.
+
+The only exception is static methods or functions/lambdas (both of which people discourage!)
+
+
+2023-05-10
+
+=== ===
+#stateful
+#programmingtips
+#asymmetry
+
+stateful systems are asymmetric in behaviour climbing vs falling because the falling section is stateful. It's not a reciporical / mirror image of the rising section
+
+e.g. forgetting curve, stock prices(?), lies vs truth
+
+
+2022-06-25
+
+=== ===
+#memoization
+#statevstransition
+#eventsourcing
+#programmingtips
+
+
+Vagrant vs vm snapshots
+Dockerfile vs docker image registry
+
+
+memoization performs better, but costs more storage space.
+
+2023-03-22
+
+=== ===
+#programmingtips
+#stateless
+#fp
+
+In a true functional, recursive style you "retain" information by passing it as parameters and/or return types.
+
+like leaky abstractions, we have leaky algorithms that rely on global state (bookkeeping). This is one major element of (in)elegance.
+
+2019-04-18
+=== ===
+#programmingtips
+#stateless
+#fp
+#imperative
+
+if people don't understand stateless, functional programming, low level or imperative style (e.g. during a code review) say "this code has side effects" so it's harder to understand.
+
+2023-03-16
+
+=== ===
+#programmingtips
+#statevstransition
+
+Storing states rather than transitions can be very expensive
+
+e.g. VM snapshots vs vagrant instructions
+
+2023-03-22
+
+=== ===
+#programmingtips
+#oop
+#composition
+#stateful
+
+Composing stateful code is harder than composing stateless code. That's why most people don't see the power of composing - it's near-impossible with OO
+
+2020-03-05
+
+
+=== declarative state nodes vs imperative transitions edges ===
+#programmingtips
+#statevstransition
+#eventsourcing
+
+when we say declarative doesn't tell you how we achieve the end result, what they really mean is the declarative code shows you the state nodes before and after but not the transitions (edges) - in other words the opposite of event sourcing or a transaction log.
+
+It sounds good in theory but in practice it's not done well.
+
+e.g. gradle Jenkins build pipeline is supposed to be declarative but you don't know how to read it as an english sentence.
+
+2023-03-22
+
+=== ===
+
+#programmingtips
+#statetransition
+#eventsourcing
+#unglorification
+
+
+League standings are literally state, and a new season is literally rotation
+
+Games are transitions.
+
+2023-06-07
+
+=== ===
+#programmingtips
+#stateful
+
+python or java interactive shells are pointless for me because they are stateful multiline logic. Conversely, shell commands are standalone lines.
+
+(if you think reading from disk makes a shell commannd stateful, that's different - the IO to read from that is all in a single command. What is pointless is when you have to declare variables, import libraries in an interactive shell before use on a separate line)
+
+In a sense, shell commands are stateless. You do all of it in a single execution. Not so with java shell, python shell etc.
+
+Actually one use case is learning or non-experts who need feedback for the tiniest addotopms because they don't yet have a mental model of what a line does. I remember with Haskell we used to have the "hugs" shell (god that was an embarassing name). Even data scientists prefer jupyter notebook web shell
+
+2022-08-17
+=== Imperative less effort to write ===
+#programmingtips
+#eventsourcing
+#stateless
+#stateful
+#scripting
+#imperativevsdeclarative
+#Incrementalism
+Local maxima
+Baby steps
+
+Implicit state (both before and after) means less typing. Delta transformation step is the theoretical minimal you need to express
+
+Multi stage imperative is more divisible than final state declarative (hence you can achieve smaller goals more progressively)
+
+This is why we write stateful code. It's less information you have to feed.
+When climbing Mount Everest, you just want to worry about the next target, not the end goal.
+
+To tell the final state that encompasses steps
+A then B then C then D then E then step F resulting in state F prime, it's a lot less effort to just specify state A and stabilize your code before worrying about step B. To achieve the same statelessly requires explicitly passing/specifying the state before A and state after A. This is a lot of extra code.
+
+Imperative code has implied state, declarative has explicit state.
+
+For CSS, there is a blank initial state and the final state is just the entire CSS code. This can be tough to write all in a single step without a prior understanding. Stateful transformations don't need full knowledge of how to specify a valid (final) state, just the delta.
+
+This is why imperative Kubernetes instructions are useful for learning.
+
+
+2023-04-04
+=== ===
+#programmingtips
+#imperativevsdeclarative
+#statevstransition
+
+I keep hearing the unhelpful explanation that declarative programs don't tell you how to compute the results. 
+
+My answer is always WTF because if that really was the case, even the computer can't.
+
+the right mathematical way to explain it is:
+
+beginstate + transition = endstate
+beginstate - endstate = transition
+(the right hand side being determined by the computer)
+
+In fact in Kubernetes we even use the term "desired state"
+
+One of the advantages of declarative is that you can execute it over and over again and it should be idempotent (because the transition gets computed to take into account the state which may be evolving each time you run the transition commands).
+
+2023-03-22
+
+=== ===
+#programmingtips
+#stateless
+
+I think (but can't prove) productivity algorithms evolve into mutable memory because the data gets too big to keep moving around or transforming like a data flow
+
+e.g. operating system queues
+e.g 2: tagging which needs a centralized database that is external to the file (which is not scalable, so it sucks!)
+
+
+2022-10-13
+
+=== ===
+#programmingtips
+#stateless
+#globalstate
+#recursion
+
+I wonder if there's a case for saying that declaring variables in the heap is an antipattern. In theory strings declared on the stack are just a different way of making sure memory gets reclaimed.
+
+If you structure your program to I use the data flow paradigm that should ensure it happens, at the expense of a lot of creation and destruction in each component
+
+it’s analogous to how recursion is elegant because there’s no global state to manage by low-level primitives.
+
+My mwk “slice one” repeated is basically recursion.
+
+2020-08-19
+=== ===
+#programmingtips
+#stateless
+#reading
+
+bullet points or mini chapters do a state reset when reading a book
+
+2022-10-10
+
+=== ===
+#productivity
+#asp
+#career
+#stateless
+
+Stateless working pattern means not having to remember (which is why I hate being asked why is it taking so long)
+
+I am a stateless machine, not a (mental) stateful machine
+
+I guess this is why I rely on written notes - to pass me the full input as if I had amnesia
+
+2022-10-22
+=== ===
+#asp
+
+#statefulness
+#papervsdigital
+
+a book that you are interrupted from reading a bit of carries a state. Thus it is easier to pick up when you have a small amount of free time.
+
+Reading a pdf requires you to set up the state again by opening the file and going to the right page. I don't function that way since I'm slow.
+
+2023-06-12
+
+=== ===
+#statefulness
+#productivity
+
+#interruption
+#purging
+
+Statefulness makes pickup after interruption easier (e.g. tmux sessions).
+
+But state is difficult to keep mindfully clean and eventually needs blind purging
+
+
+2023-06-05
+
+=== ===
+
+#research
+#hateoop
+#mutablestate
+#statelessness
+
+OOP languages encourage mutability, non determinism and complexity.
+
+Mutating state is so easy and fundamental in OOP that you often overlook how often it happens. If you're invoking a method on an object that's not a getter, you're probably mutating state.
+
+Java is the most distressing thing to happen to computing since MS-DOS. ‚Äî Alan Kay
+
+The typical college introduction to OOP starts with a gentle introduction to objects as metaphors for real world concepts. Very few real world OOP programs even consist entirely of nouns, they're filled with verbs masquerading as nouns: strategies, factories and commands. Software as a mechanism for directing a computer to do work is primarily concerned with verbs.
+
+OOP programs that exhibit low coupling, cohesion and good reusability sometimes feel like nebulous constellations, with hundreds of tiny objects all interacting with each other. Sacrificing readability for changeability. Many of OOP best practices are in fact encouraged by functional programming languages.
+
+
+When people overcome the significant hurdle of fully appreciating OOP, they tend to apply it to every problem. OOP becomes the solution, and every problem looks like a nail.
+
+2023-01-31
+=== ===
+#stateful
+State is the root of all evil. In particular functions with side effects should be avoided.
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#mutablestate
+#stateful
+
+The trouble with mutable state is that you don't care about it as an end user (because it's temporary and low level). But looking at programs which manipulate it, you can't tell which parts are low level and which are end user consequential.
+=== ===
+#reuse
+#stateless
+#hateoop
+
+Reusing OO code is hard. Reusing FP code is easy because there is no combinatorial explosion of states and thus complex setup of state.
+=== ===
+#hateoop
+#stateful
+
+Fractured call tree
+
+the problem with OO boils down to the fact that you are receiving inputs in one call hierarchy and consuming them at a different point in time in another call hierarchy.
+
+And some objects lifetimes exceed the call tree's
+
+===  ===
+#stateless
+#imperativedeclarative
+declarative programs can be more verbose because there is no context that holds some of the information
+=== ===
+#static
+#purefunction
+#stateless
+
+one of the reasons that I personally tend to prefer static methods when I can is that if they are pure, you can test and reason about them in isolation, without having to worry about the surrounding state.
+=== ===
+#hateoop
+#reasoningaboutprograms
+#codereading
+#stateful
+
+Putting behavior and state together makes it harder to analyze the program as a unix-style source/sink + filter 
+
+It also doesn't allow you to reason about data flow separately from control flow which would be a higher level and useful analysis. Well maybe it is possible but when data gets stored in variables instead of returned you have to keep track of multiple things
+=== ===
+#reasoningaboutprograms
+#stateful
+
+The point he is trying to make is that reasoning about state is difficult. He's been trying to show it to you by giving concrete examples that are small enough to understand but still prove the point. Your response is some clever way to work around those issues for the particular problem at hand under a closed-world assumption where the example is the only "component" in the program. Closed-world might be a reasonable assumption even in the real world, but a single stateful component is not.
+=== ===
+#stateful
+#globalstate
+#nondeterministic
+
+Insanity: doing the same thing over and over again and expecting different results. -- attributed to Albert Einstein
+Global state is essentially the same thing as insanity in this definition: a way to affect the execution of code hidden from sight, so that two apparently identical lines actually produce a different result depending on some external factor.
+
+=== ===
+#stateful
+
+Even if the only state your program has is a single global variable of a 32-bit integer type, that implies at least 2^32 (more than 4 billion) states. And that's not even taking into account the program counter and call stack.
+
+A push-down automaton model is more realistic for this kind of thing.
+
+
+It is possible to model a single OOP object as finite state machine. The state of the machine will be determined by the states of all member variables. Normally, you'd only count the valid states between (not during) method calls. Again, you'll generally have a lot of states to worry about—it's something you might use as a theoretical model, but you wouldn't want to enumerate all those states, except maybe in a trivial case.
+
+don't enumerate all those states, just include the integer variable. In a sense it's still part of the push-down automaton state, but it's a much more manageable approach than in effect drawing 4 billion state bubbles on a diagram.
+
+===  ===
+#stateful
+#mutablestate
+
+temporal state change
+I hold the right to completely change my mind about this.
+=== ===
+#stateful
+#codereading
+#codecomprehension
+
+Metadata driven apps are hard to debug because you have no idea how they're used.
+=== ===
+#stateful
+#imperative
+#codeevolution
+
+Passing primitives
+Passing objects
+Passing objects containing objects (contexts)
+Passing the universe
+Do not pass dependencies, rely on state
+
+2019-01-17
+
+=== ===
+#immutable
+#movingtarget
+#stateful
+
+functional programming, immutability (tags: moving target)
+Understanding functional code is like trying to throw a dart at a dartboard.
+Understanding imperative code / OO code is like trying to throw a dart at a dartboard on wheels.
+
+In other words, not only is there a correct WAY, but it is only the correct way at a certain point of TIME.
+=== ===
+#stateful
+
+On the cost of imperative programming There are several reasons why functional programming can be considered superior to imperative programming [14]. One of them is that functional programs are easier to reason about. In other words, there is a cost to reasoning about state.
+In a typical modern imperative programming language, all heap-allocated data is mutable. As a result, instead of reasoning in terms of high-level entities such as, say, pairs, lists, trees, etc., programmers are forced to reason in terms of a view of the heap as a graph. More concretely, they must write down and prove formulae that involve mappings of memory addresses to memory blocks [15, 12].
+The possibility of aliasing means that, whenever some memory block is written, the memory that is accessible through every type-compatible pointer is potentially affected. This makes it difficult to reason about the effects of a single write operation, and creates the problem of representation exposure [16, 17]. In order to address this issue, researchers have developed linear types and regions [18], ownership types [19], and separation logic [20], among other approaches.
+=== ===
+#stateful
+
+Reasoning about state is fundamentally difficult as it is not a syntactic property of a program's execution (and is, thus, an extra "chunk" of reasoning the developer must keep in mind). Functional programming discourages (or disallows altogether) the use of state, forcing the developer to live without state. When they go back to imperative programming, they use less state which in turn makes the code that they write easier to reason about and maintain.
+=== ===
+#stateful
+#stateless
+#imperativevsdeclarative
+
+stateful / imperative programming - infinite input volume / uncountable infinite input (so non-deterministic output)
+stateless / functional programming - very limited input / countable infinite input (so deterministic output)
+
+
+2017-02-07
+
+
+=== ===
+
+#stateful
+#stateless
+
+stateful / imperative programming - infinite input volume / uncountable infinite input (so non-deterministic output)
+stateless / functional programming - very limited input / countable infinite input (so deterministic output)
+
+=== ===
+#stateful
+#stateless
+#copypaste
+
+The functional manifesto that is "only care about what is done, not how it's done" may seem useless but it does have its manifestation in testing. No more mocks.verify() All you care about is the output of a function call which makes tests easier to read.
+
+The problem with OO is that you don't immediately perform actions. You store reminders of pending things to do things later, which makes testing more unnatural.
+
+With FP, you can pretty much copy and paste code from a test to production or vice versa.
+=== ===
+#stateless
+#stateful
+
+When people say functional programming is not concerned with "how" the way imperative is, this is misleading (and blind in explanation).
+
+I think what they really mean is that functional programming does not concern itself with intermediate states at each point of time before the end results are constructed. The program only expresses relationships between variables in those variables' final states (so actually they are not variables - they are inputs and outputs).
+=== ===
+#globalstate
+#stateful
+
+Properties have some of the same problems as global state / global variables / global constants. Bypassing flow of data reduces the number of dimensions available to you for understanding code
+2019-01-17
+
+=== ===
+#stateless
+The more pieces of your program are stateless, the more ways there are to put pieces together without having anything break. The power of the stateless paradigm lies not in statelessness (or purity) per se, but the ability it gives you to write powerful, reusable functions and combine them.
+

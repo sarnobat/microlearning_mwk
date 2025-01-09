@@ -1,0 +1,451 @@
+=== ===
+#bureaucracy
+#business
+#innovation
+#betterfastercheaper
+
+"progress" is the art of hiding expenses in places where decisionmakers do not know how to measure them so substitute zero into them.
+
+e.g. microservices, outsourcing, cheaper products (you can't measure the aesthetic beauty of CDs over mp3s)
+
+2022-07-11
+
+
+=== ===
+
+#vertical
+#endtoend
+
+#bureaucracy
+
+Only do horizontal repetition once you've done full vertical traversal of one, end to end
+
+Managers don't seem to get this. They can't give a quick answer on time estimates, even though experimenting trumps guessing.
+
+2024-05-31
+
+=== ===
+Martin Fowler
+#career
+#bureaucracy
+#programmingtips
+
+I've written a fair bit about how using pull requests can encourage a low integration frequency, increasing cycle time and discouraging refactoring.
+Room
+2021-09-22
+
+=== ===
+#toosoon
+#speculative
+#career
+#bureaucracy
+
+Too soon
+
+Reckless actions based on trying to prediction the future (and that affect others)
+
+Instead of waiting and acting later after you know more (e.g. should I throw away this new hire printout now that I've set up the essentials for my laptop but not followed everything the wiki page says)
+
+
+2024-01-30
+
+=== ===
+#conventions
+#bureaucracy
+#productivity
+#career
+
+Scalability requires conventions. Conventions introduce bureaucracy
+
+I noticed this thinking about how Oracle is so huge because of all the acquisitions (though that's not a great example)
+
+
+2023-09-09
+
+=== ===
+
+#career
+#bureaucracy
+
+In a large company, tracking work is more important than doing work (spend your time filing tickets for jira admin for tasks not showing up in a board because you can't edit the sprint field)
+Honest craftsman don't get this
+Create subtasks for each sprint so that you can easily find out what you did in each sprint, if a task cannot be started and completed in a single one (it's annoying but that's the only way to protect yourself)
+
+2022-05-04
+
+=== ===
+
+
+#bureaucracy
+#curseofknowledge
+#career
+
+People who say you should write a design doc before any code are only thinking about developers who've done 10 prior tasks on the same code. For anyone who hasn't, the design doc just adds an unnecessary layer of bureaucracy.
+
+I guess you have to accept that as with other processes, it's for management's benefit, not yours.
+
+2024-05-14
+
+=== ===
+#career
+#bureaucracy
+#tonguefu
+
+Ivory tower
+
+a state of privileged seclusion or separation from the facts and practicalities of the real world
+
+2021-05-19
+
+=== ===
+
+#career
+#bureaucracy
+
+It's s sad fact that you have to outsmart system administrators at work for your own productivity
+
+e.g. cloud VM windows - so I use a tunnel that lets me use Mac command line
+MFA for ssh - so I use ssh keys
+
+2024-04-26
+
+=== ===
+#career
+#bureaucracy
+
+If your program doesn’t work, you don’t throw your processor away!
+=== ===
+#toosoon
+#speculative
+#career
+#bureaucracy
+
+Too soon
+
+Reckless actions based on trying to prediction the future (and that affect others)
+
+Instead of waiting and acting later after you know more (e.g. should I throw away this new hire printout now that I've set up the essentials for my laptop but not followed everything the wiki page says)
+
+
+2024-01-30
+
+=== ===
+#bureaucracy
+#career
+
+Organization diseconomies of scale
+Multiple passwords
+Needing to set up SSO new systems you introduce
+
+2022-06-01
+
+=== ===
+#management
+#career
+#bureaucracy
+
+#bureauracy
+
+The problem with divide and conquer is the lack of communication between components
+
+It's why a podiatrist had no idea why I had ankle pain. Turns out it was the fascia. The feedback never got to the original referrer (no one's fault). Only later did I go to a rheumatologist when my back started getting pain
+
+2023-12-20
+
+=== ===
+Martin Fowler
+#career
+#bureaucracy
+#programmingtips
+
+I've written a fair bit about how using pull requests can encourage a low integration frequency, increasing cycle time and discouraging refactoring.
+Room
+2021-09-22
+
+=== ===
+#bloated
+#bureaucracy
+#business
+#branding
+#soccer
+
+Instead of creating good on screen graphics, video editors created bloated ones, thinking more is better
+
+Italia 90 on screen scores were both beautifully balanced (color, 3D, shadow) yet minimal. Thereafter it became giant blue blobs on the screen (probably because of some bizarre brand recall and brand equity quantitative research).
+
+
+2024-01-30
+=== ===
+#bloated
+#bureaucracy
+#business
+#branding
+#soccer
+
+Instead of creating good on screen graphics, video editors created bloated ones, thinking more is better
+
+Italia 90 on screen scores were both beautifully balanced (color, 3D, shadow) yet minimal. Thereafter it became giant blue blobs on the screen (probably because of some bizarre brand recall and brand equity quantitative research).
+
+
+2024-01-30
+
+=== ===
+
+#programmingtips
+#incrementalism
+#bureaucracy
+
+#agencyproblem
+
+Duct tape programming is basically incrementalism
+
+It's the opposite of do one thing well
+
+CTO asks engineer can it  support a new requirement and the engineer is forced to say yes for job security. It happens as a result of the agency problem
+
+I guess working for someone else is a dictatorship in disguise
+
+2024-08-24
+
+=== programming tips ===
+#programmingtips
+#bureaucracy
+
+Externalizing values can be bad - when you need to change a value, there is an ownership ping pong when properties files that differ by environment need to be edited approved etc.
+
+e.g. for security vulnerability of jmx credentials. Is this the engineer or IT's responsibility if it's run by tomcat from a  VM image?
+
+2021-04-26
+
+=== ===
+#programmingtips
+#bureaucracy
+
+#hatespring
+
+Use of glamorous frameworks are just management masturbation desperate to show measurable savings, by sweeping the costs under the rug for developers to inhale.
+
+2023-11-18
+
+=== ===
+
+#business
+#bureaucracy
+
+anyone with an executive bonus is basically an expense watcher and cutter
+
+They'll put customers and employees at inconvenience to make more profit for their quarterly bonus (though to be fair, simply stay out of loss is probably the bigger priority).
+
+Both work morale and quality of products you buy are negatively affected
+
+2023-11-30
+
+=== ===
+
+
+#career
+#business
+#bureaucracy
+
+Bureaucracy is when we enforce conventions/uniformity that suit the majority get applied to the minority. And by majority we don't necessarily mean more than 51%
+
+e.g. me moving trash/ content to a separate drive. Maybe for home videos I should not. But for uniformity I have to. Remembering the exceptions is too complex. It's the same logic for executives. They need the uniformity to perform aggregation (to be able to report and make decisions)
+
+And there in lies the difficulty with autistic people: they can't adapt from academic best practices to proprietary conventions (partly because no one explains those conventions; neurotypicals obtain them through social skills)
+
+Autistic people can't reconcile "only do the right thing when people are observing the results, otherwise circumvent it."
+
+2024-11-08
+
+=== ===
+#business
+#verticalintegration
+#bureaucracy
+
+Employees at Small companies are more vertically integrated than at large companies. Jira tickets don't have to jump between 3-5 different assignees before progress is made on the ticket.
+
+
+2022-05-18
+
+=== ===
+
+#bureaucracy
+#business
+datadriven
+
+
+Data-driven decisions may be touted as smarter than classic decisions, but they are in fact a poor substitute by non-technical businesspeople for a real understanding of the driving factors (which technical people understand).
+
+Google used to be an engineer-driven company but now it's succumbed to being like the rest. Non technical people making technical decisions for instead of letting technical people decide through non-codifiable, tacit knowledge.
+
+2024-10-21
+
+=== ===
+#spending
+#bureaucracy
+#capitalism
+#datadriven
+#business
+
+When data lies
+
+Reporting bias
+Particularly americans who say something new is amazing, whether it's meditation or a Chinese product on amazon
+
+2024-08-13
+
+=== ===
+
+#business
+#bureaucracy
+
+Bureaucracy kills any good company. It will kill Man City (like Man Utd, Apple 1980s, Google 2010s) unless they implode before then through recklessness (like Chelsea 2020s or or Atletico 2000s).
+
+2024-08-23
+
+=== ===
+
+#business
+#bureaucracy
+
+Bureaucracy kills the soul of a company
+
+2024-10-07
+=== ===
+#research
+#bureaucracy
+#incrementalism
+
+The path of least resistance approach¬†helps organizations to minimize disruptions to operations by breaking down the process into steps that can be handled in an incremental manner.Mar 30, 2023
+
+2024-01-30
+
+=== ===
+#vertical
+#bureaucracy
+
+horizontal is often selected over vertical because the labor can be specialized, and thus optimized for per-unit-output. It is not optimized for understanding.
+
+An assembly worker will never learn how a car is made. 
+
+horizontalism creates bureaucracy, cog-in-a-wheel syndrome
+
+
+2022-02-28
+
+=== ===
+
+#verticalintegration
+#bureaucracy
+#productivity
+
+When you have separate systems rather than everything in house (like google), you experience authentication fatigue. At Cisco and Stanford I have to unlock my laptop, sign in to VMWare horizon, turn on VPN. At some point I just don't make use of pockets of free time to do microtasks because getting set up is too much effort. I wait until I know I'm not going to be interrupted (e.g. by an upcoming daily team meeting, lunch break, just before leaving for the day, waiting at an airport...)
+
+2024-08-15
+
+=== ===
+#career
+#bureaucracy
+
+Ironically being junior in an organization is harder than being senior in that even for things you're capable of doing, you need your manager's permission to spend time doing them.
+
+2023-03-16
+
+=== ===
+#bureaucracy
+#programmingtips
+
+
+Executives cannot enforce functional programming but they can enforce unit tests.
+
+They also can't recruit enough people who know functional programming
+
+2023-02-28
+
+=== ===
+
+#career
+#asp
+
+#bureaucracy
+I may be too much of an idealist managerially when trying to avoid tacit knowledge. I am critical about how things are done in reality (e.g. saying unit tests are pointless)
+
+2023-02-10
+
+=== ===
+#career
+#bureaucracy
+#low functioning
+#business
+#loudadvice
+
+Converting measurable costs to unmeasurable costs is an organizational anti pattern.  And saying that the total cost is the cost of each constitutent.
+
+The equivalent in programming is creating separate modules.
+
+(value through obfuscation is like security through obscurity; it's probably why the subprime mortgage crisis happened)
+
+
+2023-01-24
+
+=== ===
+#business
+
+#bureaucracy
+#costcutting
+
+business anti patterns
+
+Convert measurable costs into unmeasurable costs, and report lower measured costs and label it as an improvement
+(business people probably even put those kind of half-truths on their resumes)
+
+2023-02-10
+
+=== ===
+#business
+
+#bureaucracy
+#costcutting
+
+business anti patterns
+
+Convert measurable costs into unmeasurable costs, and report lower measured costs and label it as an improvement
+(business people probably even put those kind of half-truths on their resumes)
+
+2023-02-10
+
+=== ===
+Martin Fowler
+#career
+#bureaucracy
+#programmingtips
+ 
+I've written a fair bit about how using pull requests can encourage a low integration frequency, increasing cycle time and discouraging refactoring.
+Room
+2021-09-22
+ 
+=== ===
+#incompetentprogrammers
+#bureaucracy
+#designdoc
+#rapidprototyping
+
+Teams tell you to write design docs before writing code
+But that’s assuming that it’s quicker/easier to write docs than code. For a normal person or mediocre programmer that may well be the case, but for someone like me who is a strong coder but not good at reading (or writing prose) it’s counterproductive.
+
+They’re also more for the benefit of manual writers. But I would say do that after the code has been written, not before.
+
+2019-01-17
+
+=== ===
+
+The problem with sprints
+You can’t justify pushing small pieces per release, which is lower risk than a single commit all in one go. Unless you have really understanding management but most are immature and underprepared
+
+#bureaucracy
+
+=== ===
+#career
+#bureaucracy
+ 
+If your program doesn’t work, you don’t throw your processor away!

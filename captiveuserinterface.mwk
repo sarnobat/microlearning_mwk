@@ -1,0 +1,184 @@
+=== ===
+
+#declarativedonewrong
+#captiveuserinterface
+
+Regedit (and dot files) are an attempt to make scripts declarative
+
+Dot files use plaintext that you can use in any editor, regedit uses a captive user interface and stores the state in binary format
+
+this reflects the different business priorities of the companies.
+
+Unix-like systems emphasize modularity/customizability/pluggability/composabilty while the extra effort required to honour these philosophical qualities is bypassed in Microsoft Windows in favour of accidental tamper-proofing, and putting more resources (staffing) into simplifying casual user's needs elsewhere. 
+
+
+2024-02-21
+
+
+=== ===
+#sysadmin
+
+#programmingtips
+#captiveuserinterface
+
+Finding config/settings, logs etc. for Windows is not a standardized process. For one app you have to go to the services window, for another you have to go to regedit, for another you have to do it inside the app.
+
+In Linux it's quite standardized since everything is a file, and config is always plaintext (you are free to pick your own editor for making changes)
+
+2024-02-21
+
+=== ===
+
+#declarativedonewrong
+#captiveuserinterface
+
+Regedit (and dot files) are an attempt to make scripts declarative
+
+Dot files use plaintext that you can use in any editor, regedit uses a captive user interface and stores the state in binary format
+
+this reflects the different business priorities of the companies.
+
+Unix-like systems emphasize modularity/customizability/pluggability/composabilty while the extra effort required to honour these philosophical qualities is bypassed in Microsoft Windows in favour of accidental tamper-proofing, and putting more resources (staffing) into simplifying casual user's needs elsewhere. 
+
+
+2024-02-21
+
+=== ===
+#sysadmin
+
+#programmingtips
+#captiveuserinterface
+
+Finding config/settings, logs etc. for Windows is not a standardized process. For one app you have to go to the services window, for another you have to go to regedit, for another you have to do it inside the app.
+
+In Linux it's quite standardized since everything is a file, and config is always plaintext (you are free to pick your own editor for making changes)
+
+2024-02-21
+
+=== ===
+#productivity
+#plaintext
+#captiveuserinterface
+
+Confluence is a captive user interface
+You can't edit the document in your text editor. You have to use the web browser (which takes a lot of memory, loses text with erratic ctrl Z behaviour, has limited keyboard shortcut support).
+(In old versions you could, and in Jira you still can)
+
+unfortunately, power users are treated as 2nd class citizens
+
+2020-09-10
+=== ===
+
+#worseisbetter
+
+#captiveuserinterface
+
+Worse is better
+Captive user interface
+
+Email reservation system (mostly plaintext) instead of captive user interface. But no one does this
+
+2023-02-28
+
+=== ===
+#captiveuserinterface
+
+“A business buys a copy machine because it needs copies, not because it wants a copy machine.” The high tech equivalent lesson is captive user interface. Executables come and go. The data is what lasts forever.
+
+2019-01-17
+
+=== ===
+#plaintext
+#captiveuserinterface
+#sridharaxiom
+
+reasons not to use a database
+
+it's harder to backup  (because it gets bloated with unnecessary files that are too big to source control, and are binary so cannot be versioned meaningfully)
+it's harder to recover (because of the captive user interface - it's not plaintext)
+
+People who say "there is a backup tool that comes with the product itself" are not speaking from experience (CMS for atleticomadrid.de ultimately failed despite having "logically colocated backups"). Of course it's easy when disasters within the scope of expected events happen. But data disasters are usually from unforeseen situations (like when circular rsync removed all my files from my yurl.db and I had no recent backup).
+
+It's better to use source-controlled plaintext.
+
+Binary data, even if decipherable (which usually it isn't), is completely muddled. The best data is just key-value rows in plaintext files, which I'm starting to use now.
+
+
+Prefer plaintext export / transaction logs (event sourcing) over colocated backups with captive user interface needed for recovery
+
+2017-08-09
+
+=== ===
+#captiveuserinterface
+
+Mediawiki is a captive user interface (bad)
+Once my mediawiki installation suddenly stopped working (for atleticomadridenglish). Thankfully I hadn't put any content in it. I couldn't close shop and move.
+
+Yurl Priority 3 list is a captive user interface
+static html of my favorite videos is not
+atletico articles mwk file is not a captive user interface
+=== ===
+#captiveuserinterface
+#plaintext
+
+the only data that isn't captive is plaintext
+the only app that isn't a captive user interface is a text editor
+
+2018-01-12
+
+=== The export/takeout prerequisite (and why geeks love plaintext) ===
+#plaintext
+#captiveuserinterface
+
+Applications are just a means to an end - i.e. data. Data lasts decades. Apps just last 2-3 years.
+But so many applications don't allow you to take your data away with you, you can only acces them through the app. Beware of reliance on such applications.
+
+=== ===
+#captiveuserinterface
+
+non captive user interface
+google contacts export
+(so you can easily take backups and restore if you accidentally erase things when syncing)
+2019-01-17
+
+=== ===
+#captiveuserinterface
+if a data or config file is binary rather than plaintext, it is highly likely to be for a captive user interface
+
+the only exception to this rule I can think of is when you have binary json, protocol buffers or something that is a straightforward, open standard compression format.
+
+
+2017-12-31
+
+=== ===
+#captiveuserinterface
+
+captive user interface
+imagine if audio created in garageband couldn't be played outside garageband
+
+2018-03-30
+
+=== ===
+#captiveuserinterface
+
+Captive user interface even applies to operating systems
+
+When your operating system becomes so slow or no longer works at all (and becomes unsupported), you should be able to read your data on a new computer. Swappable disks or the cloud help here, though even the cloud can be deceptively captive (google reader, yahoo photos)
+
+Usually this is the case but be careful about app dependencies (e.g. dbx for windows)
+
+2019-01-17
+
+=== ===
+#captiveuserinterface
+
+captive UI is the opposite of get in / get out, disposable software
+2019-01-17
+
+=== ===
+#captiveuserinterface
+
+Captive user interfaces are only worth the effort if they are a final destination (e.g. Google Docs, File System). Most apps are means to an end so shouldn’t flatter themselves by thinking they are an ultimate destination.
+
+2019-01-17
+

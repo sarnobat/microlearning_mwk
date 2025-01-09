@@ -1,0 +1,3047 @@
+=== ===
+
+#architecture
+#programmingtips
+#dataflow
+
+
+"Architecture" basically means data flow
+
+2024-02-29
+
+=== ===
+#programmingtips
+#distributedsystems
+#dataflow
+
+calling remote procedures in a distributed system may be acceptably performant but that shouldn't mean you should do it gratuitously (even if you have separate threads like you do in javascript callbacks) without thinking. Ideally it should just happen once at the very end. This is why pipelines work so well.
+
+Anything that keeps jumping back and forth is hard to understand
+
+2024-02-21
+
+=== ===
+#dataflow
+#pipeline
+#linear
+#codecomprehension
+
+data flow programming is mostly linear, whereas imperative programs have no sense of beginning middle or end, jumping all over the place. It's tough to read.
+
+
+2024-02-21
+
+=== ===
+
+
+#programmingtips
+#dataflow
+
+
+data flow is higher level than control flow because data location is persistent. Control flow location is not persistent.
+
+I guess we could call higher level diagrams “persistent state diagrams”
+
+
+2024-02-29
+
+=== ===
+#programmingtips
+#memoization
+#dataflow
+
+Memoization goes hand in hand with dataflow programming
+
+It's why it's easy to pick up where you left off (e.g. build pipelines have "rerun from failure")
+
+
+2024-02-21
+
+=== ===
+#pipeline
+#dataflow
+dataflow programs can be visualized and almost physically modeled (e.g. as water flowing through a pipe) whereas stateful programs it's almost impossible (though maybe thinking of the state as a bulletin board might be a partial trick)
+
+2022-08-11
+
+=== ===
+#pipeline
+#dataflow
+dataflow programs can be visualized and almost physically modeled (e.g. as water flowing through a pipe) whereas stateful programs it's almost impossible (though maybe thinking of the state as a bulletin board might be a partial trick)
+
+2022-08-11
+
+
+=== ===
+#reserach
+#erlang
+#dataflow
+
+Written in"Erlang, the"RabbitMQ"server is built on the Open Telecom Platform framework for clustering and failover.
+
+2022-01-26
+
+https://en.wikipedia.org/wiki/RabbitMQ
+=== ===
+#progrmamingtips
+#stateless
+#dataflowprogramming
+
+dataflow programming has no global state (thank god).
+
+2022-08-11
+
+=== ===
+#errand
+#dataflowdiagram
+#r23c
+
+data flow diagrams to create
+
+spring boot
+
+2022-11-07
+
+=== ===
+#progrmamingtips
+#stateless
+#dataflowprogramming
+
+dataflow programming has no global state (thank god).
+
+2022-08-11
+
+=== ===
+#programmingtips
+#dataflow
+#pipeline
+#codereading
+Pipelines are transparent, monolithic scripts are not. You can't tweak them at invocation time.
+
+
+2022-08-11
+=== ===
+#programmingtips
+#dataflow
+#pipeline
+#codereading
+Pipelines are transparent, monolithic scripts are not. You can't tweak them at invocation time.
+
+
+2022-08-11
+=== ===
+#programmingtips
+#codereading
+#dataflow
+
+Request IDs allow you to trace data flow (as opposed to just control flow from the method name)
+
+You're looking at what's being passed, not what's being executed
+
+
+2022-12-14
+
+=== ===
+#codecomprehension
+#codereading
+#programmingtips
+#dataflow
+
+One reason that enterprise java code becomes so hard to understand is that data flow becomes non obvious because there are too many lines that do not involve the main data structure. They involve expressions that indirectly contribute to the value of the data variable.
+
+Until I can write a java data dependency graph tool, the only things I can suggest to myself are:
+(-) draw diagrams and keep them as close to the code as you can (README.md, javadoc. Not a wiki)
+(-) write your code such that the main data variable is easy to relate to from any line in your program (pass it around explicitly). This is why streams are so appealing to me - the data that is flowing is in an expected place and easy to access.
+(-) make helper function pure so that you can fold away their internals and model the output of such functions as single variables (impure functions or maintaining any kind of state makes this hard). The main data variable should be reachable from almost anywhere in your program - this is why shell scripts are more effective than java programs
+
+2022-12-14
+
+=== ===
+#scripting
+#unixphilosphy
+#filter
+#dataflow
+
+if a program needs multiple passes through the data, is it really a filter?
+
+it is in the case of unix sort
+
+I think the best way to do it is to not wait until the end of the 1st pass to emit something (shuf does this well)
+
+e.g. gedcom2mwk needs to know the root before it can start emitting anything (though is a small input so you barely notice)
+
+nonetheless one benefit of a filter structure of a program is that you don't need to know how to pass data to the program (e.g. a command line option that you need to check the source code for - since your own scripts probably don’t have good help output). The input passing mechanism is standardized if it's a filter.
+
+2022-08-08
+=== ===
+#hateoop
+#static
+#fp
+#unixphilosophy
+#dataflowprogramming
+
+I started hating OOP when I discovered static methods are FP style
+
+But what really made it irreversible is discovering unix philosophy of filters. All these OOP "design patterns" seemed pointless
+
+2020-08-07
+=== ===
+#hateoop
+#static
+#fp
+#unixphilosophy
+#dataflowprogramming
+
+I started hating OOP when I discovered static methods are FP style
+
+But what really made it irreversible is discovering unix philosophy of filters. All these OOP "design patterns" seemed pointless
+
+2020-08-07
+
+=== ===
+#programmingtips
+#dataflow
+#repeat
+
+Recursion is better than iteration because it's harder to add global state and so the separation between iterations is cleaner. So it's easier to compose/decompose. Once you have side effects, you can almost forget about  ever getting the benefits of composition/decomposition (which are what? Clean non-leaky abstractions?)
+
+It's a bit like data flow programming in that all required data is passed from step 1 to step 2 in the same blob, it's not fragmented or implicit (this is why I like static methods).
+
+Furthermore, step 1 and step 2 are identical instructions, it's just that the input data is different.
+
+I think this is why my mwk slice top is so elegant. The way to access state doesn't vary between iterations (i.e. it's the same file path - errands.mwk). It's also why repeated keypresses (e.g. cd ..) is so convenient. You don't need to "call" it differently each time. Same with vim & xemacs repeat previous command (e.g. forward word, next match)search for ne
+
+You are forced to understand the critical path of the algorithm, rather than piggybacking your own barely related algorithm on the existing scaffolding
+
+2022-05-23
+=== ===
+#programmingtips
+#dataflow
+#stateless
+
+Docker is like a stateless operating system, in the sense that you just use the OS as a means to an end (e.g. a build artifact) and destroy the workspace before it has a chance to accumulate anything useful.
+
+Computationally it’s less efficient but instead of storing a mess of intermediate build output it leaves a clean state on the host system.
+
+it’s somewhat the opposite of memoization. Instead of storing the ending state, you store the instructions that will get you there.
+
+
+2022-08-02
+=== ===
+#programmingtips
+#dataflow
+#stateless
+CPU = stateless
+Disk = stateful (by definition)
+
+Apps vs data same thing, ideally
+
+2022-07-14
+
+=== ===
+#programmingtips
+#dataflow
+#repeat
+
+Recursion is better than iteration because it's harder to add global state and so the separation between iterations is cleaner. So it's easier to compose/decompose. Once you have side effects, you can almost forget about  ever getting the benefits of composition/decomposition (which are what? Clean non-leaky abstractions?)
+
+It's a bit like data flow programming in that all required data is passed from step 1 to step 2 in the same blob, it's not fragmented or implicit (this is why I like static methods).
+
+Furthermore, step 1 and step 2 are identical instructions, it's just that the input data is different.
+
+I think this is why my mwk slice top is so elegant. The way to access state doesn't vary between iterations (i.e. it's the same file path - errands.mwk). It's also why repeated keypresses (e.g. cd ..) is so convenient. You don't need to "call" it differently each time. Same with vim & xemacs repeat previous command (e.g. forward word, next match)
+
+You are forced to understand the critical path of the algorithm, rather than piggybacking your own barely related algorithm on the existing scaffolding
+
+2022-05-23
+=== ===
+#programmingtips
+#dataflow
+#stateless
+CPU = stateless
+Disk = stateful (by definition)
+
+Apps vs data same thing, ideally
+
+2022-07-14
+
+=== ===
+#programmingtips
+#dataflow
+#stateless
+
+Docker is like a stateless operating system, in the sense that you just use the OS as a means to an end (e.g. a build artifact) and destroy the workspace before it has a chance to accumulate anything useful.
+
+Computationally it’s less efficient but instead of storing a mess of intermediate build output it leaves a clean state on the host system.
+
+it’s somewhat the opposite of memoization. Instead of storing the ending state, you store the instructions that will get you there.
+
+
+2022-08-02
+=== ===
+#programmingtips
+#dataflow
+#repeat
+
+Recursion is better than iteration because it's harder to add global state and so the separation between iterations is cleaner. So it's easier to compose/decompose. Once you have side effects, you can almost forget about  ever getting the benefits of composition/decomposition (which are what? Clean non-leaky abstractions?)
+
+It's a bit like data flow programming in that all required data is passed from step 1 to step 2 in the same blob, it's not fragmented or implicit (this is why I like static methods).
+
+Furthermore, step 1 and step 2 are identical instructions, it's just that the input data is different.
+
+I think this is why my mwk slice top is so elegant. The way to access state doesn't vary between iterations (i.e. it's the same file path - errands.mwk). It's also why repeated keypresses (e.g. cd ..) is so convenient. You don't need to "call" it differently each time. Same with vim & xemacs repeat previous command (e.g. forward word, next match)
+
+You are forced to understand the critical path of the algorithm, rather than piggybacking your own barely related algorithm on the existing scaffolding
+
+2022-05-23
+=== ===
+#programmingtips
+#dataflow
+#repeat
+
+Recursion is better than iteration because it's harder to add global state and so the separation between iterations is cleaner. So it's easier to compose/decompose. Once you have side effects, you can almost forget about  ever getting the benefits of composition/decomposition (which are what? Clean non-leaky abstractions?)
+
+It's a bit like data flow programming in that all required data is passed from step 1 to step 2 in the same blob, it's not fragmented or implicit (this is why I like static methods).
+
+Furthermore, step 1 and step 2 are identical instructions, it's just that the input data is different.
+
+I think this is why my mwk slice top is so elegant. The way to access state doesn't vary between iterations (i.e. it's the same file path - errands.mwk). It's also why repeated keypresses (e.g. cd ..) is so convenient. You don't need to "call" it differently each time. Same with vim & xemacs repeat previous command (e.g. forward word, next match)search for ne
+
+You are forced to understand the critical path of the algorithm, rather than piggybacking your own barely related algorithm on the existing scaffolding
+
+2022-05-23
+=== ===
+
+#dataflow
+#imperativevsdeclarative
+
+#fp
+
+(-) Imperative everything is a variable
+(-) Fp everything is a LOCAL variable
+
+
+2023-04-04
+
+=== ===
+#imperative
+#stateful
+
+#dataflow
+
+stateful, imperative programming causes global impact because you don't know who logic depends on the state you are modifying. Data flow programs / functional programs have a very localized impact.
+
+2023-02-17
+
+=== ===
+#imperative
+#stateful
+
+#dataflow
+
+stateful, imperative programming causes global impact because you don't know who logic depends on the state you are modifying. Data flow programs / functional programs have a very localized impact.
+
+2023-02-17
+
+=== ===
+#dataflowprogramming
+
+#programmingtips
+
+
+
+Function data flow vs field/object data flow
+
+both need to be captured in a data dependency diagram (and my bcel tool)
+
+2023-01-24
+
+=== ===
+#functionalprogramming
+#dataflowprogramming
+
+
+Function first programming
+
+Every program is a function so modules should essentially be functions
+
+In shell pipeline scripts this is indeed the case
+
+We shouldn't care about state in modules at the time of designing
+
+2023-05-25
+
+=== ===
+#programmingtips
+#pipeline
+#dataflow
+Functional pipelines make the code more lexicographically ordered (later code in the plaintext source file gets executed later in the control flow. This is not true with imperative OOP)
+
+2023-01-27
+
+=== ===
+#dataflow
+#pipeline
+#linear
+#codecomprehension
+
+data flow programming is mostly linear, whereas imperative programs have no sense of beginning middle or end, jumping all over the place. It's tough to read.
+
+
+2024-02-21
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#reactive
+
+Functional reactive programming could be considered stream processing in a broad sense.
+
+2017-09-11
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#reactive
+
+Functional reactive programming could be considered stream processing in a broad sense.
+
+2017-09-11
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#dataflow
+#stateless
+#imperative
+#stateful
+#imperative
+
+state based programming vs data flow / stateless programming
+
+state based programming = imperative programming?
+
+2017-09-14
+
+=== ===
+#dataflow
+#stateless
+#stateful
+
+Create and dispose quickly. Long-running state is harder to reason about.
+=== ===
+#imperative
+#dataflow
+#reasoningaboutprograms
+
+Reasoning about Imperative programs
+
+Same way you consider pipes as allowing data to flow from the command before to the command after, a semi colon could mean you pass the entire contents of memory from the statement before to the statement after.
+
+And when you look at it this way, there is so much (pointless) state you need for reasoning about the program. Small is beautiful.
+
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+===  ===
+#dataflow
+#composition
+
+It's a simple thing, and here it might seem more verbose, but as you build code into compositional expressions, you can connect parts together without so many explicit, intermediate "state containers" -- instead you're handing-off results to the next step: dataflow.
+
+=== ===
+#dataflow
+
+Vertical programs (data flow programs) last longer than layered programs because new business functionality gets added in verticals. If your modules are layered, all modules will need changes when new business functionality is needed.
+
+2019-01-17
+
+=== ===
+#hateframeworks
+#dataflow
+
+Frameworks make it difficult to build a data flow diagram. You get these clouds in which you have no idea what is happening (unless you have a mental model of it which only comes after a lot of experience of how it works manually, or with rote memorizing facts that are usually not presented visually)
+
+2017-02-03
+=== ===
+#dataflow
+
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+
+
+=== ===
+#reasoningaboutprogramms
+#dataflow
+
+the more variables "in play" for any given section, the harder code is to understand
+
+"in play" = from initial assignment to last usage
+
+In a best case scenario, there is only one variable in play: the data flow. This happens in a linear pipeline
+
+2016-12-14
+
+===  ===
+#journey
+#dataflow
+
+Changed the way I look at programming, August 8, 2002
+By Martin P. Cohen
+This review is from: Structured Analysis and System Specification (Paperback)
+This book offers data flow as a simple and powerful metaphor for programming. The idea is this: look at a program as a black box that takes information in and spews information out, then at each stage refine this black box by breaking it out into individual ones. I read this book many years ago and it remains the most useful book on program design that I have read. It was written before object oriented programming but it adapts to it in an obvious way. Forget about UML. Data flow is the best way of presenting the elusive big picture view, that view of the forest that gets obscured by all those trees. It has the following virtues offered nowhere else: 1. It serves as a design tool that you can work with and refine to identify object classes. 2. It is easily understood by computer illiterate clients. 3. It allows programmers new to a project to quickly come up to speed.
+=== ===
+#dataflow
+
+When imperative code doesn't make data flow obvious, you know it's not been written well.
+
+2017-12-19
+
+=== OO higher level logical data flow / call graph is split into creational and behavioral halves ===
+#dataflow
+#reasoningaboutimperativeprograms
+
+data flow in Object oriented systems is easier once you realize that it's a call graph of broken subcalls. A calls B, and B calls C but the latter only happens later. In between, B might store what A passes to it before passing it on to C. (does this mean it is temporally coupled?)
+
+A -> B
+	B gets instantiated with "new" along with some input data (constructor args)
+
+B -> C
+	B's method gets called (perhaps with further input params), instantiating C etc.
+
+use sequence diagrams to put the subcalls back together
+===  ===
+#dataflow
+#pipeline
+
+One (very) simplistic genre of DataflowProgramming are Unix filter pipelines. They are used quite extensively, too, by experienced shell programmers.
+
+A very interesting bit of history: DougMcIlroy was very interested in what amounted to FlowBasedProgramming very early on, starting from an interest in coroutines, and his continued insistence led directly to the implementation of the less-powerful but more manageable Unix pipes by Ken Thompson.
+
+In 1964 (at Bell Labs, but well before Unix efforts began) DougMcIlroy wrote a memo that said in part "We should have some ways of connecting programs like garden hose - screw in another segment when it becomes when it becomes necessary to massage data in another way. This is the way of IO also." Quoted on Dennis Ritchie's site at https://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html. [Ignore the second "when it becomes".]
+
+the pipeline is merely a specific form of coroutine
+
+M. D. McIlroy, a long-time advocate of the non-hierarchical control flow that characterizes coroutines. 
+
+The new facility was enthusiastically received, and the term `filter' was soon coined. Many commands were changed to make them usable in pipelines. For example, no one had imagined that anyone would want the sort or pr utility to sort or print its standard input if given no explicit arguments.
+
+the one-input one-output model of command execution seemed too confining. What a failure of imagination!
+
+The genius of the Unix pipeline is precisely that it is constructed from the very same commands used constantly in simplex fashion. The mental leap needed to see this possibility and to invent the notation is large indeed.
+
+One of the comforting things about old memories is their tendency to take on a rosy glow
+
+Nevertheless, it did not seem so at the time; the memory fixes on what was good and what lasted, and on the joy of helping to create the improvements that made life better. In ten years, I hope we can look back with the same mixed impression of progress combined with continuity.
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== Functional Programming ===
+#functionalprogramming
+#dataflow
+#controlflowvsdataflow
+
+Data Flow based programming
+The processes are permanent, the data is moving
+Control Flow based programming
+The data is permanent, the control flow (or processor's activity) is moving
+
+Or put another way:
+
+In data flow programming: the data moves from one processor to another
+In control flow programming: The processor moves from one data to another
+
+Okay, not permanent but ongoing. It's lasts for the same duration as the runtime
+
+I guess database applications are imperative because architects naturally view them as transformations of permanent data. To make functional programs you need to isolate a component of data before you can do your flow-based transformation. A global state transformation is more direct (and lazy)
+
+Processors are easier to split than data, so concurrency is easier (with multicore, aws lambda etc)
+
+If data is highly connected but the processes are easy to split, use functional programming.
+If the processes are highly connected but the data is easy to split, use imperative programming. Though this seems backwards.
+
+Actually, if the entire state space / database is huge, it's easier to be imperative by continuous evolution.
+
+
+Think of Unix piped processes
+
+I guess Akka is a flow-based model. But the Java compiler doesn't help you much.
+=== Functional programming ===
+#imperativevsfunctional
+#dataflow
+
+Imperative programming - memory manipulation
+Functional programming - input and output
+
+Imperative programming - state transformation
+Functional programming - data flow
+
+2019-01-17
+
+=== ===
+#programmingtips
+#memoization
+#dataflow
+
+Memoization goes hand in hand with dataflow programming
+
+It's why it's easy to pick up where you left off (e.g. build pipelines have "rerun from failure")
+
+
+2024-02-21
+
+=== ===
+#programmingtips
+#distributedsystems
+#dataflow
+
+calling remote procedures in a distributed system may be acceptably performant but that shouldn't mean you should do it gratuitously (even if you have separate threads like you do in javascript callbacks) without thinking. Ideally it should just happen once at the very end. This is why pipelines work so well.
+
+Anything that keeps jumping back and forth is hard to understand
+
+2024-02-21
+

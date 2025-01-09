@@ -1,23 +1,28 @@
 === ===
-#programmingtips
-#sridharaxiom
-#toosoon
+#r23c
 
-Transparency is the opposite of abstraction
+#axiomsridhar
 
-initially, favor transparency over abstraction. (same with decluttering too I think)
+axiomsridhar = uncool-aid programmer
+axiomsridhar = radical programmer
 
-only 10% of the time will the patterns be so static that the abstraction will be of any benefit (or non-detriment)
+2022-10-24
 
-2022-06-21
+=== Thou shalt not fragment code ===
 
-=== ===
-#programmingtips
-#wrongabstraction
-#axiomssridhar
+#axiomsridhar
 
-the wrong abstraction is more damaging than no abstraction
+#fragmentation
+#segmentation
 
+
+DRY often creates the wrong abstraction, and the wrong abstraction is worse than no abstraction. Copy paste programming is better initially.
+
+Only when double duty becomes a problem THEN create a common method. If you create common code because it seems like tangential logic but there is only one use, you will end up with split code where the util method is only used in one place but has greater visibility than it should; this makes code archaeology harder).
+
+common logic should be initiated bottom up, not top down. Or as most programmers say, YAGNI
+
+2022-10-24
 
 === ===
 #programmingtips
@@ -45,43 +50,17 @@ The above are core practices in functional programming will make the code easier
 
 2023-03-16
 === ===
-#r23c
+#programmingtips
+#wrongabstraction
+#axiomssridhar
 
-#axiomsridhar
+the wrong abstraction is more damaging than no abstraction
 
-axiomsridhar = uncool-aid programmer
-axiomsridhar = radical programmer
-
-2022-10-24
-
-=== Thou shalt not fragment code ===
-
-#axiomsridhar
-
-#fragmentation
-#segmentation
-
-
-DRY often creates the wrong abstraction, and the wrong abstraction is worse than no abstraction. Copy paste programming is better initially.
-
-Only when double duty becomes a problem THEN create a common method. If you create common code because it seems like tangential logic but there is only one use, you will end up with split code where the util method is only used in one place but has greater visibility than it should; this makes code archaeology harder).
-
-common logic should be initiated bottom up, not top down. Or as most programmers say, YAGNI
-
-2022-10-24
-
-=== ===
-#sridharaxiom
-
-prefer string input and output to your APIs/programs than objects. Strings can be easily manufactured for testing during your test-and-code cycle
-
-e.g. for my mwk snippets, a program that gets the date of a snippet that takes a Snippet object as input is a pain. Taking a snippet string (or file containing text) is much easier to try things out on.
-
-2017-08-16
 
 === ===
 #flatfile
 #sridharaxioms
+#axiomssridhar
 
 Prefer file system over database
 
@@ -95,40 +74,201 @@ You could argue this is how Google evolved. They gave the middle finger to relat
 
 
 === ===
-#plaintext
-#captiveuserinterface
-#sridharaxiom
+#axiomssridhar
 
-reasons not to use a database
+sridhar axioms
 
-it's harder to backup  (because it gets bloated with unnecessary files that are too big to source control, and are binary so cannot be versioned meaningfully)
-it's harder to recover (because of the captive user interface - it's not plaintext)
+prefer programmatic over declarative dependency specification (i.e. configuration)
 
-People who say "there is a backup tool that comes with the product itself" are not speaking from experience (CMS for atleticomadrid.de ultimately failed despite having "logically colocated backups"). Of course it's easy when disasters within the scope of expected events happen. But data disasters are usually from unforeseen situations (like when circular rsync removed all my files from my yurl.db and I had no recent backup).
+2018-03-26
 
-It's better to use source-controlled plaintext.
+=== ===
+#axiomssridhar
 
-Binary data, even if decipherable (which usually it isn't), is completely muddled. The best data is just key-value rows in plaintext files, which I'm starting to use now.
+Sridhar axiom
+Prefer gist / template written by you over copy pasting helper code written by someone else
+Prefer copy paste helper code over library call
+Prefer library call over framework hook (mixin?)
 
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+Booklet idea
+Sridhar's axioms of programming
+-Never too late to refactor,but it can be too early
+- do the simplest thing that could possibly work
+- use functional programming (from oreilly 97 book)
+===  ===
+#axiomssridhar
+
+sridhar's programming axioms
+
+avoid blind inputs
+
+e.g. configuration files for scripts or processes
+fields for methods
+
+(though defaults are good for unnecessary parameters. I guess important paramters shouldn't be hidden away - e.g. DocumentRoot for apache, and for ffserver which uses  ffserver.conf which hides what you are serving)
+=== ===
+#axiomssridhar
+
+Sridhar's axioms of programming
+* Make things private
+* Make things immutable.
+* Create and destroy often rather than retain and reuse (i.e. narrow scope)
+=== ===
+#axiomssridhar
+
+Sridhar axioms
+
+Prefer libraries over frameworks
+Prefer copy and paste over prefactoring
+Prefer stateless over state full
+Prefer immutable over mutable (including event sourcing)
+Prefer static linking over dynamic linking (people don't share television screens in this era. I don't want IMAX 3D, I don't want curved monitors, I don't want the LG replacements for Apple monitors even if they are the latest)
+Prefer schemaless over schemaful 
+(including file systems as a persistent store)
+Prefer rapid iteration over waterfall/phase gate design
+Prefer failing immediately over returning special values and continuing (even better put precondition checks to stop the code from ever being reached)
+<<<<<<< HEAD
+Prefer plaintext file over binary database
+=======
+>>>>>>> 0c4e387a4935b23196cd90af94a0e330b06cd27c
+
+Less clear - strongly typed vs weakly typed
+
+
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+Sridhar axioms
 
 Prefer plaintext export / transaction logs (event sourcing) over colocated backups with captive user interface needed for recovery
 
 2017-08-09
 
 === ===
-#transparent
-#abstraction
-#sridharaxiom
-#opacity
-
-Prefer transparency over abstraction - so other developers don't have to learn a new domain (i.e. the new abstraction layer).
-
-Maybe people abuse the success of TCP, and hardware abstraction.
+#axiomssridhar
 
 
+Sridhar axioms
+you don’t need a logging framework - stderr
+you don’t need a application development framework - use an embedded server
+you don’t need an ORM - use dbutils (or if you must, jdbc)
+you don’t need pojos - just pass values around without enclosing objects; if you must, use json
+you don’t need maven - just create single file apps (like I do with groovy)
 
-===  ===
-#sridharaxiom
-#hateunittesting
 
-prefer preconditions over unit tests
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+Sridhar axioms
+Prefer logical over magical, transparent over hidden 
+
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+sridhar axiom
+
+prefer enum over string (or at least a regex checker)
+
+2018-07-09
+
+=== Sridhar axioms ===
+#axiomssridhar
+
+prefer sanity checks over tests
+=== ===
+#axiomssridhar
+
+Sridhar axiom
+
+Prefer preconditions over returning null or throwing an exception.
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+Sridhar axiom
+
+* prefer zero-log configuration. The last thing you want to do is break your head over why important debugging statements are not printing anything (and trying to add temporary print statements when there are helper libraries not written by you or common jars not in your workspace is often just impractical)
+* prefer programmatic configuration over declarative configuration - you can't debug declarative configuration when it is complicated (e.g. logging interceptors)
+** but you can still use functional-style programmatic code. Basically just don't throw the java compiler away. That's asinine
+
+
+2018-06-28
+
+=== Sridhar axioms ===
+#axiomssridhar
+
+Prefer duplication over sharing
+* initially. If a need for sharing emerges later you can refactor
+* the duplicate should be private, otherwise you don't get much benefit
+ * this minimizes dependencies, which makes code easier to understand (shared dependencies aren't as key as composed dependencies)
+ 
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+Sridhar Axioms
+
+avoid broad parameters. Aside from the increased chance of mutating state, it's harder to understand what code does.
+
+Related concept: referential integrity
+
+2016-12-06
+
+=== ===
+#axiomssridhar
+
+
+Sridhar axiom
+
+Only create pure functions when extracting methods (as with most axioms, functional programming makes this easy - you can do the refactoring mechanically)
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+Sridhar axioms
+
+Prefer programmatic logger over declarative. It's easier to find (in one sense), and easier to get working.
+
+declarative throws away the power of the compiler.
+
+2017-12-28
+
+=== ===
+#axiomssridhar
+
+
+Sridhar axioms
+Prefer schemeless over schemaful. Apps are constantly evolving and schemas simply get in your way. If no new features ever get added, only then use a schema. In fact even then is it really worth it? Plaintext is better so you can compose programs from different languages
+
+2019-01-17
+
+=== ===
+#axiomssridhar
+
+sridhar axioms
+
+prefer fat jars (static linking) over dynamic linking
+
+2017-09-08
+
+=== Sridhar axioms ===
+#axiomssridhar
+
+Prefer composable lambdas over Monolithic monstrosities
+
+2019-01-17
+

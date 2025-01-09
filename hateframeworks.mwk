@@ -1,0 +1,55 @@
+=== ===
+#research
+#hateframeworks
+#debugging
+
+Sometimes I'll be debugging an unfamiliar web application and not be sure where to start. With all of their indirection, inversion of control and dependency injection, some Java webapps do a great job of obscuring where the action actually happens.
+
+2023-05-16
+=== ===
+#programmingtips
+#hateframeworks
+#research
+
+JavaScript UI frameworks and libraries work in cycles. Every six months or so, a new one pops up, claiming that it has revolutionized UI development."
+
+2019-01-17
+
+=== ===
+#research
+#hatespring
+#hateframeworks
+#programmingtips
+#cureworsethandisease
+
+while boilerplate code is certainly undesirable all else being equal, sometimes the cure is worse than the disease: abstraction techniques used to eliminate boilerplate code can sometimes have hidden costs which cause worse problems than the boilerplate itself.
+
+The overall philosophy is: rather than start with a large framework which even complex applications will only ever use a small fraction of, it is better to start with a set of abstractions which are as simple as possible, provided you see no barriers to extending them as your application grows.
+
+"another advantage of using a little boilerplate: the compiler can help us check that it does what we want it to do!
+
+Spring's design sacrifices simplicity and ease of debugging for a flexibility which brings no real benefits for a great many applications
+
+So Spring Boot is causing us to pull 1.5 times as many JARs, almost 2.5 times as many bytecode megabytes, and over 2.5 times as many classes onto our classpath, compared to the identical application written in Vert.x.
+
+Spring Boot approach is almost three times slower to compile and test
+
+"Spring, the "magic" behaviours of Spring Boot (the classpath scanning, the property source hierarchy, the annotation language, the auto-discovery of static files and templates) cause considerable fragility: for example, a small change in the classpath or a small refactoring could break the app completely in a non-obvious way. These features also, again, introduce dynamic behaviour which is not predictable from reading the code or using static analysis tools.
+
+The same features which got us up and running so quickly could easily cost us hours of debugging and trawling through debug logs as soon as we do something which slightly conflicts with Spring Boot's expectations. The vast majority of software engineering effort is spent on maintenance, not initial construction: it is the former we should be optimising for, not the latter.
+
+
+2019-01-17
+=== ===
+#research
+#hatespring
+#hateframeworks
+#programmingtips
+
+Frameworks are one of the hugest anti-patterns in software development. They're hard to learn. They limit your creativity. They increase your project's complexity and dependencies. They go out of business and get abandoned. You have to maintain and upgrade your code to match the latest framework versions for no good reason. You have to search for help and ask others for advice when you're stuck. And you probably only need a small percentage of features that the framework offers anyway. They just don't make much sense.
+
+
+Framework developers can't stop evolving their projects for no good reason. Often software is just done. It does what it's supposed to do and doesn't need any changes ever again. You don't need the latest version of every software. Some of the best software was written 10 or 20 years ago. Use it!
+Upgrading versions for no reason is another huge anti-pattern. If software works at version X, then it should stay at version X and should never be touched unless absolutely necessary.
+
+2019-01-17
