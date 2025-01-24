@@ -1,0 +1,1135 @@
+=== ===
+#programmingtips
+#codecomprehension
+#dataflow
+#callgraph
+
+Sequence diagrams (like textart.io) excell in comparison to linear graph easy flow diagrams when the same method gets called in different contexts (e.g. "dao.execute()")
+
+2024-04-18
+
+
+=== ===
+#callgraph
+#dataflow
+#codecomprehension
+#programmingtips
+
+Consider a call graph as a preliminary step to help you construct a data flow diagram. It's a means to an end.
+
+Well, it can be useful in itself
+
+
+2024-04-26
+
+=== ===
+
+#programmingtips
+
+#codecomprehension
+#dataflow
+
+Testers are more concerned with data, and use examples to gain understanding of program behaviour
+
+Developers are more concerned with code, and look at code to gain understanding of program behaviour
+
+To be honest, data is better. It's more definitive. Memoization?
+
+Data = memoization of code
+
+2024-12-11
+
+=== ===
+#programmingtips
+#dataflow
+#codecomprehensino
+#callgraph
+
+I wonder if creating data flow diagrams from control flow diagrams (call graphs) basically means converting iterative lookup to recursive lookup. Or basically putting the calls in chronological order linearly.
+
+In fact, chronological order is like a depth first search of the call graph (unfortunately yEd doesn't have ordered tree child nodes)
+
+2024-04-26
+
+=== ===
+#unglorification
+#programmertips
+#codereading
+#systemsengineering
+
+Network types
+Product Distribution
+Energy
+Water
+People
+Money
+Cellular
+Nutrients
+
+manufacturing assembly line is more of a linear pipeline. The value chain might be too at a coarse granularity
+
+bill of materials bom is like a file system (errand FS is one application - a bill of materials for life)
+
+2022-05-04
+
+=== ===
+
+#pinned
+#sharedaggregation
+#monolith
+
+#manytoone
+#dividecombineart
+#pipeline
+
+#degenerategraph
+#architecture
+#codecomprehension
+#career
+
+When you have a shared aggregation, a monolith might sidestep the problems associated with it (just like a transaction with my XML database).
+
+To be honest it's best just to duplicate.
+
+Here is the continuum:
+
+(-) merge shared resource into a monolith containing both parents
+(-) pointers to shared resources from each parent
+(-) full copy of resources for each parent
+
+
+perhaps we can say genereally that when you have many to one relationships, combine so the tree doesn't degenerate into a graph (well, or copy and paste which is the same thing as inlining a helper method).
+
+We probably should care a lot more about topological purity between components but not really within components (intra). And I think that's the way engineering managers are. They don't care how bad a mediocre engineer's code is until they start integrating it with other modules. Google on the other hand wants you to educate yourself about it by doing it everywhere. If I ever become senior enough, I grudgingly admit that inter-connections matter a lot more than intra-connections. In fact Unix tools internally probably have code that is not tree-like. But shell pipelines are where the simplicity is enforced.
+
+In fact, I guess there is a continuum:
+
+(-) degenerate graph
+(-) tree
+(-) linear pipeline
+
+When you can't enforce tree structure, enforcing linearity is one way to avoid the chaos and complexity of degenerate graphs. This is why build or data pipelines are effective tool composition architectures. And maybe at work where you see these graph systems, you should wonder "what would the system look like if it was a linear architecture?" Maybe for interactive user flows, graphs are more natural while for batch jobs, linear processing makes more sense. I need to think this through more.
+
+Maybe this is the missing link in trying to understand a system in a new job.
+
+2024-10-11
+
+=== ===
+#programmingtips
+#codecomprehension
+#errand
+
+If cflow doesn't work with java, the next best thing is to create a file system call graph
+
+
+2024-04-30
+
+=== ===
+#linux
+#codereading
+
+#research
+
+The code will always tell you exactly what the system is doing (not to be confused with what it *should* be doing), and the code never lies. Every developer should be capable of finding answers to their problems by reading the code in question, assuming they have access to it. I know that sometimes you really just want the answer in a quick way (after all, time is money and all that), especially if someone knows the answer off hand. But you'll be more knowledgeable about the system you're working in, in addition to being able to honestly say you've looked as deep as you could to solve your problem. You might even find bugs!
+Much of the time that someone asked me a question about our system I end up... looking at the code. I've done it enough times that I happen to know where to look but I don't necessarily know the answer off hand. But when I started out, I had obviously never seen the code base (in fact, I'd never even coded in the language it was written in) but reading the code taught me the system. Often the reason I was in the code was to troubleshoot a problem, so I had to figure out what the system was *supposed* to be doing, so that I could make it do that.
+Perhaps a new phrase is in order, RTFC. Note that that 'F' in that phrase should never been taken as harshly as the spoken version actually sound, but if you can't help it... RTC.
+
+
+
+2022-11-03
+
+=== ===
+#programmingtips
+#codereading
+
+Look for string fields. Ultimately everything important is stored there directly via assignments and more revealingly via method params
+
+2023-11-18
+
+=== ===
+#callgraph
+#codecomprehension
+
+#programmingtips
+
+Class dependencies = stateful call graphs?
+
+2023-07-14
+
+=== ===
+#programmingtips
+
+#codecomprehension
+#reasoningaboutprograms
+
+global state = memoized function calls
+
+an OOP fractured call tree embodies this
+
+2024-10-28
+
+=== ===
+#programmingtips
+#codecomprehension
+#java
+
+Since you can't get cflow for java, the next best thing is using cscope (and with line mode plus some CSV, you might be able to replicate cflow)
+
+But I need to check if cflow itself works on java
+
+
+2024-04-15
+
+=== ===
+#programmingtips
+#pipeline
+
+#codereading
+
+Java web apps use a pipe/filter mechanism through servlet request and response filter mappings. It's just verbose unlike unix
+
+
+Knowing this can make java web applications make a lot more instant sense.
+
+2024-03-12
+
+=== ===
+#codereading
+#programmingtips
+
+it's easiest to learn a complex system of components when everything is connected to something
+
+I need to use yEd to identify all the relevant connections between Linux kernel source files
+
+In other words, I want a 1000 foot view. Most just give a 10,000 foot view which is too abstract for me
+
+2022-03-02
+
+=== ===
+#research
+
+#codecomprehension
+#programmingtips
+
+
+A cookie implies a server session, which can be killed by the server at any time. JWT lives as long as it's issued for. 
+
+2024-05-31
+
+=== ===
+#programmingtips
+#codereading
+
+key patterns
+
+(-) interpreter
+(-) compiler
+(-) filter
+(-) daemon
+
+implication: try to to identify which one a component is when reasoning about a complex system (such as OS kernel components)
+
+2021-06-21
+
+=== Programming Tips ===
+#programmingtips
+#codereading
+
+Code reading
+
+Web.xml is the equivalent of a shell script. And if you want something similar to ps aux, you'll have to look at web.xml (to see which properties files and xml files are in the classpath)
+
+Unfortunately you can't easily convert it to a shell command because it doesn't go through the shell runtime. It uses the existing JVM's runtime that Tomcat starts.
+
+but maybe there is a way to do it, even approximated
+
+2021-05-03
+
+=== ===
+#programmingtips
+#codecomprehension
+
+Code comprehension
+
+Search the logs for stack traces, particularly for methods whose call hierarchy you are trying to find out (this is useful when polymorphism makes static analysis difficult)
+
+2020-07-27
+
+
+
+=== programming tips ===
+#programmingtips
+#codereading
+
+Use disk inventory x to get a quick visualization of a code base
+
+2021-05-03
+
+=== ===
+#programmingtips
+#framework
+
+#codereading
+
+With annotations or frameworks, you can't grep for whoever is calling/consuming a target. It is hidden in code that is not yours and the source can’t be navigated to easily.
+
+2019-01-17
+
+=== ===
+#programmingtips
+
+#codereading
+
+Both if statements and polymorphism make static analysis less useful.
+
+
+verticals avoid this ambiguity
+
+
+2019-01-17
+
+=== web.xml ===
+#research
+#programmingtips
+#codecomprehension
+
+Spring MVC, as many other web frameworks, is designed around the front controller pattern where a central Servlet, the DispatcherServlet, provides a shared algorithm for request processing, while actual work is performed by configurable delegate components
+
+2024-03-15
+
+=== ===
+#programmingtips
+#codecomprehension
+
+Code comprehension
+
+Search the logs for stack traces, particularly for methods whose call hierarchy you are trying to find out (this is useful when polymorphism makes static analysis difficult)
+
+2020-07-27
+
+
+=== ===
+#programmingtips
+#codecomprehension
+#stacktrace
+#callgraph
+
+Code comprehension
+
+Search the logs for stack traces, particularly for methods whose call hierarchy you are trying to find out (this is useful when polymorphism makes static analysis difficult)
+
+2020-07-27
+
+
+=== ===
+#shell
+#programmingtips
+
+#codecomprehension
+
+shell programming is my equivalent of mathematics when it comes to relating practical programming to a more theoretical robust non leaky bullet proof layer of abstraction
+
+2024-10-28
+
+=== ===
+#programmingtips
+#codecomprehension
+
+Multiple public methods for a class make it impossible to compose / "roll up" to a higher level when reasoning about code.
+
+I guess you could argue that util classes shouldn’t be part of the object model and are just primitives like in the java language (I disagree, but there are imperfections in any concept that you have to let go). Come to think of it, any stateless code isn’t part of the object model. It’s logic as opposed to a model (still important, but as a filter rather than a sink).
+
+
+2024-04-15
+
+
+=== ===
+
+#programmingtips
+#codecomprehension
+#codereading
+
+code comprehension by breaking is most useful for non-compile-time dependencies. Compile time breakages you can just get from the compiler + IDE.
+
+2024-10-28
+
+=== ===
+#programmingtips
+#codereading
+#codewriting
+
+Refactoring does have a downside - it makes code harder to understand for others because you separate the caller and callee textually. Denormalizing, on the other hand, puts everything together.
+
+This is why no refactoring is better than the wrong refactoring.
+
+
+2022-08-02
+
+=== ===
+#programmingtips
+#codereading
+
+Code comprehension tips
+
+Look at the data, not the code (as Torvalds said).
+
+This is difficult, code is usually dynamically generated and so looking at noisy log files is more fruitful (but you don't always have this luxury)
+
+
+2022-05-09
+
+=== ===
+#programmingtips
+
+#codewriting
+#codereading
+
+Mutable non final fields are problematic because when we see code that sets something, we don't continue looking throughout the entire codebase to see if it's changed or not. We assume this is the place it's set. Changing a field is expected to be the exception rather than the rule.
+
+
+
+2024-07-24
+
+=== ===
+#programmingtips
+#codereading
+
+the shell itself (/bin/sh) is a filter program
+
+well, or a cantrip etc.
+
+implication: don't think of it as anything more glorious than a filter for the kernel. And for some things in the future maybe you will benefit from creating your own custom shell (command query separation). Even try to think about how alternatives to the shell are filters (e.g. a web browser or an OS kernel or a DB kernel)
+
+2021-06-21
+
+
+=== ===
+#programmingtips
+
+#codereading
+#decomposition
+
+Forget debugging, simply reading SQL statements becomes untenable with plain joins. Nested decomposable blocks are easier to (hence structured programming in the first place?).
+
+In fact, the skill of code reading is a subset of code debugging.
+
+2024-07-26
+
+=== ===
+
+#programmingtips
+#codereading
+
+
+The case against comments
+
+
+If something isn't needed to make a program work, don't bother going through the care to document it even if it's useful. It can be reverse engineered. It just breaks the flow of the program logic.
+
+
+2019-01-17
+
+=== ===
+
+#codecomprehension
+#programmingtips
+
+Call graphs from static anlysis will only get you so far. Better is to create diagrams from stack traces and logging
+
+Implication: spend more time running code and adding print statements than grepping for calls.
+
+2024-06-21
+
+=== ===
+#programmingtips
+#filter
+#codereading
+
+A web app is like a unix filter, but the input comes from a client socket instead of stdin
+
+Implication: you can still model web rest services as pipelines in theory (in practice you might need the client to know how they are chained together)
+
+2020-10-13
+
+=== ===
+#programmingtips
+#codereading
+
+(tabulate the equivalents)
+
+Java web application daemons are a developer-created equivalent of a command line shell (in addition to the actual user program). Creating command line java programs invoked on each user request instead of daemons that listen to remote connections is a lot less work because the shell is written for you.
+
+Implication: not sure. Try and use command line programs instead of web servers? Maybe xinetd can help you solve usual enterprise problems more cleanly
+
+2021-03-03
+
+=== ===
+#toosoon
+#productivity
+#indirection
+
+#programmingtips
+#codereading
+
+Every piece of software auto mates something physical. Software is just an indirection. Same can be said of computers themselves.
+
+Implication: do things the manual way until you know what is actually repetitive
+
+Too soon
+
+
+same way you can create software to automate sticky notes systems, the reverse is possible: you can model an app as a system for managing sticky notes for variou tasks.
+
+2019-01-17
+
+=== ===
+#programmingtips
+#monolith
+#codereading
+
+#debuggingtips
+#decomposability
+
+Joins are a classic case of tightly bound monolith needing global visibility for understanding. Subqueries allow decomposition and composition: you can copy and paste inner queries with minimal repairing of broken dependencies.
+
+2024-07-22
+
+=== ===
+#codereading
+#programmingtips
+
+
+Changing existing code is learning by working backwards
+
+2022-07-05
+
+=== ===
+#research
+#codereading
+
+Code doesn't lie, but it isn't always obvious either. 
+
+I'm famous for saying that code never lies but comments sometimes do, but here we have a case where the code doesn't lie ... because it does just what it says ... but what it says is hard to understand.
+
+The code doesn't lie, but it can try to confuse us. Or, more accurately, we try something that confuses us. The code is innocent: it's the guy who hammered that value who did the confusing.
+
+code doesn't lie, but context matter. And not everything can be deduced from the code. For instance, Temporal Coupling, measured from the evolution of your code.
+
+2024-07-16
+
+=== ===
+#linear
+#pipeline
+
+#architecture
+#codereading
+#immutablesoftware
+
+An example of linear architecture benefit
+
+No matter how cryptic my perl substitutions for apple notes are (and whether they're not working when they should be), I can always tack on an extra one
+
+2024-11-25
+
+=== ===
+#business
+#technology
+#career
+#codecomprehension
+#programmingtips
+
+#research
+
+Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
+-- Melvin Conway
+
+2022-11-03
+
+=== ===
+
+
+#reasoningaboutprograms
+#codecomprehension
+
+Understanding code requires mental memoization of code's effect/impact/output instead of understanding the lines that perform the actions.
+
+i.e. preconditions & postconditions
+
+In fact, functional programming emphasizes these I think
+
+2024-12-11
+
+=== ===
+code reading
+#codereading
+
+save stack traces when you are running the app to a text file. They are difficult to get when you need them for code comprehension
+
+2021-03-19
+
+=== ===
+#codereading
+#linux
+
+#research
+
+Real Programmers don't need comments-- the code is obvious
+
+(From essay "real programmers don't use pascal")
+
+2022-11-03
+
+=== ===
+#codecomprehension
+code comprehension patterns
+
+
+(-) mutable object
+(-) superimposed control flows (lots of if-else statements)
+(-) return value at end of method
+(-) exit prematurely if not applicable
+(-) write to persistent store
+(-) report to user
+(-) store temporarily, act later
+(-) combine existing data to produce new data
+(-) fractured call tree of OOP layers
+(-) Trade complexity
+
+it seems like a lot of these are rooted in data flow
+
+
+2024-11-04
+
+=== ===
+#yed
+#codecomprehension
+#dataflowdiagram
+#callgraph
+
+yEd 
+
+group boxes = functions (or classes or dirs) (ideally the arrows between them should depict flows of control)
+Yellow boxes = simple parameters, variables, literals (ideally the arrow between them should depict flows of data - which is usually the inverse of the control flow)
+
+(but what about objects? I've never really come to a conclusion about this since my goal of understanding code can work around this vagueness)
+
+
+2024-04-26
+
+=== ===
+#fp
+#codereading
+
+Functional code doesn't do anything. It's just a value. Even readLn "Hello, World!" (the print("Hello, World!") equivalent in Haskell) is just a value of type IO ().
+
+2019-01-17
+
+=== ===
+#codecomprehension
+#imperative
+#stateful
+
+The problem with global state is that it can't be partitioned and exist in isolation and still function. CAP theorem (partition tolerance)?
+
+This means it’s harder to understand code
+
+2024-05-08
+
+=== ===
+
+
+#codereading
+
+Code reading won't tell you if the code is in use or not. Don't waste your time learning something in detail if you're not sure it's used (which is often the case with legacy code).
+
+2024-10-03
+
+=== ===
+#research
+#codecomprehension
+
+
+Our intellectual powers are rather geared to master static relations and ... our powers to visualize processes evolving in time are relatively poorly developed. For that reason we should do (as wise programmers aware of our limitations) our utmost to shorten the conceptual gap between the static program and the dynamic process, to make the correspondence between the program (spread out in text space) and the process (spread out in time) as trivial as possible.
+Dijkstra (1968) "A Case against the GO TO Statement" cited in: Bill Curtis (1981) Tutorial, human factors in software development. p. 109.
+
+2024-06-05
+
+=== ===
+
+#tech
+#codecomprehension
+
+
+A REST servlet's annotation handles routing instead of web.xml. And for spring you add DispatcherServlet inside web.xml.
+
+It's horrible that in non-REST servlets you split logic across xml and java.
+
+2024-03-12
+
+=== ===
+#research
+#codereading
+#tech
+
+humor
+
+Code doesn't lie, but sometimes it makes me wonder if it's being sarcastic.
+
+2024-07-16
+
+=== ===
+#productivity
+
+#storytelling
+#codecomprehension
+
+Shape of story or program = pipeline shape
+
+(-) linear, 
+(-) 2 parallel, 
+(-) converging fork etc.
+
+And both need the consumer to know it quickly. 
+
+(-) In a program, an ascii diagram. (-) In a ppt, some kind of visual progress marker. 
+(-) In a video, background music (create associations on first encounter, then recall them on subsequent reappearances).
+
+(-) in a book, the chapter title at the top of every page
+
+2024-07-23
+
+=== ===
+
+#pipeline
+#functionalprogramming
+#codewriting
+#codereading
+
+
+pipelines rebalance the mismatch between writing vs reading code being of dramatically different magnitudes.
+
+Usually reading (and editing) code is tough, and writing (new) code is easy.
+
+With pipelines, in theory, it should be easier to read code at the expense of making writing a bit more effort.
+
+Hmmmmm, I'm not sure how true this is in practice even though it makes sense theoretically.
+
+Probably this rebalance is true of functional programming. The code is laid out much more intuitively/logically/functionally, but passing the state around is a bit more effort (initially; I found at imperial that transitioning from Haskell to Java was a bit of effort. Haskell was easier to write - but I guess that was because minimal state was carried around such that you didn't have to think very hard; In fact maybe this is why I as an autistic programmer I like functional programming - it makes it very hard to do the wrong thing; this concept was lost on John Mar; Even with C, what makes it easy is that you pass explicit lightweight references around; you aren't carrying the universe around through global variables usually).
+
+Furthermore, it seems to me that functional programming only cares about business logic and doesn't have pointless copying data between variables (maybe because layering is pointless).
+
+
+2024-08-27
+
+=== ===
+#programmintips
+
+#codereading
+
+refactoring rules don't actually be need to be carried out, just mentally refactoring is a good way to improve code comprehension. This is a step more removed from scratch refactoring.
+ 
+2021-09-08
+ 
+ 
+=== ===
+#codereading
+#dataflow
+#codecomprehension
+#executablevsdata
+
+Instead of call graphs, use data flow graphs since most people write bad code (i.e. Mutable state)
+
+
+(control flow hierarchy vs data dependency hierarchy)
+This might be what Torvalds meant when he said great programmers look at data structures
+=== ===
+#hateoop
+#reasoningaboutprograms
+#codereading
+#stateful
+
+Putting behavior and state together makes it harder to analyze the program as a unix-style source/sink + filter 
+
+It also doesn't allow you to reason about data flow separately from control flow which would be a higher level and useful analysis. Well maybe it is possible but when data gets stored in variables instead of returned you have to keep track of multiple things
+=== ===
+#controlflowvsdataflow
+#codereading
+
+when torvalds said great engineers look at data structures instead of algorithms, I think he meant data flow diagrams are more helpful than control flow diagrams
+===  ===
+#spatiallocality
+#codereading
+
+extracting method causes loss of spatial locality
+
+2018-04-25
+
+===  ===
+#codereading
+
+you cannot understand a system until you try to change it
+=== ===
+#codereading
+
+code reading
+
+in addition to finding the application's "central loop", identify what is the logical unit of business data that repeats many times (one per customer usually, though depending on your team maybe it's one per customer transaction).
+
+<!--
+It's On: Plan Subscription
+GComp: Plan
+Comcast: location?
+Optimizer: query
+
+-->
+
+In WWE, I guess it's a "program"
+
+Better yet, find the hierarchy that surrounds this central repeating type
+
+
+<!--
+It's On: Account -> Plan Subscription -> Allowance (Service types is a parallel hierarchy but is secondary)
+GComp: Plan -> compensation (equity, cash, bonus)
+Comcast: location?
+Optimizer: query -> query block -> where clause
+
+-->
+
+
+2016-12-20
+
+
+=== ===
+#polymorphismhell
+#codereading
+
+the closer code is to the runtime equivalent, the easier it is to read.
+
+The more your code paths branch according to runtime values the harder it is to read.
+
+2018-06-22
+
+=== ===
+#mentalmodel
+#codereading
+
+Mental models aren’t just for end users, they are for programmers too.
+
+You must have a good abstract representation of a unit of code that resembles something the developer already knows
+
+E.g. Coherence, despite probably being intimidating, is at its core a hashmap - a model well understood by most programmers.
+
+2019-01-17
+
+=== ===
+#sequencediagram
+#codereading
+
+use sequence diagrams for multithreaded apps
+
+also use sequence diagrams for OO apps
+
+2016-12-08
+
+=== dependency convergence ===
+#codereading
+
+ER diagram for complex database schema is like a page rank algorithm
+
+it allows attention to converge on the core tables, by following the foreign key links
+
+entity dependency convergence?
+
+2018-04-13
+
+=== ===
+#reasoningaboutimperativeprograms
+#codereading
+#codecomprehension
+
+Reasoning about OO programs
+
+Each method is not really standalone, so don't analyze at a method level. Analyze at a class level:
+
+* declarations of variables at the top (field declarations)
+* assignment of variables in the constructor 
+* first part of the processing is in one method (e.g. JUnit Setup method)
+* second part of the processing is in another method (e.g. JUnit Test method)
+
+You might find that things make more conceptual sense then.
+
+=== ===
+#codecomprehension
+#codereading
+
+Grouping to aid learning
+
+This is effectively what object composition or function composition is.
+
+For complex code bases like tomcat, you might find that individual classes/interfaces are way too small in scope to make any sense in isolation. Grouping gives context.
+
+Also, you can imagine a simpler source code base for a servlet container being easier to understand - because the broad scope of responsibilities could be captured in less files.
+
+2018-03-02
+
+=== ===
+#codereading
+#codecomprehension
+
+The ability to reverse-engineer models of software
+behaviour is valuable for a wide range of software maintenance,
+validation and verification tasks. Current reverse-engineering
+techniques focus either on control-specific behaviour (e.g. in the
+form of Finite State Machines), or data-specific behaviour (e.g.
+as pre/post-conditions or invariants). However, typical software
+behaviour is usually a product of the two; models must combine
+both aspects to fully represent the software’s operation. 
+=== ===
+#codewriting
+#entrypoint
+#codereading
+#codecomprehension
+
+Code written is inherently linear. But code comprehension requires hierarchic mental consumption.
+
+e.g. when reading the code in a merge request, if there are a lot of changes it looks intimidating but if there’s just 1 entry point it can be a lot simpler.
+
+2019-01-17
+
+=== ===
+#codecomprehension
+#codereading
+
+To discover relevant classes, use object dependency graphs and call graphs (once you know an initial code snippet of interest)
+
+For architecture, use data flow diagrams
+=== ===
+#codereading
+
+I have always thought of OOP as a way to take in data and transform it through various filters without relying on internal data.
+
+2017-11-02
+
+=== code reading ===
+#conceptcloud
+#similarto
+#codereading
+#composition
+
+SQL Subqueries = inline/anonymous views
+Similar to Anonymous classes
+
+2019-01-17
+
+=== ===
+#codereading
+
+Code comprehension / Reasoning about programs = Executing code mentally 
+Dynamic string construction or reading is an impediment
+=== ===
+#stateful
+#codereading
+#codecomprehension
+
+Metadata driven apps are hard to debug because you have no idea how they're used.
+=== ===
+#codereading
+
+Most applications do things with data ?
+
+=== ===
+#codereading
+
+The further down the call graph business logic is, the harder it is to read code because it is so isolated.
+
+2018-08-27
+
+=== ===
+#codereading
+
+It is usually both impossible and unnecessary to describe a significant system in a single diagram. Some approaches seek to manage this complexity by providing different views of the same architecture
+
+
+2019-01-17
+
+=== ===
+#codereading
+
+Code reading
+It sounds obvious but is still helpful to think about the metamodel of a program.
+
+For java programs, it’s often a group of processes listening for events that either respond by querying main memory,secondary memory (which contains a lot of application state) or writing to these memories.
+
+The tricky part  is in imagining what main memory looks like (unlike stable storage which is just a bunch of tables cross referencing each other). I guess it’s just a group of mutable class objects referencing each other, the data being stored in (collections of) variables.
+
+The metamodel for pipeline based programs is much easier to visualize because it’s 1 dimensional instead of 2 or n-dimensional: a linear monodirectional pipeline of processes with data flowing left to right.
+
+Objects introduce an extra dimension of spatiality which makes it harder for the brain to build.
+2019-01-17
+
+===  ===
+#architecturerecovery
+#codecomprehension
+#codereading
+#refactoring
+
+(non-scratch) refactoring is an architecture recovery technique
+
+2018-03-21
+
+=== ===
+#reasoningaboutprograms
+#codecomprehension
+#codereading
+#logging
+
+We use logging to represent state transformations within an application.
+
+A trace represents a single user’s journey through an entire stack of an application. 
+
+
+2018-09-20
+
+=== ===
+#codereading
+
+when finding relevant code for a task through grepping '\b' is your friend
+=== code reading ===
+#codereading
+
+The first step to understanding a new code base is to run it (i.e. dynamic analysis). Which means you need to be able to compile it. Imagine trying to understand Minix without every compiling it
+
+2019-01-17
+
+=== ===
+#codereading
+#codecomprehension
+
+It is more important for upper layers of a code base to be readable than lower layers (as far as code comprehension is concerned; for modification even lower layers would benefit from ease of understanding).
+
+The context in which I say this is - is it shorter to write a loop or a fluent iterable? Fluent iterable is longer but the consuming code is simpler.
+
+Actually I'm not sure the lower layer is harder to read. It's just more finely sliced, and more verbose. But conceptually it is simple.
+
+=== ===
+#codereading
+
+To learn an application, it helps knowing the level of abstraction at which to reason by.
+
+For example, in a public-subscribe system, you want to depict the event bus as a black box and focus on the data flow of the events, rather than any metadata flow.
+=== ===
+#codereading
+#learnbybreaking
+
+code reading
+learning by breaking
+
+if you're not sure why something is needed, delete it
+
+2018-04-19
+
+=== ===
+#codereading
+#codecomprehension
+#copypaste
+#scope
+
+Code duplication isn't as bad as scope widening which makes code comprehension harder. Do the latter by copy paste rather than making a private method public.
+=== ===
+#codecomprehension
+#codereading
+
+Conclusion, after a lot of  trial and improvement:
+* You cannot reverse engineer a domain model from a schema + code alone. There has to be a shell of human intent that is communicated to you.
+** But you should still learn to extract as much information as you can from a code base. It's a valuable skill. You just shouldn't avoid talking to people (which people like me are tempted to avoid).
+=== ===
+#libraryvsframework
+#compiletimechecking
+#codecomprehension
+
+libraries vs frameworks
+
+since you can't cross-reference frameworks code as easily as compiled code, you have to rely on the meanings of words to get an understanding of the functionality. You don't get any topological structure to remember (linear, tree-like, circular etc.)
+
+
+=== ===
+#cantrip
+#sourceandsink
+#codereading
+#codecomprehension
+
+Code reading
+
+Another potential way to learn code (I haven’t tried) is to ignore cantrips. That might not sound like much but think about it further. There are 4 types of commands, according to (the excellent) Unix philosophy: source, sink, filter and cantrip. What do these really mean in a large enterprise java app. It’s pretty much data flow analysis:
+
+Source: produces data (e.g. a button press on a smartphone, or a photo being uploaded from a camera)
+Sink: consumes data (e.g. a database)
+Filter: transforms/reassembles data (e.g. rotate a photo)
+Cantrip: configures the other 3, without producing, consuming or transforming it.
+
+When we say data, we mean the subset that is “business data”, not every single bit in existence.
+
+So coming back to code reading, how does this help us? When learning a new system, we initially want to know the functionality (ie. The inputs and outputs)
+
+Cantrips set configuration options. Option are data for the programs, not payload data for the end user. If we really are interested in the details of how inputs, filters and outputs work only then the options, set by cantrips, become relevant. 
+
+
+
+2019-01-17
+
+=== ===
+#purefunction
+#codecomprehension
+
+Aggregation is possible with pure functions
+
+If a hierarchy of pure function calls can be modeled as a single variable (with no side effects), then and only then should you extract it. Anything else is just hiding important information.
+
+2019-01-17
+
+=== ===
+
+#codereading
+#onboarding
+#career
+
+Code comprehension
+Dynamic analysis
+To become an architect
+
+Look at log files to determine core functionality by weight
+
+2021-11-10
+=== ===
+
+
+#bottomuptopdown
+#codereading
+
+Bottom up - how the code works line by line (nitty gritty details, asp!)
+Top down - what the code achieves, design docs
+
+
+2021-10-12
+
+=== ===
+#codereading
+Assembly code is executed in a linear order in theory
+
+Oop code meanders unpredictability (in a random graph traversal). It's a way to hide goto statements
+
+Fp goes in a depth first traversal
+
+CSS is sort of linear but doesn’t match the order of the html to which it applies (this is why I use inline CSS if possible)
+
+=== ===
+
+#codereading
+
+Log files are like unique identifiers for pipelines  (past and present)
+
+Implication - when confused, use different log file names (e.g. rsync2.log)
+
+2021-10-12
+
